@@ -26,7 +26,8 @@ import {
 export function MainNav() {
     const pathname = usePathname();
     const menuList = getMenuList(pathname);
-
+    console.log(menuList); // Vérifiez les données du menu
+    console.log(Icons); // Vérifiez les icônes
     return (
         <div className="mr-4 hidden md:flex">
             <Link href="/" className="relative mr-6 flex items-center space-x-2">
