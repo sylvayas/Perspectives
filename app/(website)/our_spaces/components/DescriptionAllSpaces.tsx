@@ -40,7 +40,7 @@ export default function DescriptionAllSpaces() {
                 <div className="mt-4 md:mt-0">
                     <h2 className="mb-4  text-2xl md:text-4xl tracking-tight font-saudagar">Open space</h2>
                     <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-                    Travailler en open space chez Perspectives Co-Working, 
+                    Travailler en open space chez Novis Co-Working, 
                     c’est maximiser vos ressources tout en enrichissant votre réseau. 
                     Sur le plan financier, notre espace partagé vous permet de réduire considérablement vos coûts par rapport à un bureau privé, tout en accédant à des équipements premium. Côté relationnel, l’open space favorise les rencontres spontanées, les échanges d’idées et les collaborations fructueuses avec des professionnels variés. Vous évoluerez dans un environnement stimulant où chaque interaction peut être une opportunité. Alliez économies et synergies dans un cadre chaleureux et inspirant, conçu pour propulser votre réussite.
                     </p>
@@ -66,7 +66,7 @@ export default function DescriptionAllSpaces() {
                 <div className="mt-4 md:mt-0">
                     <h2 className="mb-4  text-2xl md:text-4xl tracking-tight font-saudagar">Salle de réunion</h2>
                     <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
-                        Vous souhaitez pouvoir recevoir du monde afin d&apos;y organiser des réunions ? Perspectives coworking vous donne la possibilité de pouvoir louer cette salle de réunion moderne dans Abidjan <br />
+                        Vous souhaitez pouvoir recevoir du monde afin d&apos;y organiser des réunions ? NOVIS coworking vous donne la possibilité de pouvoir louer cette salle de réunion moderne dans Abidjan <br />
                         Que cela se fasse avec vos collaborateurs, vos prestataires et/ou vos clients, vous disposez de cet espace de <span className="font-bold">20 m2</span>. Ce lieu de réflexion peut accueillir <span className="font-bold"> 10 voir 14 personnes</span> si nécessité de rallonge.
                     </p>
                     <Link
@@ -112,7 +112,7 @@ export default function DescriptionAllSpaces() {
             {/* <div className="bg-black">
                 <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                     <div className="mt-4 md:mt-0 text-white">
-                        <h2 className="text-Perspectives_yellow mb-4  text-2xl md:text-4xl tracking-tight font-saudagar">We didn't reinvent the wheel</h2>
+                        <h2 className="text-novis_yellow mb-4  text-2xl md:text-4xl tracking-tight font-saudagar">We didn't reinvent the wheel</h2>
                         <p className="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
                         <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
                     </div>
