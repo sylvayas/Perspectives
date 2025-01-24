@@ -43,7 +43,7 @@ export default function SolutionsCarousel() {
                   <div
                     className="absolute translate-y-1/2 bottom-0 w-full flex flex-col items-center justify-center
                                     gap-2 xl:gap-4 py-4 text-center z-10 group-hover/solution_item:translate-y-1 bg-transparent 
-                                    group-hover/solution_item:bg-Perspectives_green transition-all duration-500"
+                                    group-hover/solution_item:bg-perspectives_marron transition-all duration-500"
                   >
                     {/* Vous pouvez ajouter un contenu ici */}
                   </div>

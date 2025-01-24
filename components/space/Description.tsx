@@ -31,7 +31,7 @@ export default function Description(
                                     {space.options.items.map((option: any, key: number) => {
                                         return (
                                             <table key={key} className="w-full text-sm text-left rtl:text-right text-gray-200">
-                                                <thead className="text-xs text-gray-50 uppercase bg-Perspectives_orange">
+                                                <thead className="text-xs text-gray-50 uppercase bg-perspectives_orange">
                                                     <tr>
                                                         <th scope="col" className="px-6 py-3">
                                                             {option.title}

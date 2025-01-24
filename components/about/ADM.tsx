@@ -13,7 +13,7 @@ export default function ADM() {
                 <div className="relative isolate grid lg:grid-cols-2 items-center gap-y-10 lg:gap-y-6 gap-x-12 lg:gap-x-12">
                     <div className="relative self-stretch w-full max-w-full lg:max-w-[598px]">
                         <div className="relative h-full col-span-1 row-span-1">
-                            <div className="absolute skew-y-12 bottom-8 md:bottom-16 top-0 left-0 right-0 bg-Perspectives_orange rounded-3xl shadow-2xl" />
+                            <div className="absolute skew-y-12 bottom-8 md:bottom-16 top-0 left-0 right-0 bg-perspectives_orange rounded-3xl shadow-2xl" />
                             <div className="relative flex justify-center items-center h-full z-[1] pt-8 px-8">
                                 <div className="w-full sm:max-w-[80%] md:max-w-[60%] border-2 shadow-2xl rounded-2xl lg:rounded-3xl border-white relative top-auto bottom-auto mx-auto flex justify-center flex-col">
                                     <Image

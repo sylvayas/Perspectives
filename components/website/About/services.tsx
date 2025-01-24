@@ -69,7 +69,7 @@ export default function Services() {
         return item.type == "image" ? <div className="flex relative w-full aspect-square items-center justify-center h-[250px] sm:h-[350px] xl:h-[400px]">
           <Image className="object-cover" src={item.image!} alt={item.image!} fill />
         </div> :
-          <div className="flex flex-col px-4 bg-Perspectives_green text-white gap-2 relative w-full items-center justify-center py-4 min-h-[250px] xl:h-[400px]">
+          <div className="flex flex-col px-4 bg-perspectives_marron text-white gap-2 relative w-full items-center justify-center py-4 min-h-[250px] xl:h-[400px]">
             {item.icon && <item.icon className="text-Perspectives_yellow size-12 md:size-20 mb-4" />}
             <h3 className="font-bold font-saudagar text-xl md:text-2xl">{item.title}</h3>
             <p className="text-center text-xs md:text-sm xl:w-3/4">{item.description}</p>

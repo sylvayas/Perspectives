@@ -12,7 +12,7 @@ export default function Footer() {
   const menuList = getMenuList(pathname);
 
   return (
-    <section className="container px-0 xl:px-8 bg-Perspectives_green min-h-[50vh] h-fit xl:h-[500px] relative">
+    <section className="container px-0 xl:px-8 bg-perspectives_marron min-h-[50vh] h-fit xl:h-[500px] relative">
       <div className="flex flex-col xl:flex-row xl:h-full relative w-full xl:items-stretch gap-8">
         <div className="py-14 w-full xl:w-[350px] bg-black/90 flex flex-col gap-4 px-4 sm:px-8 md:px-10 md:gap-6 items-center xl:items-start justify-center">
           <Icons.logo_black className="size-20" />

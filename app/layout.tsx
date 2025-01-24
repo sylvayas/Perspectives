@@ -1,20 +1,6 @@
 import type { Metadata } from "next";
-import { Roboto as FontSans } from "next/font/google"
-import { Lora } from "next/font/google"
-import "./globals.css";
-import { cn } from "@/lib/utils"
-
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-sans",
-})
-
-const fontLora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
-})
+import "./globals.css"; // Importation des styles globaux
+import { cn } from "@/lib/utils"; // Fonction utilitaire pour gérer les classes CSS
 
 export const metadata: Metadata = {
   title: "Perspectives",
@@ -28,13 +14,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Book+Antique&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className={cn(
         `relative flex min-h-screen w-full flex-col justify-center 
-        overflow-x-hidden scroll-smooth bg-background font-sans antialiased
-        `,
-        fontSans.variable,
-        fontLora.variable,
-      )}>{children}</body>
+        overflow-x-hidden scroll-smooth bg-background antialiased
+        `
+      )}>
+        {children}
+      </body>
     </html>
   );
 }

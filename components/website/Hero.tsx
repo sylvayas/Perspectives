@@ -14,7 +14,7 @@ const images = [
 
 export default function Hero() {
   const item_bar = (
-    <div className="w-full h-[2px] scale-x-0 bg-Perspectives_orange group-hover/service_item:scale-x-100 group-hover/service_item:bg-white transition-all duration-300"></div>
+    <div className="w-full h-[2px] scale-x-0 bg-perspectives_orange group-hover/service_item:scale-x-100 group-hover/service_item:bg-white transition-all duration-300"></div>
   );
 
   const item = (name: string, url: string) => {

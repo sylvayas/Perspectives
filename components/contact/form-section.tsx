@@ -166,10 +166,10 @@ export default function FormSection() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`bg-Perspectives_orange text-white tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6 ${
+              className={`bg-perspectives_orange text-white tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6 ${
                 isSubmitting
                   ? "opacity-50 cursor-not-allowed"
-                  : "hover:bg-Perspectives_orange-dark"
+                  : "hover:bg-perspectives_orange-dark"
               }`}
             >
               {isSubmitting ? "Envoi en cours..." : "Envoyer"}

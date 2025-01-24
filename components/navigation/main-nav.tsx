@@ -50,7 +50,7 @@ export function MainNav() {
                                 <li className="row-span-6">
                                     <NavigationMenuLink asChild>
                                         <a
-                                            className="flex h-full w-full ring-2 ring-Perspectives_yellow select-none flex-col justify-end rounded-md bg-Perspectives_green p-6 no-underline outline-none focus:shadow-md"
+                                            className="flex h-full w-full ring-2 ring-Perspectives_yellow select-none flex-col justify-end rounded-md bg-perspectives_marron p-6 no-underline outline-none focus:shadow-md"
                                             href={menuList[1].menus[0].href}
                                         >
                                             <Icons.logo className="h-20 w-20 mb-4" />
@@ -121,11 +121,6 @@ export function MainNav() {
                     </NavigationMenuItem>
 
 
-
-
-
-
-
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className={cn(`${menuList[3].menus[0].active && "font-bold text-Perspectives_orange"}`)}>{menuList[3].menus[0].label}</NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -133,7 +128,7 @@ export function MainNav() {
                                 <li className="row-span-6">
                                     <NavigationMenuLink asChild>
                                         <a
-                                            className="flex h-full w-full ring-2 ring-Perspectives_yellow select-none flex-col justify-end rounded-md bg-Perspectives_green p-6 no-underline outline-none focus:shadow-md"
+                                            className="flex h-full w-full ring-2 ring-Perspectives_yellow select-none flex-col justify-end rounded-md bg-perspectives_marron p-6 no-underline outline-none focus:shadow-md"
                                             href={menuList[3].menus[0].href}
                                         >
                                             <Icons.logo className="h-20 w-20 mb-4" />

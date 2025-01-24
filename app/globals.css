@@ -3,70 +3,11 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "LemonMilk";
+  font-family: "Book Antique";
   src: url("/fonts/lemon_milk/LEMONMILK-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
-
-@font-face {
-  font-family: "LemonMilk";
-  src: url("/fonts/lemon_milk/LEMONMILK-RegularItalic.otf") format("opentype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "LemonMilk";
-  src: url("/fonts/lemon_milk/LEMONMILK-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "LemonMilk";
-  src: url("/fonts/lemon_milk/LEMONMILK-BoldItalic.otf") format("opentype");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "ArdelaEdge";
-  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ArdelaEdge";
-  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Italic Variable.ttf")
-    format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "ArdelaEdge";
-  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ArdelaEdge";
-  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Bold Italic.ttf")
-    format("truetype");
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "saudagar";
-  src: url("/fonts/saudagar.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
 
 @layer base {
   :root {
@@ -96,10 +37,10 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
 
-    /* Others Colors */
-    --Perspectives-orange: 27, 92%, 42%;
-    --Perspectives-yellow: 48, 86%, 40%;
-    --Perspectives-green: 184, 93%, 21%;
+    /* Autres Couleurs */
+    --perspectives-marron: 25, 70%, 30%; /* Marron */
+    --perspectives-gris: 0, 0%, 30%; /* Gris */
+    --perspectives-orange: 30, 100%, 50%; /* Orange */
   }
 
   .dark {
@@ -128,10 +69,10 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
 
-    /* Others Colors */
-    --Perspectives-orange: 27, 92%, 42%;
-    --Perspectives-yellow: 48, 86%, 40%;
-    --Perspectives-green: 184, 93%, 21%;
+    /* Autres Couleurs */
+    --perspectives-marron: 25, 70%, 30%; /* Marron */
+    --perspectives-gris: 0, 0%, 80%; /* Gris */
+    --perspectives-orange: 30, 100%, 75%; /* Orange */
   }
 }
 
@@ -142,6 +83,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Book Antique", serif; /* Application de Book Antique */
   }
 }
 
@@ -151,8 +93,9 @@
 
 *::selection {
   color: white !important;
-  background: hsl(var(--Perspectives-green)) !important;
+  background: hsl(var(--perspectives-marron)) !important;
 }
-.text-custom-justify{ 
+
+.text-custom-justify { 
   text-align: justify;
 }

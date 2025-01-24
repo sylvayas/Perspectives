@@ -18,7 +18,7 @@ export default function HeaderPage({ galerie }: { galerie: any }) {
               </h2>
               <div className="relative text-sm md:text-lg w-fit mx-auto md:mx-0 mb-8 font-semibold italic">
                 <p>{galerie.subdescription || "Description non disponible"}</p>
-                <div className="h-1 w-full md:w-9/12 bg-Perspectives_yellow"></div>
+                <div className="h-1 w-full md:w-9/12 bg-perspectives_orange"></div>
               </div>
             </div>
             <div className="flex flex-col gap-2 md:gap-4">
@@ -26,7 +26,7 @@ export default function HeaderPage({ galerie }: { galerie: any }) {
                 galerie.options.map((option: string, key: number) => (
                   <div
                     key={key}
-                    className="flex min-w-64 gap-2 bg-Perspectives_yellow rounded-sm p-2 text-white"
+                    className="flex min-w-64 gap-2 bg-perspectives_orange rounded-sm p-2 text-white"
                   >
                     <Icons.stars className="size-4 md:size-6" />
                     <p className="font-medium text-sm font-mono whitespace-pre-wrap tracking-tighter">

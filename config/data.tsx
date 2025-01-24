@@ -232,7 +232,7 @@ export const offres = [
       },
       {
         title: "NOTORIETE",
-        detail: "Perspectives CO-WORKING n'est pas seulement un lieux de travail, mais un écosystème riches en opportunités pour développer votre réseau et votre notoriété grâce au bénéfice des synergies et des collaborations sur place.",
+        detail: "Perspectives n'est pas seulement un lieux de travail, mais un écosystème riches en opportunités pour développer votre réseau et votre notoriété grâce au bénéfice des synergies et des collaborations sur place.",
         image:
           "/images/coworking/Bureaux privés/Bureau détermination/notoriété.png",
       },
@@ -926,7 +926,7 @@ export const espaces = [
     description: (
       <>
         <p className="text-sm md:text-md mb-2 md:mb-3">
-        Travailler en open space chez Perspectives Co-Working, c’est maximiser vos ressources tout en enrichissant votre réseau.
+        Travailler en open space chez Perspectives, c’est maximiser vos ressources tout en enrichissant votre réseau.
         </p>
 
         <p className="text-sm md:text-md mb-2 md:mb-3">

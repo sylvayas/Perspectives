@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Perspectives CO-WORKING",
+  name: "Perspectives",
   url: "",
   ogImage: "",
   description:
@@ -11,7 +11,7 @@ export const siteConfig = {
     instagram: "",
   },
   keywords: [
-    "Coworking",
+    "Perspectives",
   ],
 };
 

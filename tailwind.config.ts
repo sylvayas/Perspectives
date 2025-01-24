@@ -1,9 +1,8 @@
 import type { Config } from "tailwindcss";
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
-
 const config = {
-  darkMode: ["class"],
+  darkMode: ["class"], // Active le mode sombre basé sur une classe CSS
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -13,19 +12,16 @@ const config = {
   prefix: "",
   theme: {
     container: {
-      center: true,
-      padding: "2rem",
+      center: true, // Centre le conteneur
+      padding: "2rem", // Ajoute un padding de 2rem
       screens: {
-        "2xl": "1400px",
+        "2xl": "1400px", // Largeur maximale pour les écrans 2xl
       },
     },
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
-        lora: ["var(--font-lora)", ...fontFamily.sans],
-        lemonMilk: ["LemonMilk", "sans-serif"],
-        ardelaEdge: ["ArdelaEdge", "sans-serif"],
-        saudagar: ["saudagar", "sans-serif"],
+        bookAntique: ["Book Antique", "serif"], // Ajout de Book Antique
       },
       colors: {
         border: "hsl(var(--border))",
@@ -33,9 +29,9 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        Perspectives_orange: "hsl(var(--Perspectives-orange))",
-        Perspectives_yellow: "hsl(var(--Perspectives-yellow))",
-        Perspectives_green: "hsl(var(--Perspectives-green))",
+        perspectives_marron: "hsl(var(--perspectives-marron))",
+        perspectives_gris: "hsl(var(--perspectives-gris))",
+        perspectives_orange: "hsl(var(--perspectives-orange))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
