@@ -6,27 +6,27 @@ export const datas: List_SpaceCard[] = [
       {
         id: "bureau_confiance",
         title: "Bureau confiance",
-        imagePath: "coworking/Bureaux privés/Bureau confiance",
+        imagePath: "/Bureaux privés/Bureau confiance",
       },
       {
         id: "bureau_determination",
         title: "Bureau détermination",
-        imagePath: "coworking/Bureaux privés/Bureau détermination",
+        imagePath: "/Bureaux privés/Bureau détermination",
       },
       {
         id: "bureau_prosperite",
         title: "Bureau prospérité",
-        imagePath: "coworking/Bureaux privés/Bureau prospérité",
+        imagePath: "/Bureaux privés/Bureau prospérité",
       },
       {
         id: "bureau_excellence",
         title: "Bureau excellence",
-        imagePath: "coworking/Bureaux privés/Bureau prospérité",
+        imagePath: "/Bureaux privés/Bureau prospérité",
       },
       {
         id: "bureau_serenite",
         title: "bureau sérénité",
-        imagePath: "coworking/Bureaux privés/Bureau prospérité",
+        imagePath: "/Bureaux privés/Bureau prospérité",
       },
     ],
   },
@@ -37,7 +37,7 @@ export const datas: List_SpaceCard[] = [
       {
         id: "open_space",
         title: "Espace Bulle Open space",
-        imagePath: "coworking/Espace Bulle Open space",
+        imagePath: "/Espace Bulle Open space",
       },
     ],
   },
@@ -48,7 +48,7 @@ export const datas: List_SpaceCard[] = [
       {
         id: "meeting_room",
         title: "Salle de réunion",
-        imagePath: "coworking/Salle de réunion",
+        imagePath: "/Salle de réunion",
       },
     ],
   },
@@ -59,7 +59,7 @@ export const datas: List_SpaceCard[] = [
       {
         id: "common_space",
         title: "Espace commun",
-        imagePath: "coworking/Espace commun",
+        imagePath: "/Espace commun",
       },
     ],
   },
@@ -72,7 +72,7 @@ export const offres = [
     subdescription: "Choisissez notre adresse pour en faire la vôtre.",
     description: [
       "Dans le cadre de l'immatriculation de votre entreprise au CEPICI pour obtenir une autorisation légale d'exercer votre activité en Côte-d'Ivoire il vous sera nécessaire de disposer d'un siège-social et de vous rattacher par la suite à un centre d'impôts ivoirien.",
-      "Perspectives coworking met à votre disposition une adresse géographique. Grâce à la souscription d'un abonnement annuel vous obtenez un contrat qui vous permettra de compléter votre dossier auprès du notaire, de l'avocat ou l'expert en charge de faire la constitution de votre société à Abidjan.",
+      "Perspectives  met à votre disposition une adresse géographique. Grâce à la souscription d'un abonnement annuel vous obtenez un contrat qui vous permettra de compléter votre dossier auprès du notaire, de l'avocat ou l'expert en charge de faire la constitution de votre société à Abidjan.",
     ],
     options: ["Siège social pour vous faire immatriculer", "Adresse physique pour votre entreprise"],
     solutionsTitle:
@@ -91,7 +91,7 @@ export const offres = [
         icon: "flex",
       },
     ],
-    image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+    image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
     elements: [
       {
         icon: "🏢", // Représentation symbolique d'un bâtiment
@@ -130,10 +130,10 @@ export const offres = [
     id: "domiciliation_physique_entreprise",
     title: "Domiciliation physique",
     subdescription:
-      "Profitez du confort et de l'ambiance dynamisante de notre espace de coworking.",
+      "Profitez du confort et de l'ambiance dynamisante de notre espace de .",
     description: [
       "Dans un environnement où le coût de l'immobilier ne fait que s'accroître, il est important en tant qu'investisseur en côte d'ivoire, entrepreneur ou entreprises internationales de trouver des stratégies pour installer l'entreprise à moindre coût.",
-      "Perspectives coworking vous aide à atteindre cet objectif en minimisant vos coûts. Offrez-vous le luxe de bénéficier d'un bureau élégant à Abidjan au sein d'un espace partagé avec une communauté (locaux, expatriés, repats) et bénéficiez d'un large réseau.",
+      "Perspectives  vous aide à atteindre cet objectif en minimisant vos coûts. Offrez-vous le luxe de bénéficier d'un bureau élégant à Abidjan au sein d'un espace partagé avec une communauté (locaux, expatriés, repats) et bénéficiez d'un large réseau.",
       "2 possibilités s'offrent à vous, le bureau privé ou l'espace open-space",
     ],
     horraires: [
@@ -222,25 +222,25 @@ export const offres = [
       {
         title: "PRET A L'EMPLOI",
         detail: "+ imprimante, wifi",
-        image: "/images/coworking/Bureaux privés/Bureau prospérité/prêt à l'emploi.png",
+        image: "/images/perspective/Bureaux privés/Bureau prospérité/prêt à l'emploi.png",
       },
       {
         title: "VALEUR AJOUTEE",
         detail:
           "Gain de crédibilité pour le positionnement de votre entreprise.",
-        image: "/images/coworking/Bureaux privés/Bureau confiance/valeur ajoutée.png",
+        image: "/images/perspective/Bureaux privés/Bureau confiance/valeur ajoutée.png",
       },
       {
         title: "NOTORIETE",
         detail: "Perspectives n'est pas seulement un lieux de travail, mais un écosystème riches en opportunités pour développer votre réseau et votre notoriété grâce au bénéfice des synergies et des collaborations sur place.",
         image:
-          "/images/coworking/Bureaux privés/Bureau détermination/notoriété.png",
+          "/images/perspective/Bureaux privés/Bureau détermination/notoriété.png",
       },
       {
         title: "BUDGET",
         detail: "le même budget nous donnons la possibilité à chacun de pouvoir évoluer à son rythme",
         image:
-          "/images/coworking/Bureaux privés/Bureau excellence/budget.png",
+          "/images/perspective/Bureaux privés/Bureau excellence/budget.png",
       },
     ],
     image: "/images/other/bureau_equipe.jpg",
@@ -287,7 +287,7 @@ export const offres = [
     description: [
       "Notre Pack évènement vous permet d'organiser tous vos évènements professionnels à Abidjan.",
       "La Côte d'Ivoire incontournable sur l'échiquier internationale du business vous donne en 2024 la possibilité de vous faire connaître ou de vous développer à travers l'organisation de conférences de presse, lancement de produits, vente privée, cérémonie de dédicace de livre, networking, vernissage, assemblées générales etc… ",
-      "Avec sa capacité de 25 à 50 personnes choisissez au sein du coworking abidjanais l'espace qui se prêtera au mieux au format de votre vision.",
+      "Avec sa capacité de 25 à 50 personnes choisissez au sein du  abidjanais l'espace qui se prêtera au mieux au format de votre vision.",
       "Bénéficiez d'un espace spacieux, sécurisé par un service de gardiennage agrée. Places de parking disponibles, Cuisine disponible",
     ],
     tarifs: [
@@ -310,7 +310,7 @@ export const offres = [
       },
     ],
     options: ["10 personnes", "siège ergonomique", "écran de projection", "rétro-projecteur", "support de notes"],
-    image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+    image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
   },
   {
     id: "location_espace_tournage",
@@ -319,7 +319,7 @@ export const offres = [
     description: [
       "Personal branding, Mise en scène clips vidéo et films, podcast, etc… sont des besoins de notre ère dans le cadre de la communication des activités d'une entreprise ou association.",
       "Un espace unique décoré par des professionnels avec recherche, beaucoup de soin et de finesse, chaque mètre carré, mobilier, objets de décoration est mis à votre disposition pour le temps d'un tournage sur la capitale ivoirienne.",
-      "Avec Perspectives coworking, ensemble vers le succès.",
+      "Avec Perspectives, ensemble vers le succès.",
     ],
     tarifs: [
       {
@@ -332,7 +332,7 @@ export const offres = [
       },
     ],
     horaires: [{ jours: ["Samedi", "Dimanche"], horaires: ["10h-17h"] }],
-    image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+    image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
   },
 ];
 export const partenaires = [
@@ -342,7 +342,7 @@ export const partenaires = [
     subdescription: "Choisissez notre adresse pour en faire la vôtre.",
     description: [
       "Dans le cadre de l'immatriculation de votre entreprise au CEPICI pour obtenir une autorisation légale d'exercer votre activité en Côte-d'Ivoire il vous sera nécessaire de disposer d'un siège-social et de vous rattacher par la suite à un centre d'impôts ivoirien.",
-      "Perspectives coworking met à votre disposition une adresse géographique. Grâce à la souscription d'un abonnement annuel vous obtenez un contrat qui vous permettra de compléter votre dossier auprès du notaire, de l'avocat ou l'expert en charge de faire la constitution de votre société à Abidjan.",
+      "Perspectives  met à votre disposition une adresse géographique. Grâce à la souscription d'un abonnement annuel vous obtenez un contrat qui vous permettra de compléter votre dossier auprès du notaire, de l'avocat ou l'expert en charge de faire la constitution de votre société à Abidjan.",
     ],
     image: "/images/Partenaires/logo.jpg",
     bookingLink:'/reservation-domiciliation'
@@ -351,10 +351,10 @@ export const partenaires = [
     id: "dpartenaires1",
     title: "partenaires 1",
     subdescription:
-      "Profitez du confort et de l'ambiance dynamisante de notre espace de coworking.",
+      "Profitez du confort et de l'ambiance dynamisante de notre espace de .",
     description: [
       "Dans un environnement où le coût de l'immobilier ne fait que s'accroître, il est important en tant qu'investisseur en côte d'ivoire, entrepreneur ou entreprises internationales de trouver des stratégies pour installer l'entreprise à moindre coût.",
-      "Perspectives coworking vous aide à atteindre cet objectif en minimisant vos coûts. Offrez-vous le luxe de bénéficier d'un bureau élégant à Abidjan au sein d'un espace partagé avec une communauté (locaux, expatriés, repats) et bénéficiez d'un large réseau.",
+      "Perspectives  vous aide à atteindre cet objectif en minimisant vos coûts. Offrez-vous le luxe de bénéficier d'un bureau élégant à Abidjan au sein d'un espace partagé avec une communauté (locaux, expatriés, repats) et bénéficiez d'un large réseau.",
       "2 possibilités s'offrent à vous, le bureau privé ou l'espace open-space",
     ],
     image: "/images/Partenaires/logo1.jpg",
@@ -391,7 +391,7 @@ export const partenaires = [
     description: [
       "Notre Pack évènement vous permet d'organiser tous vos évènements professionnels à Abidjan.",
       "La Côte d'Ivoire incontournable sur l'échiquier internationale du business vous donne en 2024 la possibilité de vous faire connaître ou de vous développer à travers l'organisation de conférences de presse, lancement de produits, vente privée, cérémonie de dédicace de livre, networking, vernissage, assemblées générales etc… ",
-      "Avec sa capacité de 25 à 50 personnes choisissez au sein du coworking abidjanais l'espace qui se prêtera au mieux au format de votre vision.",
+      "Avec sa capacité de 25 à 50 personnes choisissez au sein du  abidjanais l'espace qui se prêtera au mieux au format de votre vision.",
       "Bénéficiez d'un espace spacieux, sécurisé par un service de gardiennage agrée. Places de parking disponibles, Cuisine disponible",
     ],
     image: "/images/Partenaires/logo4.jpg",
@@ -405,10 +405,10 @@ export const galeries = [
     title: "Événements Collaboratifs",
     subdescription: "Participez à notre événement inspirant.",
     description: [
-      "Rejoignez-nous pour une expérience inoubliable au cœur de notre espace de coworking, Perspectives COWORKING. Cet événement exclusif mettra en lumière les opportunités de collaboration et de networking au sein de notre communauté dynamique.",
+      "Rejoignez-nous pour une expérience inoubliable au cœur de notre espace de , Perspectives . Cet événement exclusif mettra en lumière les opportunités de collaboration et de networking au sein de notre communauté dynamique.",
     ],
     images:"/images/galerie/evenement collaboratif/even1.jpg",
-    image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+    image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
     bookingLink: 'https://www.facebook.com/share/p/1Ed2NxDip8/',
     titles : "Découvrez nos événements collaboratifs",
   },
@@ -417,24 +417,24 @@ export const galeries = [
     title: "Article de Presse",
     subdescription: "Découvrez les dernières articles de presse.",
     description: [
-      "Lisez sur notre espace de coworking à travers des articles de presse qui mettent en avant nos événements et notre communauté.",
+      "Lisez sur notre espace de  à travers des articles de presse qui mettent en avant nos événements et notre communauté.",
       "Ces articles soulignent les initiatives que nous prenons pour favoriser un environnement de travail collaboratif et innovant.",
-      "Restez informé des dernières tendances et opportunités dans le monde du coworking.",
+      "Restez informé des dernières tendances et opportunités dans le monde du .",
     ],
     images: "/images/galerie/article de presse/Article de presse.jpg",
-    image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+    image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
     bookingLink:'https://ahoulafricaine.com/societe-un-brunch-consacre-a-la-sante-mentale-de-lentrepreneur/?fbclid=IwY2xjawHw4a5leHRuA2FlbQIxMQABHYqXehs5GXGQbcrfpZhFhOPGVt7kdhCRl_oDN1Wc-_p5m8RiYIzQF8mC5Q_aem_6Ny7b9Hr3WLg5lLdip4Skw',
     titles : "Lire notre article de presse",
   },
   {
     id: "evenement_a_venir",
     title: "Événements à venir",
-    subdescription: "Un espace de coworking moderne et lumineux.",
+    subdescription: "Un espace de  moderne et lumineux.",
     description: [
       "Un événement qui a rassemblé les passionnés et créé des souvenirs inoubliables !",
     ],
-    images: "/images/coworking/Espace Bulle Open space/img (1).jpg",
-    image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+    images: "/images/perspective/Espace Bulle Open space/img (1).jpg",
+    image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
     bookingLink: '/',
     titles : "Découvrez nos événements à venir",
   },
@@ -448,62 +448,62 @@ export const espaces = [
     title: "Bureaux privés",
     images: [
       {
-        src: "/images/coworking/Bureaux privés/Bureau prospérité/img (1).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau prospérité/img (1).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau prospérité/img (2).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau prospérité/img (2).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau prospérité/img (3).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau prospérité/img (3).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau détermination/img (1).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau détermination/img (1).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau détermination/img (2).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau détermination/img (2).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau détermination/img (3).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau détermination/img (3).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau confiance/img (1).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau confiance/img (1).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau confiance/img (2).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau confiance/img (2).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau confiance/img (3).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau confiance/img (3).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau excellence/img (1).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau excellence/img (1).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau excellence/img (2).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau excellence/img (2).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Bureaux privés/Bureau excellence/img (3).jpg",
+        src: "/images/perspective/Bureaux privés/Bureau excellence/img (3).jpg",
         width: 1037,
         height: 691,
       },
@@ -522,7 +522,7 @@ export const espaces = [
           différents services.
         </p>
         <p className="text-lg md:text-xl font-semibold font-saudagar mb-2 md:mb-3">
-          Perspectives coworking dans un soucis de bien-être et d&apos;ergonomie a
+          Perspectives  dans un soucis de bien-être et d&apos;ergonomie a
           pensé à vous offrir différentes ambiances de bureau à louer.
         </p>
       </>
@@ -567,17 +567,17 @@ export const espaces = [
         title: "Bureau confiance",
         images: [
           {
-            src: "/images/coworking/Bureaux privés/Bureau confiance/img (1).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau confiance/img (1).jpg",
             width: 1037,
             height: 691,
           },
           {
-            src: "/images/coworking/Bureaux privés/Bureau confiance/img (2).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau confiance/img (2).jpg",
             width: 1037,
             height: 691,
           },
           {
-            src: "/images/coworking/Bureaux privés/Bureau confiance/img (3).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau confiance/img (3).jpg",
             width: 1037,
             height: 691,
           },
@@ -634,17 +634,17 @@ export const espaces = [
         title: "Bureau détermination",
         images: [
           {
-            src: "/images/coworking/Bureaux privés/Bureau détermination/img (1).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau détermination/img (1).jpg",
             width: 1037,
             height: 691,
           },
           {
-            src: "/images/coworking/Bureaux privés/Bureau détermination/img (2).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau détermination/img (2).jpg",
             width: 1037,
             height: 691,
           },
           {
-            src: "/images/coworking/Bureaux privés/Bureau détermination/img (3).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau détermination/img (3).jpg",
             width: 1037,
             height: 691,
           }
@@ -701,17 +701,17 @@ export const espaces = [
         title: "Bureau prospérité",
         images: [
           {
-            src: "/images/coworking/Bureaux privés/Bureau prospérité/img (1).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau prospérité/img (1).jpg",
             width: 1037,
             height: 691,
           },
           {
-            src: "/images/coworking/Bureaux privés/Bureau prospérité/img (2).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau prospérité/img (2).jpg",
             width: 1037,
             height: 691,
           },
           {
-            src: "/images/coworking/Bureaux privés/Bureau prospérité/img (3).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau prospérité/img (3).jpg",
             width: 1037,
             height: 691,
           },
@@ -723,8 +723,7 @@ export const espaces = [
             <p className="text-sm md:text-md mb-2 md:mb-3">
               Dans une atmosphère sérieuse et une décoration qui impose le
               respect ce cadre s&apos;aligne avec vos ambitions. Recevez vos
-              clients, fournisseurs et partenaires au sein de ce fabuleux espace
-              de coworking.
+              clients, fournisseurs et partenaires au sein de ce fabuleux espace.
             </p>
           </>
         ),
@@ -769,17 +768,17 @@ export const espaces = [
         title: "Bureau excellence",
         images: [
           {
-            src: "/images/coworking/Bureaux privés/Bureau excellence/img (1).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau excellence/img (1).jpg",
             width: 1037,
             height: 691,
           },
           {
-            src: "/images/coworking/Bureaux privés/Bureau excellence/img (2).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau excellence/img (2).jpg",
             width: 1037,
             height: 691,
           },
           {
-            src: "/images/coworking/Bureaux privés/Bureau excellence/img (3).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau excellence/img (3).jpg",
             width: 1037,
             height: 691,
           },
@@ -837,17 +836,17 @@ export const espaces = [
         title: "Bureau sérénité",
         images: [
           {
-            src: "/images/coworking/Bureaux privés/Bureau sérénité/img (1).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau sérénité/img (1).jpg",
             width: 1037,
             height: 691,
           },
           {
-            src: "/images/coworking/Bureaux privés/Bureau sérénité/img (2).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau sérénité/img (2).jpg",
             width: 1037,
             height: 691,
           },
           {
-            src: "/images/coworking/Bureaux privés/Bureau sérénité/img (3).jpg",
+            src: "/images/perspective/Bureaux privés/Bureau sérénité/img (3).jpg",
             width: 1037,
             height: 691,
           },
@@ -908,17 +907,17 @@ export const espaces = [
       "COCODY SAINT VIATEUR, Immeuble Kori près du rond-point de la Y4 entre Nissi assurance et BT mat",
     images: [
       {
-        src: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+        src: "/images/perspective/Espace Bulle Open space/img (1).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Espace Bulle Open space/img (2).jpg",
+        src: "/images/perspective/Espace Bulle Open space/img (2).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Espace Bulle Open space/img (3).jpg",
+        src: "/images/perspective/Espace Bulle Open space/img (3).jpg",
         width: 1037,
         height: 691,
       },
@@ -934,7 +933,7 @@ export const espaces = [
         </p>
 
         <p className="text-sm md:text-md mb-2 md:mb-3">
-        Côté relationnel, l’open space favorise les rencontres spontanées, les échanges d’idées et les collaborations fructueuses avec des professionnels variés.
+        Côté relationnel, l’open space favorise les  rencontres spontanées, les échanges d’idées et les collaborations fructueuses avec des professionnels variés.
         </p>
 
         <p className="text-sm md:text-md mb-2 md:mb-3">
@@ -976,17 +975,17 @@ export const espaces = [
     ],
     images: [
       {
-        src: "/images/coworking/Salle de réunion/img (1).jpg",
+        src: "/images/perspective/Salle de réunion/img (1).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Salle de réunion/img (2).jpg",
+        src: "/images/perspective/Salle de réunion/img (2).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Salle de réunion/img (3).jpg",
+        src: "/images/perspective/Salle de réunion/img (3).jpg",
         width: 1037,
         height: 691,
       },
@@ -995,7 +994,7 @@ export const espaces = [
       <>
         <p className="text-sm md:text-md mb-2 md:mb-3">
           Vous souhaitez pouvoir recevoir du monde afin d&apos;y organiser des
-          réunions ? Perspectives coworking vous donne la possibilité de pouvoir louer
+          réunions ? Perspectives  vous donne la possibilité de pouvoir louer
           cette salle de réunion moderne dans Abidjan
         </p>
         <p className="text-sm md:text-md mb-2 md:mb-3">
@@ -1021,7 +1020,7 @@ export const espaces = [
         </p>
         <p className="text-lg md:text-xl font-semibold font-saudagar mb-2 md:mb-3">
           Pour une gestion plus fluide de vos réunions. Optez pour le « le LABO
-          » de Perspectives Coworking.
+          » de Perspectives .
         </p>
       </>
     ),
@@ -1048,17 +1047,17 @@ export const espaces = [
         height: 691,
       },
       {
-        src: "/images/coworking/Espace commun/img (1).jpg",
+        src: "/images/perspective/Espace commun/img (1).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Espace commun/img (2).jpg",
+        src: "/images/perspective/Espace commun/img (2).jpg",
         width: 1037,
         height: 691,
       },
       {
-        src: "/images/coworking/Espace commun/img (3).jpg",
+        src: "/images/perspective/Espace commun/img (3).jpg",
         width: 1037,
         height: 691,
       },
@@ -1082,11 +1081,11 @@ export const espaces = [
         <p className="text-sm md:text-md mb-2 md:mb-3">
           Nous vous invitons à organiser des évènements flexibles dans un lieu
           spacieux dynamique au cœur des quartiers Saint Viateur à Cocody. Le
-          premier espace de coworking du secteur à Abidjan considéré comme le
+          premier espace de  du secteur à Abidjan considéré comme le
           meilleur selon une enquête récente.
         </p>
         <p className="text-lg md:text-xl font-semibold font-saudagar mb-2 md:mb-3">
-          Le plus de Perspectives coworking qui fait toute la différence, c&apos;est un
+          Le plus de Perspectives  qui fait toute la différence, c&apos;est un
           accès 7 jours sur 7 et de 8h00 à 22h00.
         </p>
       </>
@@ -1123,7 +1122,7 @@ export const formulas: Formula[] = [
     color:'text-Perspectives_orange',
     contact: {
       phone: "+225 01 43 44 86 86",
-      email: "info@Perspectivescoworking.com",
+      email: "info@Perspectives.com",
       address: "Cocody Saint Viateur, près du Nouveau Rond Point.",
     },
   },
@@ -1138,7 +1137,7 @@ export const formulas: Formula[] = [
     color:'text-Perspectives_yellow',
     contact: {
       phone: "+225 01 43 44 86 86",
-      email: "info@Perspectivescoworking.com",
+      email: "info@Perspectives.com",
       address: "Cocody Saint Viateur, près du Nouveau Rond Point.",
     },
   },
@@ -1153,7 +1152,7 @@ export const formulas: Formula[] = [
     color:'text-Perspectives_green',
     contact: {
       phone: "+225 01 43 44 86 86",
-      email: "info@Perspectivescoworking.com",
+      email: "info@Perspectives.com",
       address: "Cocody Saint Viateur, près du Nouveau Rond Point.",
     },
   },

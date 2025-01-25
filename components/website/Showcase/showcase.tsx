@@ -78,10 +78,10 @@ export default function Showcase() {
   return (
     <section id="showcase" className="container py-14">
       <h2 className="text-Perspectives_yellow mb-2 text-center font-medium text-2xl md:text-4xl tracking-tight font-saudagar">
-        Nos Espaces
+        Nos services
       </h2>
       <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-        Des espaces de coworking en Côte-d&apos;Ivoire
+      Perspective CI offre une gamme complète de services visant à répondre aux besoins de nos clients dans divers domaines : Patrimoine Financier,Immobilier ,Transport & Logistique.
       </h3>
       <div className="relative flex flex-col">
         <Marquee pauseOnHover className="max-w-screen [--duration:40s]">

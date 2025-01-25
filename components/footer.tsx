@@ -14,25 +14,27 @@ export default function Footer() {
   return (
     <section className="container px-0 xl:px-8 bg-perspectives_marron min-h-[50vh] h-fit xl:h-[500px] relative">
       <div className="flex flex-col xl:flex-row xl:h-full relative w-full xl:items-stretch gap-8">
-        <div className="py-14 w-full xl:w-[350px] bg-black/90 flex flex-col gap-4 px-4 sm:px-8 md:px-10 md:gap-6 items-center xl:items-start justify-center">
-          <Icons.logo_black className="size-20" />
+      <div className="py-14 w-full xl:w-[350px] bg-black/90 flex flex-col gap-4 px-4 sm:px-8 md:px-10 md:gap-6 items-center xl:items-start justify-center">
+      <div className="w-40 h-10 overflow-hidden">
+         <Icons.logo_black className="w-full h-full object-cover" />
+       </div>
           <p className="text-white text-sm w-4/5 sm:w-3/4 md:w-1/2 text-center xl:text-left xl:w-full">
             Des aménagements attractifs, conçus pour la collaboration et le développement des réseaux professionnels.
           </p>
           <div className="flex items-center gap-4">
-            <a href="https://www.facebook.com//profile.php?id=61553900900562" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-Perspectives_green ring-1 ring-Perspectives_yellow bg-white flex justify-center items-center">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-Perspectives_green ring-1 ring-Perspectives_yellow bg-white flex justify-center items-center">
               <Icons.facebook className="size-6" />
             </a>
-            <a href="https://www.linkedin.com/company/Perspectives-co-working" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-Perspectives_green ring-1 ring-Perspectives_yellow bg-white flex justify-center items-center">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-Perspectives_green ring-1 ring-Perspectives_yellow bg-white flex justify-center items-center">
               <Icons.linkedIn className="size-6" />
             </a>
-            <a href="https://www.instagram.com/Perspectivescoworking" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-Perspectives_green ring-1 ring-Perspectives_yellow bg-white flex justify-center items-center">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-Perspectives_green ring-1 ring-Perspectives_yellow bg-white flex justify-center items-center">
               <Icons.instagram className="size-6" />
             </a>
-            <a href="https://twitter.com/Perspectivescoworking" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-Perspectives_green ring-1 ring-Perspectives_yellow bg-white flex justify-center items-center">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-Perspectives_green ring-1 ring-Perspectives_yellow bg-white flex justify-center items-center">
               <Icons.twitter className="size-6" />
             </a>
-            <a href="https://www.youtube.com/@PerspectivesCoworking" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-Perspectives_green ring-1 ring-Perspectives_yellow bg-white flex justify-center items-center">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-Perspectives_green ring-1 ring-Perspectives_yellow bg-white flex justify-center items-center">
               <Icons.youtube className="size-6" />
             </a>
           </div>
@@ -60,7 +62,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="text-white">
-            <h3 className="text-lg font-semibold">Perspectives CO-WORKING</h3>
+            <h3 className="text-lg font-semibold">Perspectives </h3>
             <div className="mt-2 grid grid-cols-2 md:grid-cols-1">
               {menuList[3].menus[0].href && (
                 <Link href={menuList[3].menus[0].href} className="hover:font-semibold transition-all duration-200">
@@ -72,19 +74,6 @@ export default function Footer() {
                   {menuList[5].menus[0].label}
                 </Link>
               )}
-            </div>
-          </div>
-
-          {/* Section Adresse et RCC */}
-          <div className="text-white">
-            <h3 className="text-lg font-semibold">INFORMATIONS</h3>
-            <div className="mt-2">
-              <p className="whitespace-nowrap">
-                Adresse : MACI SUARL, Abidjan Cocody, Saint Viateur, près du rond-point de la Y4
-              </p>
-              <p className="whitespace-nowrap">
-                RCCM : CI-ABJ-03-2022-B13-04387 / N° CC : 2242023T
-              </p>
             </div>
           </div>
         </div>
