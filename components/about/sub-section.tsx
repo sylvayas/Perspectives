@@ -6,57 +6,38 @@ export default function SubSection() {
   return (
     <section className="relative">
       <div className="py-8 px-4 md:px-16 mx-auto max-w-screen-xl container lg:py-16">
-        <div className="max-w-screen-lg text-gray-700 sm:text-lg">
-          <h2 className="mb-4 text-4xl tracking-tight font-bold font-saudagar">
-            Perspectives vous propose de découvrir ses espaces de travail
-            flexibles et économiques à Abidjan.
-          </h2>
-          <p className="text-custom-justify">
-            <p className="mb-4 font-light text-sm">
-              Près du rond-point de la Y4 dans le quartier de st Viateur à
-              Cocody,{" "}
-              <b className="font-medium">
-                Perspectives met à votre disposition des bureaux en location
-                pour la domiciliation physique de votre entreprise.
-              </b>{" "}
-              Vous y trouverez dans cet espace fonctionnel une salle de réunion
-              de 10 voir 14 personnes. <br /> <br />
-              La Côte-d&apos;Ivoire étant un pays très attractif pour faire du
-              business , vous pourrez également venir y passer vos moments de
-              travail et y organiser tous vos rendez-vous.
+        <div className="flex flex-col md:flex-row items-center">
+          {/* Texte */}
+          <div className="max-w-screen-lg text-gray-700 sm:text-lg md:w-1/2 mb-8 md:mb-0">
+            <h2 className="mb-4 text-4xl tracking-tight font-bold font-saudagar text-perspectives_marron">
+              QUI SOMMES-NOUS
+            </h2>
+            <p className="font-light text-sm mb-4">
+              PersPectives est née d’une véritable passion pour la gestion patrimoine.
             </p>
-            <p className="mb-4 text-sm  font-light ">
-              De la domiciliation virtuelle à la domiciliation physique des
-              entreprises, il s&apos;agit d&apos;un tiers lieu qui favorise la
-              rencontre entre entrepreneurs de différents secteurs
-              d&apos;activités.
-              <br /> Les associations y trouvent également un siège social et
-              des espaces meublés, équipés pour accueillir des activités et
-              programmes.
+            <p className="mb-4 text-sm font-light">
+              Outre notre savoir-faire et compétence qu’on continue d’enrichir à travers des prestations de service de qualité, un personnel qualifié, expérimenté et investi dans la recherche de l’excellence.
+            </p>
+            <p className="mb-4 text-sm font-light">
+              Quel que soit vos besoins, PersPectives vous accompagne et assiste de la phase initiale à la phase finale en tenant compte de vos besoins afin de vous offrir un service de qualité répondant à vos exigences.
             </p>
             <p className="mb-4 font-light text-sm">
-              Sachez que vous pourrez également profiter d&apos;espaces
-              événementiels privatisables en fonction de vos envies et projets.{" "}
-              <br />
-              Une connexion internet, une papeterie, une imprimante, un
-              distributeur de boisson froide, un coin café etc … vous mettrons
-              dans des conditions optimales pour travailler et développer votre
-              entreprise.
+              Nous nous engageons à offrir un service professionnel et honnête, lors de nos prestations en étroite collaboration avec vous.
             </p>
-          </p>
-          {/* <a href="#" className="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
-                        Learn more
-                        <svg className="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                    </a> */}
+          </div>
+
+          {/* Image section */}
+          <div className="md:w-1/2 flex justify-center">
+            <img 
+              src="/images/about/4.jpg" // Utilise un chemin relatif
+              alt="Qui sommes-nous" 
+              className="max-w-full h-auto rounded-lg shadow-lg" // Ajoute des styles pour un meilleur rendu
+              style={{ maxWidth: '400px' }} // Ajuste la taille si nécessaire
+            />
+          </div>
         </div>
       </div>
 
-      {/* <div className="container grid grid-cols-2 gap-4 md:grid-cols-4 py-8 md:py-4 bg-black text-white">
-                <p className="font-medium text-xs md:text-sm"><Icons.laptop className="size-4 md:size-6 mb-2" />Postes équipés</p>
-                <p className="font-medium text-xs md:text-sm"><Icons.key className="size-4 md:size-6 mb-2" />Salles de réunion privées</p>
-                <p className="font-medium text-xs md:text-sm"><Icons.space className="size-4 md:size-6 mb-2" />Espaces de</p>
-                <p className="font-medium text-xs md:text-sm"><Icons.building className="size-4 md:size-6 mb-2" />Domiciliation et services dédiés</p>
-            </div> */}
       <GridPattern
         squares={[
           [4, 4],

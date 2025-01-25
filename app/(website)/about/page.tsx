@@ -9,9 +9,9 @@ export default async function OurSpace() {
         <div>
             <SubSection />
             <Valeurs />
-            <Missiion_Charte />
-            <ADM />
-            <About />
+            {/* <Missiion_Charte />
+            <ADM /> */}
+            {/* <About /> */}
         </div>
     );
 }
