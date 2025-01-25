@@ -8,7 +8,7 @@ export default function SubSection() {
       <div className="py-8 px-4 md:px-16 mx-auto max-w-screen-xl container lg:py-16">
         <div className="max-w-screen-lg text-gray-700 sm:text-lg">
           <h2 className="mb-4 text-4xl tracking-tight font-bold font-saudagar">
-            Perspectives coworking vous propose de découvrir ses espaces de travail
+            Perspectives vous propose de découvrir ses espaces de travail
             flexibles et économiques à Abidjan.
           </h2>
           <p className="text-custom-justify">
@@ -16,7 +16,7 @@ export default function SubSection() {
               Près du rond-point de la Y4 dans le quartier de st Viateur à
               Cocody,{" "}
               <b className="font-medium">
-                Perspectives coworking met à votre disposition des bureaux en location
+                Perspectives met à votre disposition des bureaux en location
                 pour la domiciliation physique de votre entreprise.
               </b>{" "}
               Vous y trouverez dans cet espace fonctionnel une salle de réunion
@@ -54,7 +54,7 @@ export default function SubSection() {
       {/* <div className="container grid grid-cols-2 gap-4 md:grid-cols-4 py-8 md:py-4 bg-black text-white">
                 <p className="font-medium text-xs md:text-sm"><Icons.laptop className="size-4 md:size-6 mb-2" />Postes équipés</p>
                 <p className="font-medium text-xs md:text-sm"><Icons.key className="size-4 md:size-6 mb-2" />Salles de réunion privées</p>
-                <p className="font-medium text-xs md:text-sm"><Icons.space className="size-4 md:size-6 mb-2" />Espaces de Coworking</p>
+                <p className="font-medium text-xs md:text-sm"><Icons.space className="size-4 md:size-6 mb-2" />Espaces de</p>
                 <p className="font-medium text-xs md:text-sm"><Icons.building className="size-4 md:size-6 mb-2" />Domiciliation et services dédiés</p>
             </div> */}
       <GridPattern

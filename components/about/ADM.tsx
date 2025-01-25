@@ -29,7 +29,7 @@ export default function ADM() {
                     </div>
                     <div>
                         <p className="text-left mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400 text-custom-justify">
-                            Perspectives coworking est un tiers lieu à la disposition de l&apos;écosystème entrepreneurial ivoirien fondé en 2024 par Edyeh ANOUMAN KACOU...
+                            Perspectives  est un tiers lieu à la disposition de l&apos;écosystème entrepreneurial ivoirien fondé en 2024 par Edyeh ANOUMAN KACOU...
                         </p>
                     </div>
                     <GridPattern
