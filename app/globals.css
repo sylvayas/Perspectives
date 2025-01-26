@@ -3,8 +3,66 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Book Antique";
+  font-family: "LemonMilk";
   src: url("/fonts/lemon_milk/LEMONMILK-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LemonMilk";
+  src: url("/fonts/lemon_milk/LEMONMILK-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "LemonMilk";
+  src: url("/fonts/lemon_milk/LEMONMILK-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LemonMilk";
+  src: url("/fonts/lemon_milk/LEMONMILK-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ArdelaEdge";
+  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ArdelaEdge";
+  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Italic Variable.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "ArdelaEdge";
+  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ArdelaEdge";
+  src: url("/fonts/ardela_edge/ARDELA EDGE X01 Bold Italic.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "saudagar";
+  src: url("/fonts/saudagar.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -83,7 +141,6 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: "Book Antique", serif; /* Application de Book Antique */
   }
 }
 

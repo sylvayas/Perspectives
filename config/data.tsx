@@ -344,7 +344,7 @@ export const partenaires = [
       "Dans le cadre de l'immatriculation de votre entreprise au CEPICI pour obtenir une autorisation légale d'exercer votre activité en Côte-d'Ivoire il vous sera nécessaire de disposer d'un siège-social et de vous rattacher par la suite à un centre d'impôts ivoirien.",
       "Perspectives  met à votre disposition une adresse géographique. Grâce à la souscription d'un abonnement annuel vous obtenez un contrat qui vous permettra de compléter votre dossier auprès du notaire, de l'avocat ou l'expert en charge de faire la constitution de votre société à Abidjan.",
     ],
-    image: "/images/Partenaires/logo.jpg",
+    image: "/images/Partenaires/logo7.jpg",
     bookingLink:'/reservation-domiciliation'
   },
   {

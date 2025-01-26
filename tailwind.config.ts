@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config = {
-  darkMode: ["class"], // Active le mode sombre basé sur une classe CSS
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -12,16 +12,19 @@ const config = {
   prefix: "",
   theme: {
     container: {
-      center: true, // Centre le conteneur
-      padding: "2rem", // Ajoute un padding de 2rem
+      center: true,
+      padding: "2rem",
       screens: {
-        "2xl": "1400px", // Largeur maximale pour les écrans 2xl
+        "2xl": "1400px",
       },
     },
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
-        bookAntique: ["Book Antique", "serif"], // Ajout de Book Antique
+        lora: ["var(--font-lora)", ...fontFamily.sans],
+        lemonMilk: ["LemonMilk", "sans-serif"],
+        ardelaEdge: ["ArdelaEdge", "sans-serif"],
+        saudagar: ["saudagar", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
