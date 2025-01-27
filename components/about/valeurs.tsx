@@ -1,4 +1,4 @@
-"use client";
+"use client"; // Ajoutez cette ligne au début du fichier
 
 import React, { forwardRef, useRef } from "react";
 import TitleSection from '@/components/title-section';
@@ -6,7 +6,7 @@ import { Icons } from "@/components/icons";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
-import Image from 'next/image'; // Importation du composant Image
+import Image from 'next/image';
 
 const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(({ className, children }, ref) => {
     return (
@@ -79,8 +79,8 @@ export default function Valeurs() {
                             src="/images/valeur/3.jpg" 
                             alt="Valeurs de l'entreprise" 
                             className="max-w-full h-auto" 
-                            width={600} // Remplacez par une largeur appropriée
-                            height={400} // Remplacez par une hauteur appropriée
+                            width={600} 
+                            height={400} 
                         />
                     </div>
                 </div>
