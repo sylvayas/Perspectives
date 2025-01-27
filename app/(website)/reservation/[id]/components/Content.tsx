@@ -99,8 +99,8 @@ export default function Content({ group, space }: { group: any; space: any }) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            subject: "Demande de réservation Perspectives Coworking",
-            to: [data.email, "info@Perspectivescoworking.com"],
+            subject: "Demande de réservation PersPectives",
+            to: [data.email, "info@perspectivesci.com"],
             emailData: {
               coworkingName: space.title,
               category: group.title,
@@ -152,8 +152,8 @@ export default function Content({ group, space }: { group: any; space: any }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          subject: "Facture Perspectives Coworking",
-          to: [data.email, "info@Perspectivescoworking.com"],
+          subject: "Facture PERSPECTIVES",
+          to: [data.email, "info@noviscoworking.com"],
           emailData: {
             coworkingName: space.title,
             category: group.title,

@@ -6,10 +6,10 @@ import { CalendarIcon } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 
 const images = [
-  "/images/coworking/Bureaux privés/Bureau confiance/img (1).jpg",
-  "/images/coworking/Salle de réunion/img (1).jpg",
-  "/images/coworking/Espace Bulle Open space/img (1).jpg",
-  "/images/coworking/Espace commun/img (1).jpg",
+  "/images/perspective/Bureaux privés/Bureau confiance/img (1).jpg",
+  "/images/perspective/Salle de réunion/img (1).jpg",
+  "/images/perspective/Espace Bulle Open space/img (1).jpg",
+  "/images/perspective/Espace commun/img (1).jpg",
 ];
 
 export default function Hero() {
@@ -57,7 +57,7 @@ export default function Hero() {
               <span className="ml-1">Réserver mon espace</span>
             </div>
             <div className="ml-2 flex items-center gap-1 text-sm md:flex">
-              <CalendarIcon className="size-4 text-white transition-all duration-300 group-hover:text-Perspectives_orange" />
+              <CalendarIcon className="size-4 text-white transition-all duration-300 group-hover:text-novis_orange" />
             </div>
           </Link>
         </div>

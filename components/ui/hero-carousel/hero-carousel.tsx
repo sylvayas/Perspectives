@@ -51,7 +51,7 @@ export default function HeroCarousel({ images }: { images: string[] }) {
               src={img}
               fill
             />
-            <div className="absolute z-[1] top-0 left-0 w-full h-full bg-gradient-to-b from-black to-Perspectives_green opacity-50" />
+            <div className="absolute z-[1] top-0 left-0 w-full h-full bg-gradient-to-b from-black to-novis_green opacity-50" />
           </SwiperSlide>
         );
       })}

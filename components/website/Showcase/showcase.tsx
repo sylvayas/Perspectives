@@ -18,25 +18,25 @@ const datas: {
   href: string;
 }[] = [
     {
-      image: "/images/coworking/Bureaux privés/Bureau confiance/img (2).jpg",
+      image: "/images/perspective/Bureaux privés/Bureau confiance/img (2).jpg",
       title: "Bureau privé",
       description: "Réservez votre bureau adapté à la croissance de votre entreprise.",
       href: "/our_spaces/private_offices",
     },
     {
-      image: "/images/coworking/Espace Bulle Open space/img (1).jpg",
+      image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
       title: "Open Space",
       description: "Rencontrez des entrepreneurs et développez votre réseau.",
       href: "/our_spaces/open_space",
     },
     {
-      image: "/images/coworking/Salle de réunion/img (2).jpg",
+      image: "/images/perspective/Salle de réunion/img (2).jpg",
       title: "Salle de réunion",
       description: "Salles entièrement équipées et prêtes à l'emploi.",
       href: "/our_spaces/meeting_room",
     },
     {
-      image: "/images/coworking/Espace Bulle Open space/img (2).jpg",
+      image: "/images/perspective/Espace Bulle Open space/img (2).jpg",
       title: "Espace commun",
       description: "Une bonne adresse avec les bons services.",
       href: "/our_spaces/common_space",
@@ -77,11 +77,11 @@ export function ShowcaseCard({
 export default function Showcase() {
   return (
     <section id="showcase" className="container py-14">
-      <h2 className="text-Perspectives_yellow mb-2 text-center font-medium text-2xl md:text-4xl tracking-tight font-saudagar">
-        Nos services
+      <h2 className="text-novis_yellow mb-2 text-center font-medium text-2xl md:text-4xl tracking-tight font-saudagar">
+        Nos Espaces
       </h2>
       <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-      Perspective CI offre une gamme complète de services visant à répondre aux besoins de nos clients dans divers domaines : Patrimoine Financier,Immobilier ,Transport & Logistique.
+        Des espaces de coworking en Côte-d&apos;Ivoire
       </h3>
       <div className="relative flex flex-col">
         <Marquee pauseOnHover className="max-w-screen [--duration:40s]">

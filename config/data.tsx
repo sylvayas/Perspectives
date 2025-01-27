@@ -344,7 +344,7 @@ export const partenaires = [
       "Dans le cadre de l'immatriculation de votre entreprise au CEPICI pour obtenir une autorisation légale d'exercer votre activité en Côte-d'Ivoire il vous sera nécessaire de disposer d'un siège-social et de vous rattacher par la suite à un centre d'impôts ivoirien.",
       "Perspectives  met à votre disposition une adresse géographique. Grâce à la souscription d'un abonnement annuel vous obtenez un contrat qui vous permettra de compléter votre dossier auprès du notaire, de l'avocat ou l'expert en charge de faire la constitution de votre société à Abidjan.",
     ],
-    image: "/images/Partenaires/logo7.jpg",
+    image: "/images/perspective/logo7.jpg",
     bookingLink:'/reservation-domiciliation'
   },
   {
@@ -357,7 +357,7 @@ export const partenaires = [
       "Perspectives  vous aide à atteindre cet objectif en minimisant vos coûts. Offrez-vous le luxe de bénéficier d'un bureau élégant à Abidjan au sein d'un espace partagé avec une communauté (locaux, expatriés, repats) et bénéficiez d'un large réseau.",
       "2 possibilités s'offrent à vous, le bureau privé ou l'espace open-space",
     ],
-    image: "/images/Partenaires/logo1.jpg",
+    image: "/images/perspective/logo1.jpg",
 
   },
   {
@@ -369,7 +369,7 @@ export const partenaires = [
       "A chaque bureau son ambiance et son authenticité, choisissez qui vous va à l'instant en fonction de votre humeur pour votre bien être et une meilleure productivité. ",
     ],
 
-    image: "/images/Partenaires/logo2.jpg",
+    image: "/images/perspective/logo2.jpg",
   },
   {
     id: "location_salle_de_reunion",
@@ -381,7 +381,7 @@ export const partenaires = [
       "Grâce à son accessibilité c'est l'emplacement rêvé pour organiser vos réunions, vos formations, vos masterclass. Vos convives, collaborateurs, clients ne pourraient être que ravis de cet endroit que nous nommons affectueusement le labo.",
       "Ecrans, paperboard, stylos et accès wifi pour chaque participant.",
     ],
-    image: "/images/Partenaires/logo3.png",
+    image: "/images/perspective/logo3.png",
 
   },
   {
@@ -394,7 +394,7 @@ export const partenaires = [
       "Avec sa capacité de 25 à 50 personnes choisissez au sein du  abidjanais l'espace qui se prêtera au mieux au format de votre vision.",
       "Bénéficiez d'un espace spacieux, sécurisé par un service de gardiennage agrée. Places de parking disponibles, Cuisine disponible",
     ],
-    image: "/images/Partenaires/logo4.jpg",
+    image: "/images/perspective/logo4.jpg",
   },
 ];
 
@@ -509,7 +509,7 @@ export const espaces = [
       },
     ],
     adresse:
-      "COCODY SAINT VIATEUR, Immeuble Kori près du rond-point de la Y4 entre Nissi assurance et BT mat",
+      "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     description: (
       <>
         <p className="text-sm md:text-md mb-2 md:mb-3">
@@ -583,7 +583,7 @@ export const espaces = [
           },
         ],
         adresse:
-          "COCODY SAINT VIATEUR, Immeuble Kori près du rond-point de la Y4 entre Nissi assurance et BT mat",
+          "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
         description: (
           <>
             <p className="text-sm md:text-md mb-2 md:mb-3">
@@ -650,7 +650,7 @@ export const espaces = [
           }
         ],
         adresse:
-          "COCODY SAINT VIATEUR, Immeuble Kori près du rond-point de la Y4 entre Nissi assurance et BT mat",
+          "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
         description: (
           <>
             <p className="text-sm md:text-md mb-2 md:mb-3">
@@ -717,7 +717,7 @@ export const espaces = [
           },
         ],
         adresse:
-          "COCODY SAINT VIATEUR, Immeuble Kori près du rond-point de la Y4 entre Nissi assurance et BT mat",
+          "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
         description: (
           <>
             <p className="text-sm md:text-md mb-2 md:mb-3">
@@ -784,7 +784,7 @@ export const espaces = [
           },
         ],
         adresse:
-          "COCODY SAINT VIATEUR, Immeuble Kori près du rond-point de la Y4 entre Nissi assurance et BT mat",
+          "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
         description: (
           <>
             <p className="text-sm md:text-md mb-2 md:mb-3">
@@ -852,7 +852,7 @@ export const espaces = [
           },
         ],
         adresse:
-          "COCODY SAINT VIATEUR, Immeuble Kori près du rond-point de la Y4 entre Nissi assurance et BT mat",
+          "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
         description: (
           <>
             <p className="text-sm md:text-md mb-2 md:mb-3">
@@ -904,7 +904,7 @@ export const espaces = [
     id: "open_space",
     title: "Open space",
     adresse:
-      "COCODY SAINT VIATEUR, Immeuble Kori près du rond-point de la Y4 entre Nissi assurance et BT mat",
+      "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     images: [
       {
         src: "/images/perspective/Espace Bulle Open space/img (1).jpg",
@@ -946,7 +946,7 @@ export const espaces = [
     id: "meeting_room",
     title: "Salle de réunion",
     adresse:
-      "COCODY SAINT VIATEUR, Immeuble Kori près du rond-point de la Y4 entre Nissi assurance et BT mat",
+      "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     tarifs: [
       {
         name: "Tarif semaine",
@@ -1029,7 +1029,7 @@ export const espaces = [
     id: "common_space",
     title: "Espace commun",
     adresse:
-      "COCODY SAINT VIATEUR, Immeuble Kori près du rond-point de la Y4 entre Nissi assurance et BT mat",
+      "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     tarifs: [
       {
         name: "Tarif soirée",
@@ -1121,9 +1121,9 @@ export const formulas: Formula[] = [
     image: "/images/domi_cloud/Visuel formule CLOUD_.png",
     color:'text-Perspectives_orange',
     contact: {
-      phone: "+225 01 43 44 86 86",
-      email: "info@Perspectives.com",
-      address: "Cocody Saint Viateur, près du Nouveau Rond Point.",
+      phone: "+225 07 07-13-70-50",
+      email: "info@perspectives.com",
+      address: "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     },
   },
   {
@@ -1136,9 +1136,9 @@ export const formulas: Formula[] = [
     image: "/images/domi_cloud/Visuel formule ECO.png",
     color:'text-Perspectives_yellow',
     contact: {
-      phone: "+225 01 43 44 86 86",
-      email: "info@Perspectives.com",
-      address: "Cocody Saint Viateur, près du Nouveau Rond Point.",
+      phone: "+225 07 07-13-70-50",
+      email: "info@perspectives.com",
+      address: "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     },
   },
   {
@@ -1151,9 +1151,9 @@ export const formulas: Formula[] = [
     image: "/images/domi_cloud/Visuel formule FLEX.png",
     color:'text-Perspectives_green',
     contact: {
-      phone: "+225 01 43 44 86 86",
-      email: "info@Perspectives.com",
-      address: "Cocody Saint Viateur, près du Nouveau Rond Point.",
+      phone: "+225 07 07-13-70-50",
+      email: "info@perspectives.com",
+      address: "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     },
   },
 ];

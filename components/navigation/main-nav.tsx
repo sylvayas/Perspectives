@@ -26,8 +26,7 @@ import {
 export function MainNav() {
     const pathname = usePathname();
     const menuList = getMenuList(pathname);
-    console.log(menuList); // Vérifiez les données du menu
-    console.log(Icons); // Vérifiez les icônes
+
     return (
         <div className="mr-4 hidden md:flex">
             <Link href="/" className="relative mr-6 flex items-center space-x-2">
@@ -37,32 +36,32 @@ export function MainNav() {
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         <Link href={menuList[0].menus[0].href} legacyBehavior passHref>
-                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[0].menus[0].active && "font-bold text-Perspectives_orange"}`)} >
+                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[0].menus[0].active && "font-bold text-novis_orange"}`)} >
                                 {menuList[0].menus[0].label}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger className={cn(`${menuList[1].menus[0].active && "font-bold text-Perspectives_orange"}`)}>{menuList[1].menus[0].label}</NavigationMenuTrigger>
+                        <NavigationMenuTrigger className={cn(`${menuList[1].menus[0].active && "font-bold text-novis_orange"}`)}>{menuList[1].menus[0].label}</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                 <li className="row-span-6">
                                     <NavigationMenuLink asChild>
                                         <a
-                                            className="flex h-full w-full ring-2 ring-Perspectives_yellow select-none flex-col justify-end rounded-md bg-perspectives_marron p-6 no-underline outline-none focus:shadow-md"
+                                            className="flex h-full w-full ring-2 ring-novis_yellow select-none flex-col justify-end rounded-md bg-perspectives_marron p-6 no-underline outline-none focus:shadow-md"
                                             href={menuList[1].menus[0].href}
                                         >
                                             <Icons.logo className="h-20 w-20 mb-4" />
 
                                             <p className="text-sm leading-tight text-white">
-                                                Bienvenue au sein des espaces de Perspectives coworking à Cocody.
+                                                Bienvenue au sein des espaces de Perspectivesà Cocody.
                                             </p>
                                         </a>
                                     </NavigationMenuLink>
                                 </li>
                                 {menuList[1].menus[0].submenus.slice(1,).map((item) => (
-                                    <ListItem key={item.label} href={item.href} title={item.label} className={cn(`${item.active && "font-bold text-Perspectives_orange"}`)} />
+                                    <ListItem key={item.label} href={item.href} title={item.label} className={cn(`${item.active && "font-bold text-novis_orange"}`)} />
                                 ))}
                             </ul>
                             <GridPattern
@@ -94,7 +93,7 @@ export function MainNav() {
                         <NavigationMenuContent>
                             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                                 {menuList[2].menus[0].submenus.map((item, index: number) => (
-                                    <ListItem key={index} href={item.href} title={`${index + 1}- ${item.label}`} className={cn(`${item.active && "font-bold text-Perspectives_orange"}`)} />
+                                    <ListItem key={index} href={item.href} title={`${index + 1}- ${item.label}`} className={cn(`${item.active && "font-bold text-novis_orange"}`)} />
                                 ))}
                             </ul>
                             <GridPattern
@@ -121,14 +120,19 @@ export function MainNav() {
                     </NavigationMenuItem>
 
 
+
+
+
+
+
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger className={cn(`${menuList[3].menus[0].active && "font-bold text-Perspectives_orange"}`)}>{menuList[3].menus[0].label}</NavigationMenuTrigger>
+                        <NavigationMenuTrigger className={cn(`${menuList[3].menus[0].active && "font-bold text-novis_orange"}`)}>{menuList[3].menus[0].label}</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                 <li className="row-span-6">
                                     <NavigationMenuLink asChild>
                                         <a
-                                            className="flex h-full w-full ring-2 ring-Perspectives_yellow select-none flex-col justify-end rounded-md bg-perspectives_marron p-6 no-underline outline-none focus:shadow-md"
+                                            className="flex h-full w-full ring-2 ring-novis_yellow select-none flex-col justify-end rounded-md bg-perspectives_marron p-6 no-underline outline-none focus:shadow-md"
                                             href={menuList[3].menus[0].href}
                                         >
                                             <Icons.logo className="h-20 w-20 mb-4" />
@@ -140,7 +144,7 @@ export function MainNav() {
                                     </NavigationMenuLink>
                                 </li>
                                 {menuList[3].menus[0].submenus.slice(0,).map((item) => (
-                                    <ListItem key={item.label} href={item.href} title={item.label} className={cn(`${item.active && "font-bold text-Perspectives_orange"}`)} />
+                                    <ListItem key={item.label} href={item.href} title={item.label} className={cn(`${item.active && "font-bold text-novis_orange"}`)} />
                                 ))}
                             </ul>
                             <GridPattern
@@ -171,7 +175,7 @@ export function MainNav() {
                    
                     <NavigationMenuItem>
                         <Link href={menuList[4].menus[0].href} legacyBehavior passHref>
-                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[4].menus[0].active && "font-bold text-Perspectives_orange"}`)} >
+                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[4].menus[0].active && "font-bold text-novis_orange"}`)} >
                                 {menuList[4].menus[0].label}
                             </NavigationMenuLink>
                         </Link>
@@ -180,14 +184,14 @@ export function MainNav() {
                     
                     <NavigationMenuItem>
                         <Link href={menuList[5].menus[0].href} legacyBehavior passHref>
-                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[5].menus[0].active && "font-bold text-Perspectives_orange"}`)} >
+                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[5].menus[0].active && "font-bold text-novis_orange"}`)} >
                                 {menuList[5].menus[0].label}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     {/* <NavigationMenuItem>
                         <Link href={menuList[6].menus[0].href} legacyBehavior passHref>
-                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[6].menus[0].active && "font-bold text-Perspectives_orange"}`)} >
+                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[6].menus[0].active && "font-bold text-novis_orange"}`)} >
                                 {menuList[6].menus[0].label}
                             </NavigationMenuLink>
                         </Link>

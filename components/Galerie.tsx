@@ -64,7 +64,7 @@ export function NextJsImage({
     return (
         <div 
             style={{ ...wrapperStyle, position: "relative" }}
-            className="border-2 border-transparent hover:border-Perspectives_orange 
+            className="border-2 border-transparent hover:border-novis_orange 
             transition-all duration-300 shadow-2xl hover:shadow-amber-500/30"
         >
             <Image

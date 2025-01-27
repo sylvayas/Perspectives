@@ -40,14 +40,14 @@ export const InvoiceEmail: React.FC<EmailData> = ({
 }) => (
   <Html>
     <Head />
-    <Preview>Facture pour votre réservation chez Perspectives Coworking</Preview>
+    <Preview>Facture pour votre réservation chez PERSPECTIVES</Preview>
     <Body style={main}>
       <Container style={container}>
         <Img
           src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/logo.png`}
           width="100"
           height="100"
-          alt="Perspectives Coworking"
+          alt="PERSPECTIVES"
           style={logo}
         />
         <Heading style={heading}>Facture de réservation</Heading>

@@ -12,7 +12,7 @@ export default function SpaceStates() {
 
             <div className="mt-8 px-8 grid md:grid-cols-3 gap-8 lg:gap-12 xl:place-content-center">
                 <div className="">
-                    <h3 className="text-lg font-semibold text-Perspectives_green">Déplacements</h3>
+                    <h3 className="text-lg font-semibold text-novis_green">Déplacements</h3>
                     <ul className="mt-2 grid grid-cols-1 list-disc">
                         <li>77 km de lignes de tramway</li>
                         <li>1 425 km d&apos;aménagements cyclables</li>
@@ -22,7 +22,7 @@ export default function SpaceStates() {
                     </ul>
                 </div>
                 <div className="">
-                    <h3 className="text-lg font-semibold text-Perspectives_green">Économie et emploi</h3>
+                    <h3 className="text-lg font-semibold text-novis_green">Économie et emploi</h3>
                     <ul className="mt-2 grid grid-cols-1 list-disc">
                         <li>4 pôles de compétitivité labellisés et 15 clusters</li>
                         <li>450 000 emplois</li>
@@ -31,7 +31,7 @@ export default function SpaceStates() {
                     </ul>
                 </div>
                 <div className="">
-                    <h3 className="text-lg font-semibold text-Perspectives_green">Cadre de vie</h3>
+                    <h3 className="text-lg font-semibold text-novis_green">Cadre de vie</h3>
                     <ul className="mt-2 grid grid-cols-1 list-disc">
                         <li>140 km de balades balisés GR©</li>
                         <li>150 parcs et espaces naturels</li>

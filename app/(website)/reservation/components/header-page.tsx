@@ -1,7 +1,7 @@
 import { Icons } from "@/components/icons";
 import NumberTicker from "@/components/magicui/number-ticker";
 import Image from "next/image";
-import imgback from "@/public/images/coworking/coworking (1).jpg"
+import imgback from "@/public/images/perspective/coworking (1).jpg"
 
 export default function HeaderPage() {
 
@@ -12,8 +12,8 @@ export default function HeaderPage() {
                     <div className="relative z-[2] flex flex-col md:flex-row md:gap-x-8 justify-between bg-black/30 py-8 px-4 sm:py-16 lg:px-8">
                         <div className="max-w-screen-sm text-white text-center md:text-left">
                             <h2 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tight font-semibold">
-                                Réservez maintenant votre espace en toute simplicité</h2>
-                            <p className="mb-8 font-light text-xs sm:text-sm">Bienvenue au sein des espaces de Perspectives coworking à Cocody : coworking, location de bureaux privés dans des bâtiments neufs, propre et moderne.</p>
+                                Réservez maintenant votre espace co-working en toute simplicité</h2>
+                            <p className="mb-8 font-light text-xs sm:text-sm">Bienvenue au sein des espaces de Perspectivesà Cocody : coworking, location de bureaux privés dans des bâtiments neufs, propre et moderne.</p>
                         </div>
                         <div className=" flex flex-col gap-2 md:gap-4">
                             <div className="flex min-w-64 gap-2 bg-perspectives_orange rounded-sm p-2 text-white">

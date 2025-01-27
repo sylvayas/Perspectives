@@ -42,7 +42,7 @@ export const FormulaEmail: React.FC<FormulaEmailData> = ({
           src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/logo.png`}
           width="100"
           height="100"
-          alt="Perspectives Coworking"
+          alt="PERSPECTIVES"
           style={logo}
         />
         <Heading style={heading}>Confirmation de réservation</Heading>
@@ -65,7 +65,7 @@ export const FormulaEmail: React.FC<FormulaEmailData> = ({
         </Section>
         <Section style={footerSection}>
           <Text style={footerText}>
-            Merci de faire confiance à Perspectives Coworking. 
+            Merci de faire confiance à PERSPECTIVES. 
             Nous vous contacterons prochainement pour finaliser votre réservation.
           </Text>
         </Section>

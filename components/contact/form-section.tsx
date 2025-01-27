@@ -103,7 +103,7 @@ export default function FormSection() {
                 type="text"
                 placeholder="Nom"
                 {...register("name", { required: "Le nom est requis" })}
-                className={`w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-Perspectives_yellow focus:bg-transparent ${
+                className={`w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-novis_yellow focus:bg-transparent ${
                   errors.name ? "border-red-500" : ""
                 }`}
               />
@@ -124,7 +124,7 @@ export default function FormSection() {
                     message: "Adresse email invalide",
                   },
                 })}
-                className={`w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-Perspectives_yellow focus:bg-transparent ${
+                className={`w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-novis_yellow focus:bg-transparent ${
                   errors.email ? "border-red-500" : ""
                 }`}
               />
@@ -139,7 +139,7 @@ export default function FormSection() {
                 type="text"
                 placeholder="Sujet"
                 {...register("subject", { required: "Le sujet est requis" })}
-                className={`w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-Perspectives_yellow focus:bg-transparent ${
+                className={`w-full rounded-md py-3 px-4 bg-gray-100 text-gray-800 text-sm outline-novis_yellow focus:bg-transparent ${
                   errors.subject ? "border-red-500" : ""
                 }`}
               />
@@ -153,7 +153,7 @@ export default function FormSection() {
               <textarea
                 placeholder="Message"
                 {...register("message", { required: "Le message est requis" })}
-                className={`w-full rounded-md px-4 bg-gray-100 text-gray-800 text-sm pt-3 outline-Perspectives_yellow focus:bg-transparent ${
+                className={`w-full rounded-md px-4 bg-gray-100 text-gray-800 text-sm pt-3 outline-novis_yellow focus:bg-transparent ${
                   errors.message ? "border-red-500" : ""
                 }`}
               ></textarea>

@@ -14,7 +14,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: hsl(var(--Perspectives-green)) !important;
+  background-color: hsl(var(--novis-green)) !important;
 }
 
 /* Autoplay */

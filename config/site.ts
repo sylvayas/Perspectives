@@ -11,7 +11,7 @@ export const siteConfig = {
     instagram: "",
   },
   keywords: [
-    "Perspectives",
+    "Coworking",
   ],
 };
 

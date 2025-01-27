@@ -5,8 +5,10 @@ import Marquee from "@/components/magicui/marquee";
 export interface ShowcaseCardProps {
   image: string;
 }
-
 const datas: ShowcaseCardProps[] = [
+  {
+    image: "/images/Partenaires/logo.jpg",
+  },
   {
     image: "/images/Partenaires/logo1.jpg",
   },
@@ -28,9 +30,6 @@ const datas: ShowcaseCardProps[] = [
   },
   {
     image: "/images/Partenaires/logo7.jpg",
-  },
-  {
-    image: "/images/Partenaires/logo8.jpg",
   },
 ];
 
@@ -57,7 +56,7 @@ export function ShowcaseCard({
 export default function Showcase() {
   return (
     <section id="showcase" className="container py-14">
-      <h2 className="text-Perspectives_yellow mb-2 text-center font-medium text-2xl md:text-4xl tracking-tight font-saudagar">
+      <h2 className="text-novis_yellow mb-2 text-center font-medium text-2xl md:text-4xl tracking-tight font-saudagar">
         Nos Partenaires
       </h2>
       <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">

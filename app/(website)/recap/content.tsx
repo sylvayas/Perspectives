@@ -98,7 +98,7 @@ export default function Content() {
             Votre paiement a été effectué avec succès et une facture vous a été envoyée par email.
           </p>
         ) : (
-          <p className="text-Perspectives_green font-semibold">
+          <p className="text-novis_green font-semibold">
             Votre demande de réservation a été envoyée avec succès. Nous vous contacterons bientôt.
           </p>
         )}

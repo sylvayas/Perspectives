@@ -19,7 +19,7 @@ export default function Spaces() {
         >
           <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40" />
           <div className="flex items-center">
-            <span className="ml-1 text-xs sm:text-sm">Je découvre les espaces NOIVS</span>{" "}
+            <span className="ml-1 text-xs sm:text-sm">Je découvre les espaces NOIVS CO-WORKING</span>{" "}
           </div>
         </Link>
     </section>

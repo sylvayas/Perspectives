@@ -3,18 +3,15 @@ import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Image from 'next/image'; // Ajout de l'importation
 
 export default function DescriptionAllSpaces({ offre }: { offre: any }) {
   return (
     <section className="container min-h-[300px] mb-14 relative">
       <div className="relative gap-8 items-center md:items-stretch py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-        <Image
+        <img
           className="w-full z-10 object-cover"
           src={offre.image}
           alt="dashboard image"
-          width={800} // Remplacez par la largeur souhaitée
-          height={500} // Remplacez par la hauteur souhaitée
         />
         <div className="mt-4 md:mt-0">
           <h2 className="mb-4 text-2xl md:text-4xl tracking-tight font-saudagar">
@@ -99,12 +96,10 @@ export default function DescriptionAllSpaces({ offre }: { offre: any }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-6 lg:mb-16">
             {offre.avantages.map((avantage: any, key: number) => (
               <div key={key} className="items-center flex flex-col bg-gray-50 rounded-lg shadow">
-                <Image
+                <img
                   className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
                   src={avantage.image}
-                  alt={avantage.title} // Utilisez un titre ou une description comme alt
-                  width={800} // Spécifiez la largeur
-                  height={500} // Spécifiez la hauteur
+                  alt={avantage.image}
                 />
                 <div className="p-5">
                   <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">

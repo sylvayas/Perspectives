@@ -34,7 +34,7 @@ export const ContactEmail: React.FC<ContactEmailData> = ({
           src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/logo.png`}
           width="100"
           height="100"
-          alt="Perspectives Coworking"
+          alt="PERSPECTIVES"
           style={logo}
         />
         <Heading style={heading}>Nouveau message de contact</Heading>
