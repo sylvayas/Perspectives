@@ -111,7 +111,7 @@ export default function Content({ group, space }: { group: any; space: any }) {
               reservationPrice: 5000,
               date: formatDates(dates),
               priceType: selectedTarif,
-              coworkingImage: space.images[0].src,
+              PerspectivesImage: space.images[0].src,
             },
           }),
         });
@@ -153,7 +153,7 @@ export default function Content({ group, space }: { group: any; space: any }) {
         },
         body: JSON.stringify({
           subject: "Facture PERSPECTIVES",
-          to: [data.email, "info@noviscoworking.com"],
+          // to: [data.email, "info@perspectivesci.com"],
           emailData: {
             coworkingName: space.title,
             category: group.title,
@@ -164,7 +164,7 @@ export default function Content({ group, space }: { group: any; space: any }) {
             reservationPrice: totalAmount,
             date: formatDates(dates),
             priceType: selectedTarif,
-            coworkingImage: space.images[0].src,
+            PerspectivesImage: space.images[0].src,
           },
         }),
       })

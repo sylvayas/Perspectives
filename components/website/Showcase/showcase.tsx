@@ -81,7 +81,7 @@ export default function Showcase() {
         Nos Espaces
       </h2>
       <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-        Des espaces de coworking en Côte-d&apos;Ivoire
+        Des espaces en Côte-d&apos;Ivoire
       </h3>
       <div className="relative flex flex-col">
         <Marquee pauseOnHover className="max-w-screen [--duration:40s]">

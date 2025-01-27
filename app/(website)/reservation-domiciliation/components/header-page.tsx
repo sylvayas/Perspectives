@@ -13,7 +13,7 @@ export default function HeaderPage() {
                         <div className="max-w-screen-sm text-white text-center md:text-left">
                             <h2 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tight font-semibold">
                                 Réservez maintenant votre espace co-working en toute simplicité</h2>
-                            <p className="mb-8 font-light text-xs sm:text-sm">Bienvenue au sein des espaces de Perspectivesà Cocody : coworking, location de bureaux privés dans des bâtiments neufs, propre et moderne.</p>
+                            <p className="mb-8 font-light text-xs sm:text-sm">Bienvenue au sein des espaces de Perspectivesà Cocody : location de bureaux privés dans des bâtiments neufs, propre et moderne.</p>
                         </div>
                         <div className=" flex flex-col gap-2 md:gap-4">
                             <div className="flex min-w-64 gap-2 bg-perspectives_orange rounded-sm p-2 text-white">

@@ -1122,7 +1122,7 @@ export const formulas: Formula[] = [
     color:'text-Perspectives_orange',
     contact: {
       phone: "+225 07 07-13-70-50",
-      email: "info@perspectives.com",
+      email: "info@perspectivesci.com",
       address: "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     },
   },
@@ -1137,7 +1137,7 @@ export const formulas: Formula[] = [
     color:'text-Perspectives_yellow',
     contact: {
       phone: "+225 07 07-13-70-50",
-      email: "info@perspectives.com",
+      email: "info@perspectivesci.com",
       address: "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     },
   },
@@ -1152,7 +1152,7 @@ export const formulas: Formula[] = [
     color:'text-Perspectives_green',
     contact: {
       phone: "+225 07 07-13-70-50",
-      email: "info@perspectives.com",
+      email: "info@perspectivesci.com",
       address: "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     },
   },

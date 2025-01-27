@@ -78,7 +78,7 @@ export default function SpaceImages() {
     return (
         <section className="bg-black text-white container h-fit py-14 relative">
             <TitleSection
-                title={"Nos bureaux et espaces de coworking à Cocody"}
+                title={"Nos bureaux et espaces "}
                 description="Une équipe professionnelle est présente au quotidien pour vous assister dans vos activités :  de la gestion des équipements en passant par l'accueil, la réception de vos collaborateurs et visiteurs." />
             <div className="mt-8 md:mt-14 relative w-full h-full">
                 <Marquee className="max-w-screen [--duration:40s]">

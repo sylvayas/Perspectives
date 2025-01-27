@@ -23,16 +23,16 @@ export default function Footer() {
             <a href="https://www.facebook.com//profile.php?id=61553900900562" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
               <Icons.facebook className="size-6" />
             </a>
-            <a href="https://www.linkedin.com/company/novis-co-working" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
               <Icons.linkedIn className="size-6" />
             </a>
-            <a href="https://www.instagram.com/noviscoworking" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
               <Icons.instagram className="size-6" />
             </a>
-            <a href="https://twitter.com/noviscoworking" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
               <Icons.twitter className="size-6" />
             </a>
-            <a href="https://www.youtube.com/@NovisCoworking" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
               <Icons.youtube className="size-6" />
             </a>
           </div>

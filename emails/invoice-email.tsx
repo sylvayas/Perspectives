@@ -23,7 +23,7 @@ export interface EmailData {
   reservationPrice: number;
   date: string;
   priceType: string;
-  coworkingImage: string;
+  PerspectivesImage: string;
 }
 
 export const InvoiceEmail: React.FC<EmailData> = ({
@@ -36,7 +36,7 @@ export const InvoiceEmail: React.FC<EmailData> = ({
   reservationPrice,
   date,
   priceType,
-  coworkingImage,
+  PerspectivesImage,
 }) => (
   <Html>
     <Head />
@@ -53,11 +53,11 @@ export const InvoiceEmail: React.FC<EmailData> = ({
         <Heading style={heading}>Facture de réservation</Heading>
         <Section style={section}>
           <Img
-            src={`${process.env.NEXT_PUBLIC_BASE_URL}${coworkingImage}`}
+            src={`${process.env.NEXT_PUBLIC_BASE_URL}${PerspectivesImage}`}
             width="600"
             height="300"
             alt={coworkingName}
-            style={coworkingImg}
+            style={PerspectivesImg}
           />
           <Text style={text}>Nom du coworking : {coworkingName}</Text>
           <Text style={text}>Catégorie : {category}</Text>
@@ -112,7 +112,7 @@ const text: React.CSSProperties = {
   color: "#484848",
 };
 
-const coworkingImg: React.CSSProperties = {
+const PerspectivesImg: React.CSSProperties = {
   width: "100%",
   height: "auto",
   marginBottom: "16px",

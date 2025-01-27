@@ -52,7 +52,7 @@ export const FormulaEmail: React.FC<FormulaEmailData> = ({
             width="600"
             height="300"
             alt={`Formule ${formulaName}`}
-            style={coworkingImg}
+            style={PerspectivesImg}
           />
           <Text style={text}>Formule réservée : {formulaName}</Text>
           <Text style={text}>Informations du client :</Text>
@@ -113,7 +113,7 @@ const text: React.CSSProperties = {
   margin: "10px 0",
 };
 
-const coworkingImg: React.CSSProperties = {
+const PerspectivesImg: React.CSSProperties = {
   width: "100%",
   height: "auto",
   marginBottom: "16px",

@@ -64,7 +64,7 @@ const FormulaReservationCard = ({ formula }: { formula: Formula }) => {
         },
         body: JSON.stringify({
           subject: `Demande de réservation Formule ${formula.name}`,
-          to: [data.email, "info@noviscoworking.com"],
+          to: [data.email, "info@perspectivesci.com"],
           emailData: {
             formulaName: formula.name,
             formulaImage: formula.image,

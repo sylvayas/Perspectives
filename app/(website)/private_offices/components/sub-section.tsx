@@ -9,7 +9,7 @@ export default function SubSection() {
             <div className="container grid grid-cols-2 gap-4 md:grid-cols-4 py-8 md:py-4 bg-black text-white">
                 <p className="font-medium text-xs md:text-sm"><Icons.laptop className="size-4 md:size-6 mb-2" />Postes équipés</p>
                 <p className="font-medium text-xs md:text-sm"><Icons.key className="size-4 md:size-6 mb-2" />Salles de réunion privées</p>
-                <p className="font-medium text-xs md:text-sm"><Icons.space className="size-4 md:size-6 mb-2" />Espaces de Coworking</p>
+                <p className="font-medium text-xs md:text-sm"><Icons.space className="size-4 md:size-6 mb-2" />Espaces</p>
                 <p className="font-medium text-xs md:text-sm"><Icons.building className="size-4 md:size-6 mb-2" />Domiciliation et services dédiés</p>
             </div>
             <GridPattern

@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
     await sendEmail({
       subject,
       to,
-      react: type=="coworking"? InvoiceEmail(emailData):FormulaEmail(emailData),
+      react: type=="perspectives"? InvoiceEmail(emailData):FormulaEmail(emailData),
     });
     return NextResponse.json(
       { message: "Email sent successfully" },
