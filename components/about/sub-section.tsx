@@ -1,6 +1,7 @@
 import { Icons } from "@/components/icons";
 import GridPattern from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
+import Image from 'next/image'; // Import the Image component
 
 export default function SubSection() {
   return (
@@ -28,10 +29,12 @@ export default function SubSection() {
 
           {/* Image section */}
           <div className="md:w-1/2 flex justify-center">
-            <img 
+            <Image 
               src="/images/about/4.jpg" // Utilise un chemin relatif
               alt="Qui sommes-nous" 
               className="max-w-full h-auto rounded-lg shadow-lg" // Ajoute des styles pour un meilleur rendu
+              width={400} // Specify width
+              height={300} // Specify height
               style={{ maxWidth: '400px' }} // Ajuste la taille si nécessaire
             />
           </div>

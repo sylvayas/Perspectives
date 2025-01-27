@@ -6,6 +6,7 @@ import { Icons } from "@/components/icons";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
+import Image from 'next/image'; // Importation du composant Image
 
 const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(({ className, children }, ref) => {
     return (
@@ -74,11 +75,12 @@ export default function Valeurs() {
                     <h2 className="mb-1 text-2xl md:text-4xl tracking-tight font-saudagar text-perspectives_marron">LES VALEURS</h2>
                     <h3 className="mb-4 text-xl text-black">QUI GUIDENT NOTRE ENTREPRISE</h3>
                     <div className="flex justify-center mb-4">
-                        <img 
+                        <Image 
                             src="/images/valeur/3.jpg" 
                             alt="Valeurs de l'entreprise" 
                             className="max-w-full h-auto" 
-                            style={{ maxWidth: '100%', height: 'auto' }} 
+                            width={600} // Remplacez par une largeur appropriée
+                            height={400} // Remplacez par une hauteur appropriée
                         />
                     </div>
                 </div>
