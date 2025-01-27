@@ -1,4 +1,4 @@
-"use client"; // Ajoutez cette ligne au début du fichier
+"use client"; // Assurez-vous que cette ligne est au tout début
 
 import React, { forwardRef, useRef } from "react";
 import TitleSection from '@/components/title-section';
