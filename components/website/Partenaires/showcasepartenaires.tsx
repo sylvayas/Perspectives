@@ -7,14 +7,14 @@ export interface ShowcaseCardProps {
 }
 const datas: ShowcaseCardProps[] = [
   {
-    image: "/images/Partenaires/logo.jpg",
+    image: "/images/Partenaires/logo.png",
   },
   {
-    image: "/images/Partenaires/logo1.jpg",
+    image: "/images/Partenaires/logo1.png",
   },
 
   {
-    image: "/images/Partenaires/logo2.jpg",
+    image: "/images/Partenaires/logo2.png",
   },
   {
     image: "/images/Partenaires/logo3.jpg",
@@ -29,7 +29,7 @@ const datas: ShowcaseCardProps[] = [
     image: "/images/Partenaires/logo6.jpg",
   },
   {
-    image: "/images/Partenaires/logo7.jpg",
+    image: "/images/Partenaires/logo7.png",
   },
 ];
 
