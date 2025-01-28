@@ -31,17 +31,17 @@ export default function Hero() {
       <div className={cn("h-[60vh] md:h-[400px] xl:h-[500px] relative container px-0 max-w-[1400px]")}>
         <div className="absolute z-[3] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center flex-col gap-8 max-w-5xl w-full">
           <h1 className="text-lg sm:text-xl md:text-4xl text-white text-center font-lora uppercase">
-            Espaces de travail flexibles et économiques 
+          DES SOLUTIONS SUR  MESURE 
           </h1>
 
           <div className="flex items-center justify-center text-white flex-wrap gap-2">
-            {item("BUREAUX PRIVÉS", "/our_spaces/private_offices")}
+            {item("FINANCE", "/our_spaces/private_offices")}
             <span className="h-4 w-[2px] bg-white"></span>
-            {item("OPEN-SPACE", "/our_spaces/open_space")}
+            {item("IMMOBILIER-LOGISTIQUE", "/our_spaces/open_space")}
             <span className="h-4 w-[2px] bg-white"></span>
-            {item("SALLE DE RÉUNION", "/our_spaces/meeting_room")}
+            {item("TRANSIT–TRANSPORT", "/our_spaces/meeting_room")}
             <span className="h-4 w-[2px] bg-white"></span>
-            {item("ESPACE COMMUN", "/our_spaces/common_space")}
+            {item("COMMERCE GÉNÉRAL", "/our_spaces/common_space")}
           </div>
 
           <Link
