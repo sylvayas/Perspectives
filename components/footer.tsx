@@ -20,7 +20,7 @@ export default function Footer() {
             Des aménagements attractifs, conçus pour la collaboration et le développement des réseaux professionnels.
           </p>
           <div className="flex items-center gap-4">
-            <a href="https://www.facebook.com//profile.php?id=61553900900562" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
+            <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">
               <Icons.facebook className="size-6" />
             </a>
             <a href="" target="_blank" rel="noopener noreferrer" className="p-1 rounded-full text-novis_green ring-1 ring-novis_yellow bg-white flex justify-center items-center">

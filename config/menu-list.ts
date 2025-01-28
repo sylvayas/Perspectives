@@ -47,10 +47,11 @@ export function getMenuList(pathname: string): Group[] {
       label: "Nos Services",
       icon: Icons.library,
       submenus: [
-        { href: "/services/patrimoine_financier", label: "Patrimoine Financier", active: pathname === "/services/patrimoine_financier" },
-        { href: "/services/immobilier", label: "Immobilier", active: pathname === "/services/immobilier" },
-        { href: "/services/transport", label: "Transport", active: pathname === "/services/transport" },
-        { href: "/services/equipement_maison", label: "Équipement de Maison", active: pathname === "/services/equipement_maison" },
+        { href: "", label: "", active: pathname === "" },
+        { href: "/services/finance", label: "Finance", active: pathname === "/services/finance" },
+        { href: "/services/patrimoine_financier", label: "Immobilier - logistique", active: pathname === "/services/patrimoine_financier" },
+        { href: "/services/immobilier", label: "Transit –transport", active: pathname === "/services/immobilier" },
+        { href: "/services/transport", label: "Commerce général", active: pathname === "/services/transport" },
       ]
     },
     {

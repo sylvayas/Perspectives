@@ -41,10 +41,9 @@ export function MainNav() {
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
-
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger className={cn(`${menuList[1].menus[0].active && "font-bold text-novis_orange"}`)}>{menuList[1].menus[0].label}</NavigationMenuTrigger>
-                        <NavigationMenuContent>
+                    <NavigationMenuTrigger className={cn(`${menuList[1].menus[0].active && "font-bold text-novis_orange"}`)}>{menuList[1].menus[0].label}</NavigationMenuTrigger>
+                       <NavigationMenuContent>
                             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                 <li className="row-span-6">
                                     <NavigationMenuLink asChild>
@@ -55,7 +54,7 @@ export function MainNav() {
                                             <Icons.logo className="h-20 w-20 mb-4" />
 
                                             <p className="text-sm leading-tight text-white">
-                                                Bienvenue au sein des espaces de Perspectives.
+                                                Bienvenue a PersPectives.
                                             </p>
                                         </a>
                                     </NavigationMenuLink>
@@ -84,10 +83,8 @@ export function MainNav() {
                                     "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
                                 )}
                             />
-                        </NavigationMenuContent>
+                    </NavigationMenuContent>
                     </NavigationMenuItem>
-
-
                     <NavigationMenuItem>
                         <NavigationMenuTrigger>{menuList[2].menus[0].label}</NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -118,13 +115,6 @@ export function MainNav() {
                             />
                         </NavigationMenuContent>
                     </NavigationMenuItem>
-
-
-
-
-
-
-
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className={cn(`${menuList[3].menus[0].active && "font-bold text-novis_orange"}`)}>{menuList[3].menus[0].label}</NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -169,10 +159,6 @@ export function MainNav() {
                             />
                         </NavigationMenuContent>
                     </NavigationMenuItem>
-
-
-                   
-                   
                     <NavigationMenuItem>
                         <Link href={menuList[4].menus[0].href} legacyBehavior passHref>
                             <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[4].menus[0].active && "font-bold text-novis_orange"}`)} >
@@ -180,8 +166,6 @@ export function MainNav() {
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
-
-                    
                     <NavigationMenuItem>
                         <Link href={menuList[5].menus[0].href} legacyBehavior passHref>
                             <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[5].menus[0].active && "font-bold text-novis_orange"}`)} >
