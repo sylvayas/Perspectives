@@ -1,5 +1,5 @@
 import Hero from "@/components/website/Hero";
-import Services from "@/components/website/Services/services";
+import Solutions from "@/components/website/Solutions/solutions";
 import ShowcasePartenaires from "@/components/website/Partenaires/showcasepartenaires";
 import Showcase from "@/components/website/Showcase/showcase";
 import About from "@/components/website/About/about";
@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <div>
       <Hero />
-      <Services />
+      <Solutions />
       <Showcase />
       <ShowcasePartenaires />
       <About />

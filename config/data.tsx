@@ -63,6 +63,49 @@ export const datas: List_SpaceCard[] = [
       },
     ],
   },
+  {
+    id: "logistics_space",
+    title: "Espace Logistique",
+    items: [
+      {
+        id: "warehouse",
+        title: "Entrepôt",
+        imagePath: "/Logistique/Entrepôt",
+      },
+      {
+        id: "transport_space",
+        title: "Espace Transport",
+        imagePath: "/Logistique/Espace Transport",
+      },
+    ],
+  },
+  {
+    id: "cleaning_space",
+    title: "Espace Nettoyage",
+    items: [
+      {
+        id: "cleaning_services",
+        title: "Services de nettoyage",
+        imagePath: "/Nettoyage/Services de nettoyage",
+      },
+    ],
+  },
+  {
+    id: "commerce_space",
+    title: "Espace Commerce",
+    items: [
+      {
+        id: "import_export",
+        title: "Import-Export",
+        imagePath: "/Commerce/Import-Export",
+      },
+      {
+        id: "appliances_sales",
+        title: "Vente d'appareils électroménagers",
+        imagePath: "/Commerce/Vente appareils électroménagers",
+      },
+    ],
+  },
 ];
 
 export const offres = [

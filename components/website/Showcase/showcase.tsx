@@ -78,10 +78,10 @@ export default function Showcase() {
   return (
     <section id="showcase" className="container py-14">
       <h2 className="text-novis_yellow mb-2 text-center font-medium text-2xl md:text-4xl tracking-tight font-saudagar">
-        Nos Espaces
+        Nos Services
       </h2>
       <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-        Des espaces en Côte-d&apos;Ivoire
+      Nous proposons des services variés en finance, immobilier, nettoyage, commerce général et transport, incluant conseil, accompagnement, gestion de biens, location, import-export, et solutions logistiques.
       </h3>
       <div className="relative flex flex-col">
         <Marquee pauseOnHover className="max-w-screen [--duration:40s]">

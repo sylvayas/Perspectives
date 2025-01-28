@@ -15,7 +15,7 @@ export function SiteBanner() {
           ✨{" "}
           <span className="ml-1 font-[580] dark:font-[550]">
             {" "}
-            BIENVENUE CHRZ <span className="font-lora">PERSPECTIVES COTE D’IVOIRE</span> CHAQUE DÉFI EST UNE CHANCE DE BRILLER.
+           <span className="font-lora">PERSPECTIVES</span> ALLONS LOIN ENSEMBLE.
           </span>{" "}
           <ChevronRight className="ml-1 mt-[3px] hidden size-4 transition-all duration-300 ease-out group-hover:translate-x-1 lg:inline-block" />
         </Link>

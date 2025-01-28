@@ -74,6 +74,21 @@ export default function Footer() {
               )}
             </div>
           </div>
+                    {/* Section Adresse et RCC */}
+                    <div className="text-white">
+            <h3 className="text-lg font-semibold">INFORMATIONS</h3>
+            <div className="mt-2">
+              <p className="whitespace-nowrap">
+                Adresse : Rue Alex Fleming Marcory Zone 4c Abidjan-Côte D’ivoire
+              </p>
+              <p className="whitespace-nowrap">
+                Contact :+225 07-07-13-70-50
+              </p>
+              <p className="whitespace-nowrap">
+              E-Mail : info@perspectivesci.com
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <AnimatedGridPattern
