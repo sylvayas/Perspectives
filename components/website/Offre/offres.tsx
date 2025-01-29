@@ -1,5 +1,5 @@
-import * as React from "react"
-import OffresCarousel from "./offres-carousel"
+import * as React from "react";
+import OffresCarousel from "./offres-carousel";
 
 export default function Offres() {
     return (
@@ -8,10 +8,9 @@ export default function Offres() {
                 Nos Offres
             </h2>
             <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-             Nos Offres s'adaptent à vos besoins et à votre budget !
+                Nos Offres s&apos;adaptent à vos besoins et à votre budget !
             </h3>
             <OffresCarousel />
         </section>
-
-    )
+    );
 }
