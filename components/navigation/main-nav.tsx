@@ -30,7 +30,7 @@ export function MainNav() {
     return (
         <div className="mr-4 hidden md:flex">
             <Link href="/" className="relative mr-6 flex items-center space-x-2">
-                <Icons.logo_rogner className="w-28" />
+                <Icons.logo_black_rogner className="w-28" />
             </Link>
             <NavigationMenu className="hidden items-center space-x-6 text-sm font-medium xl:flex">
                 <NavigationMenuList>
@@ -51,7 +51,7 @@ export function MainNav() {
                                             className="flex h-full w-full ring-2 ring-novis_yellow select-none flex-col justify-end rounded-md bg-perspectives_marron p-6 no-underline outline-none focus:shadow-md"
                                             href={menuList[1].menus[0].href}
                                         >
-                                            <Icons.logo className="h-20 w-20 mb-4" />
+                                            <Icons.logo_black className="h-25 w-25 mb-4" />
 
                                             <p className="text-sm leading-tight text-white">
                                                 Bienvenue a PersPectives.
@@ -125,7 +125,7 @@ export function MainNav() {
                                             className="flex h-full w-full ring-2 ring-novis_yellow select-none flex-col justify-end rounded-md bg-perspectives_marron p-6 no-underline outline-none focus:shadow-md"
                                             href={menuList[3].menus[0].href}
                                         >
-                                            <Icons.logo className="h-20 w-20 mb-4" />
+                                            <Icons.logo_black className="h-20 w-20 mb-4" />
 
                                             <p className="text-sm leading-tight text-white">
                                             Découvrez notre galerie.

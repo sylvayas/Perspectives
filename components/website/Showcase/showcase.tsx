@@ -78,10 +78,10 @@ export default function Showcase() {
   return (
     <section id="showcase" className="container py-14">
       <h2 className="text-novis_yellow mb-2 text-center font-medium text-2xl md:text-4xl tracking-tight font-saudagar">
-        Nos Solution
+        Nos Offres
       </h2>
       <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-      Nos Solutions s&apos;adaptent à vos besoins et à votre budget !
+      Nos Offres s&apos;adaptent à vos besoins et à votre budget !
       </h3>
       <div className="relative flex flex-col">
         <Marquee pauseOnHover className="max-w-screen [--duration:40s]">

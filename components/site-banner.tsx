@@ -15,7 +15,7 @@ export function SiteBanner() {
           ✨{" "}
           <span className="ml-1 font-[580] dark:font-[550]">
             {" "}
-            Bienvenue chez <span className="font-lora">PersPectives</span> <span className=" font-lora">CI</span>,ALLONS LOIN ENSEMBLE.
+            Bienvenue chez <span className="font-lora">PersPectives</span> <span className=" font-lora">CI</span>, <span className="font-lora"> allons loin ensemble.</span>
           </span>{" "}
           <ChevronRight className="ml-1 mt-[3px] hidden size-4 transition-all duration-300 ease-out group-hover:translate-x-1 lg:inline-block" />
         </Link>
