@@ -18,25 +18,25 @@ const offres = [
     id: 1,
     image: "/images/offres/offrePage/Finance.png",
     title: "Finance",
-    subdescription: "Bureaux privés modernes conçus pour les professionnels de la finance.",
+    subdescription: "Montage de structuration de dossiers de financement.",
   },
   {
     id: 2,
     image: "/images/offres/offrePage/Immobilier - Logistique.png",
     title: "Immobilier - Logistique",
-    subdescription: "Espace de travail collaboratif idéal pour le secteur immobilier et logistique.",
+    subdescription: "IntermédiationenAchatet Vente,BTP -Construction et Promotion immobilière",
   },
   {
     id: 3,
     image: "/images/offres/offrePage/Transit - Transport.png",
     title: "Transit - Transport",
-    subdescription: "Salles de réunion équipées pour vos besoins en transit et transport.",
+    subdescription: "Service de dédouanement,Transporteurde marchandises",
   },
   {
     id: 4,
     image: "/images/offres/offrePage/Commerce général.png",
     title: "Commerce général",
-    subdescription: "Espace polyvalent pour le commerce général.",
+    subdescription: "Entrepôts, Hangars, Plateformes Logistique",
   },
 ];
 
