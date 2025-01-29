@@ -24,13 +24,13 @@ const offres = [
     id: 2,
     image: "/images/offres/offrePage/Immobilier - Logistique.png",
     title: "Immobilier - Logistique",
-    subdescription: "IntermédiationenAchatet Vente,BTP -Construction et Promotion immobilière",
+    subdescription: "Intermédiationen Achat et Vente, BTP - Construction et Promotion immobilière",
   },
   {
     id: 3,
     image: "/images/offres/offrePage/Transit - Transport.png",
     title: "Transit - Transport",
-    subdescription: "Service de dédouanement,Transporteurde marchandises",
+    subdescription: "Service de dédouanement, Transporteur de marchandises",
   },
   {
     id: 4,
