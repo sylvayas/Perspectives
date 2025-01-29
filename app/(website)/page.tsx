@@ -9,8 +9,8 @@ export default async function Home() {
   return (
     <div>
       <Hero />
-      <Solutions />
       <Showcase />
+      <Solutions />
       <ShowcasePartenaires />
       <About />
       <Statistiques />

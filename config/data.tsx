@@ -111,7 +111,7 @@ export const datas: List_SpaceCard[] = [
 export const offres = [
   {
     id: "domiciliation_virtuelle_entreprise",
-    title: "Domiciliation Virtuelle",
+    title: "Finance",
     subdescription: "Choisissez notre adresse pour en faire la vôtre.",
     description: [
       "Dans le cadre de l'immatriculation de votre entreprise au CEPICI pour obtenir une autorisation légale d'exercer votre activité en Côte-d'Ivoire il vous sera nécessaire de disposer d'un siège-social et de vous rattacher par la suite à un centre d'impôts ivoirien.",
@@ -171,7 +171,7 @@ export const offres = [
   },
   {
     id: "domiciliation_physique_entreprise",
-    title: "Domiciliation physique",
+    title: "Imobilier - Logistique",
     subdescription:
       "Profitez du confort et de l'ambiance dynamisante de notre espace de .",
     description: [
@@ -245,7 +245,7 @@ export const offres = [
   },
   {
     id: "location_occasionnelle_de_bureaux_meubles",
-    title: "Location de bureau",
+    title: "Transit - Trasport",
     subdescription: "Faites comme chez vous !",
     description: [
       "Conscient du fait que toutes les entreprises n'ont pas les mêmes besoins et le même budget nous donnons la possibilité à chacun de pouvoir évoluer à son rythme. A L'heure, à la journée, à la semaine ou au mois venez comme vous êtes.",
@@ -290,7 +290,7 @@ export const offres = [
   },
   {
     id: "location_salle_de_reunion",
-    title: "Salle de réunion",
+    title: "Commerce generale",
     subdescription:
       "Louez une salle de réunion équipée pour vos rencontres professionnelles.",
     description: [
@@ -323,60 +323,60 @@ export const offres = [
     image: "/images/other/salle_reunion.jpg",
 
   },
-  {
-    id: "location_espace_evenementiel",
-    title: "Location espace évènementiel",
-    subdescription: "Une occasion particulière ? Réservez une salle.",
-    description: [
-      "Notre Pack évènement vous permet d'organiser tous vos évènements professionnels à Abidjan.",
-      "La Côte d'Ivoire incontournable sur l'échiquier internationale du business vous donne en 2024 la possibilité de vous faire connaître ou de vous développer à travers l'organisation de conférences de presse, lancement de produits, vente privée, cérémonie de dédicace de livre, networking, vernissage, assemblées générales etc… ",
-      "Avec sa capacité de 25 à 50 personnes choisissez au sein du  abidjanais l'espace qui se prêtera au mieux au format de votre vision.",
-      "Bénéficiez d'un espace spacieux, sécurisé par un service de gardiennage agrée. Places de parking disponibles, Cuisine disponible",
-    ],
-    tarifs: [
-      {
-        name: "Tarif semaine",
-        horraire: "8h-17h et 17h-22h",
-        items: [
-          { title: "1 Demie journée", price: "45 000 F" },
-          { title: "1 Journée", price: "75 000 F" },
-          { title: "Soirée", price: "30 000 F" },
-        ],
-      },
-      {
-        name: "Tarif samedi et dimanche",
-        horraire: "10h-17h",
-        items: [
-          { title: "1 Demie journée", price: "75 000 F" },
-          { title: "1 Journée", price: "90 000 F" },
-        ],
-      },
-    ],
-    options: ["10 personnes", "siège ergonomique", "écran de projection", "rétro-projecteur", "support de notes"],
-    image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
-  },
-  {
-    id: "location_espace_tournage",
-    title: "Location espace tournage",
-    subdescription: "Louez un espace décoré pour vos tournages et podcasts.",
-    description: [
-      "Personal branding, Mise en scène clips vidéo et films, podcast, etc… sont des besoins de notre ère dans le cadre de la communication des activités d'une entreprise ou association.",
-      "Un espace unique décoré par des professionnels avec recherche, beaucoup de soin et de finesse, chaque mètre carré, mobilier, objets de décoration est mis à votre disposition pour le temps d'un tournage sur la capitale ivoirienne.",
-      "Avec Perspectives, ensemble vers le succès.",
-    ],
-    tarifs: [
-      {
-        name: "Tarif samedi et dimanche",
-        horraire: "10h-17h",
-        items: [
-          { title: "1 Demie journée bureau", price: "25 000 F / 30 000 F" },
-          { title: "1 Demie journée salon", price: "40 000 F" },
-        ],
-      },
-    ],
-    horaires: [{ jours: ["Samedi", "Dimanche"], horaires: ["10h-17h"] }],
-    image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
-  },
+  // {
+  //   id: "location_espace_evenementiel",
+  //   title: "Location espace évènementiel",
+  //   subdescription: "Une occasion particulière ? Réservez une salle.",
+  //   description: [
+  //     "Notre Pack évènement vous permet d'organiser tous vos évènements professionnels à Abidjan.",
+  //     "La Côte d'Ivoire incontournable sur l'échiquier internationale du business vous donne en 2024 la possibilité de vous faire connaître ou de vous développer à travers l'organisation de conférences de presse, lancement de produits, vente privée, cérémonie de dédicace de livre, networking, vernissage, assemblées générales etc… ",
+  //     "Avec sa capacité de 25 à 50 personnes choisissez au sein du  abidjanais l'espace qui se prêtera au mieux au format de votre vision.",
+  //     "Bénéficiez d'un espace spacieux, sécurisé par un service de gardiennage agrée. Places de parking disponibles, Cuisine disponible",
+  //   ],
+  //   tarifs: [
+  //     {
+  //       name: "Tarif semaine",
+  //       horraire: "8h-17h et 17h-22h",
+  //       items: [
+  //         { title: "1 Demie journée", price: "45 000 F" },
+  //         { title: "1 Journée", price: "75 000 F" },
+  //         { title: "Soirée", price: "30 000 F" },
+  //       ],
+  //     },
+  //     {
+  //       name: "Tarif samedi et dimanche",
+  //       horraire: "10h-17h",
+  //       items: [
+  //         { title: "1 Demie journée", price: "75 000 F" },
+  //         { title: "1 Journée", price: "90 000 F" },
+  //       ],
+  //     },
+  //   ],
+  //   options: ["10 personnes", "siège ergonomique", "écran de projection", "rétro-projecteur", "support de notes"],
+  //   image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
+  // },
+  // {
+  //   id: "location_espace_tournage",
+  //   title: "Location espace tournage",
+  //   subdescription: "Louez un espace décoré pour vos tournages et podcasts.",
+  //   description: [
+  //     "Personal branding, Mise en scène clips vidéo et films, podcast, etc… sont des besoins de notre ère dans le cadre de la communication des activités d'une entreprise ou association.",
+  //     "Un espace unique décoré par des professionnels avec recherche, beaucoup de soin et de finesse, chaque mètre carré, mobilier, objets de décoration est mis à votre disposition pour le temps d'un tournage sur la capitale ivoirienne.",
+  //     "Avec Perspectives, ensemble vers le succès.",
+  //   ],
+  //   tarifs: [
+  //     {
+  //       name: "Tarif samedi et dimanche",
+  //       horraire: "10h-17h",
+  //       items: [
+  //         { title: "1 Demie journée bureau", price: "25 000 F / 30 000 F" },
+  //         { title: "1 Demie journée salon", price: "40 000 F" },
+  //       ],
+  //     },
+  //   ],
+  //   horaires: [{ jours: ["Samedi", "Dimanche"], horaires: ["10h-17h"] }],
+  //   image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
+  // },
 ];
 export const partenaires = [
   {
