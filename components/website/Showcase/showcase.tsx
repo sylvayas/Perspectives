@@ -19,25 +19,25 @@ const datas: {
 }[] = [
     {
       image: "/images/perspective/Bureaux privés/Bureau confiance/img (2).jpg",
-      title: "Bureau privé",
+      title: "Finance",
       description: "Réservez votre bureau adapté à la croissance de votre entreprise.",
       href: "/our_spaces/private_offices",
     },
     {
       image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
-      title: "Open Space",
+      title: "Imobilier - Logistique",
       description: "Rencontrez des entrepreneurs et développez votre réseau.",
       href: "/our_spaces/open_space",
     },
     {
       image: "/images/perspective/Salle de réunion/img (2).jpg",
-      title: "Salle de réunion",
+      title: "Transit - Trasport",
       description: "Salles entièrement équipées et prêtes à l'emploi.",
       href: "/our_spaces/meeting_room",
     },
     {
       image: "/images/perspective/Espace Bulle Open space/img (2).jpg",
-      title: "Espace commun",
+      title: "Commerce generale",
       description: "Une bonne adresse avec les bons services.",
       href: "/our_spaces/common_space",
     },
@@ -78,10 +78,10 @@ export default function Showcase() {
   return (
     <section id="showcase" className="container py-14">
       <h2 className="text-novis_yellow mb-2 text-center font-medium text-2xl md:text-4xl tracking-tight font-saudagar">
-        Nos Services
+        Nos Solution
       </h2>
       <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-      Nous proposons des services variés en finance, immobilier, nettoyage, commerce général et transport, incluant conseil, accompagnement, gestion de biens, location, import-export, et solutions logistiques.
+      Nos Solutions s&apos;adaptent à vos besoins et à votre budget !
       </h3>
       <div className="relative flex flex-col">
         <Marquee pauseOnHover className="max-w-screen [--duration:40s]">
