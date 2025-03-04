@@ -1,7 +1,7 @@
 import { Icons } from "@/components/icons";
 import NumberTicker from "@/components/magicui/number-ticker";
 import Image from "next/image";
-import imgback from "@/public/images/perspective/coworking (1).jpg";
+// import imgback from "@/public/images/perspective/coworking (1).jpg";
 
 export default function HeaderPage({
   group,
@@ -24,16 +24,16 @@ export default function HeaderPage({
             </p>
           </div>
           {/* image background */}
-          <Image
+          {/* <Image
             fill
             src={imgback}
             alt="img back"
             placeholder={"blurDataURL" in imgback ? "blur" : undefined}
             className=" object-cover"
-          />
+          /> */}
         </div>
       </section>
-      <section className="relative">
+      {/* <section className="relative">
         <div className="container grid grid-cols-2 gap-4 md:grid-cols-4 py-2 md:py-4 bg-gray-200">
           <p className="font-medium text-xs md:text-sm">
             Domiciliation d&apos;entreprises{" "}
@@ -46,7 +46,7 @@ export default function HeaderPage({
             Location de salle de conférence
           </p>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

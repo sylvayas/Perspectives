@@ -31,7 +31,7 @@ export default function Hero() {
       <div className={cn("h-[60vh] md:h-[400px] xl:h-[500px] relative container px-0 max-w-[1400px]")}>
         <div className="absolute z-[3] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center flex-col gap-8 max-w-5xl w-full">
           <h1 className="text-lg sm:text-xl md:text-4xl text-white text-center font-lora uppercase">
-          DES SOLUTIONS SUR  MESURE 
+          Allons loin ensemble
           </h1>
 
           <div className="flex items-center justify-center text-white flex-wrap gap-2">
@@ -43,7 +43,7 @@ export default function Hero() {
             <span className="h-4 w-[2px] bg-white"></span>
             {item("COMMERCE GÉNÉRAL", "/our_spaces/common_space")}
           </div>
-
+{/* 
           <Link
             className={cn(
               buttonVariants(),
@@ -59,7 +59,7 @@ export default function Hero() {
             <div className="ml-2 flex items-center gap-1 text-sm md:flex">
               <CalendarIcon className="size-4 text-white transition-all duration-300 group-hover:text-novis_orange" />
             </div>
-          </Link>
+          </Link> */}
         </div>
         <HeroCarousel images={images} />
       </div>

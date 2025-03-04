@@ -487,72 +487,18 @@ export const galeries = [
 
 export const espaces = [
   {
-    id: "private_offices",
-    title: "Bureaux privés",
+    // id: "private_offices",
+    // title: "Bureaux privés",
     images: [
-      {
-        src: "/images/perspective/Bureaux privés/Bureau prospérité/img (1).jpg",
-        width: 1037,
-        height: 691,
+       {
+       src: "/images/perspective/buying-selling-house.jpg",
+        width: 900,
+         height: 200,
       },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau prospérité/img (2).jpg",
-        width: 1037,
-        height: 691,
-      },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau prospérité/img (3).jpg",
-        width: 1037,
-        height: 691,
-      },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau détermination/img (1).jpg",
-        width: 1037,
-        height: 691,
-      },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau détermination/img (2).jpg",
-        width: 1037,
-        height: 691,
-      },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau détermination/img (3).jpg",
-        width: 1037,
-        height: 691,
-      },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau confiance/img (1).jpg",
-        width: 1037,
-        height: 691,
-      },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau confiance/img (2).jpg",
-        width: 1037,
-        height: 691,
-      },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau confiance/img (3).jpg",
-        width: 1037,
-        height: 691,
-      },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau excellence/img (1).jpg",
-        width: 1037,
-        height: 691,
-      },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau excellence/img (2).jpg",
-        width: 1037,
-        height: 691,
-      },
-      {
-        src: "/images/perspective/Bureaux privés/Bureau excellence/img (3).jpg",
-        width: 1037,
-        height: 691,
-      },
+       
     ],
-    adresse:
-      "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
+    // adresse:
+    //   "RUE ALEX FLEMING MARCORY ZONE 4C ABIDJAN-CÔTE D’IVOIRE",
     description: (
       <>
         <p className="text-sm md:text-md mb-2 md:mb-3">
