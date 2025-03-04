@@ -618,6 +618,7 @@ export const espaces = [
           },
         ],
       },
+      
       {
         id: "bureau_determination",
         title: "Bureau détermination",

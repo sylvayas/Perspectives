@@ -8,7 +8,7 @@ export default async function PrivateOffice() {
         <div>
             <HeaderPage />
             <SubSection />
-            <DescriptionAllSpaces />
+    
         </div>
     );
 }
