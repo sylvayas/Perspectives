@@ -1,7 +1,7 @@
 import { Icons } from "@/components/icons";
 import NumberTicker from "@/components/magicui/number-ticker";
 import Image from "next/image";
-import imgback from "@/public/images/perspective/coworking (1).jpg"
+
 
 export default function HeaderPage() {
 
@@ -31,13 +31,7 @@ export default function HeaderPage() {
                         </div>
                     </div>
                     {/* image background */}
-                    <Image
-                        fill
-                        src={imgback}
-                        alt="img back"
-                        placeholder={"blurDataURL" in imgback ? "blur" : undefined}
-                        className=" object-cover"
-                    />
+                  
                 </div>
             </section >
             <section className="relative">

@@ -50,7 +50,7 @@ export function getMenuList(pathname: string): Group[] {
         { href: "", label: "", active: pathname === "" },
         { href: "/our_spaces", label: "Finance", active: pathname === "/our_spaces" },
         { href: "/our_spaces/private_offices", label: "Immobilier - logistique", active: pathname === "/our_spaces/private_offices" },
-        { href: "/our_spaces", label: "Transit –transport", active: pathname === "/our_spaces" },
+        { href: "/our_spaces/our_spaces_transport", label: "Transit –transport", active: pathname === "/our_spaces/our_spaces_transport" },
         { href: "/services/transport", label: "Commerce général", active: pathname === "/services/transport" },
       ]
     },

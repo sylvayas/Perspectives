@@ -493,7 +493,7 @@ export const espaces = [
        {
        src: "/images/perspective/buying-selling-house.jpg",
         width: 900,
-         height: 200,
+        height: 200,
       },
        
     ],
