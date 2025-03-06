@@ -6,7 +6,7 @@ export default function SubSection() {
   return (
     <section className="bg-[#0d1b2a] text-white py-12 px-6 relative">
       <h2 className="text-3xl md:text-4xl font-light text-center mb-8">
-        C'est compris dans le prix !
+       Nos services
       </h2>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">

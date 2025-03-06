@@ -1,3 +1,4 @@
+import DescriptionCom from "./components/DescriptionCom";
 
 
 
