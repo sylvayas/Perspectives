@@ -442,6 +442,19 @@ export const partenaires = [
 ];
 
 
+export const transport =[
+  {
+    id: "transport",
+    title: "transport",
+    subdescription: "des vehicules a votre disposition !",
+    
+   
+  },
+]
+
+
+
+
 export const galeries = [
   {
     id: "evenements_collaboratifs",
