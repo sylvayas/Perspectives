@@ -4,15 +4,15 @@ import { cn } from "@/lib/utils";
 
 export default function SubSection() {
   return (
-    <section className="bg-[#0d1b2a] text-white py-12 px-6 relative">
+    <section className="bg-perspectives_marron text-white py-12 px-6 relative">
       <h2 className="text-3xl md:text-4xl font-light text-center mb-8">
        Nos services
       </h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto ">
         {/** Liste des cartes */}
         {cardData.map((card, index) => (
-          <div key={index} className="flex flex-col items-center text-center p-6 bg-[#14273e] rounded-lg shadow-lg">
+          <div key={index} className="flex flex-col items-center text-center p-6  rounded-lg shadow-lg">
             <span className="text-4xl">{card.icon}</span>
             <h3 className="text-lg font-bold mt-2">{card.title}</h3>
             <p className="text-sm text-gray-300 mt-2">{card.description}</p>

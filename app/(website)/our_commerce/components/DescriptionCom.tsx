@@ -13,7 +13,7 @@ export default function DescriptionCom() {
             {/* <TitleSection title={"Nos différents espaces situés à Cocody"} /> */}
 
             <div className="relative gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-                <Image className="w-full h-full object-cover" src="/images/finance/business-people.jpg" alt="finance image" width={800} height={600} />
+                <Image className="w-full h-full object-cover" src="/images/commerce_géneral/E-commerce.jpg" alt="finance image" width={800} height={600} />
                 <div className="mt-4 md:mt-0">
                     <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
                         Nous somme spécialisé dans le commerce général , offrant une large gamme de service incluant l'import-export la vente d'appareil électroménagers , ainsi que le 

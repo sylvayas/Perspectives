@@ -52,7 +52,7 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 export const Icons: any = {
   logo: ({ className, ...props }: { className: string }) => (
     <img
-      src="/images/logo.png"
+      src="/images/logo-1.png"
       alt="Perspectives"
       className={className}
       {...props}

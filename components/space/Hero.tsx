@@ -43,13 +43,14 @@ export default function Hero(
                                </div>
                            </div>
                            {/* image background */}
+                             {/* image background */}
                           
-                   
+                        
                    </div>
-         </section >
+             </section >
        
                   
                    
-                   </>
+        </>
     );
 }

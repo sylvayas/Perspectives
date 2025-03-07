@@ -15,9 +15,9 @@ export default function DescriptionAllSpaces() {
             {/* <TitleSection title={"Nos différents espaces situés à Cocody"} /> */}
 
             <div className="relative gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-                <Image className="w-full h-full mt-6" src="/images/immobilier/house.jpg" alt="finance image" width={800} height={500} />
+                <Image className="w-full h-full mt-6" src="/images/immobilier/maison_immobilier.jpg" alt="finance image" width={900} height={600} />
                 <div className="mt-4 md:mt-0">
-                    <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400 leading-loose">
+                    <p className="mb-6 font-light text-gray-500 md:text-lg  dark:text-gray-400 leading-loose">
                          Nous offrons une gamme complète de services dans le domaine de l'immobilier et de la logistique,incluant l'intermédiation 
                         en achat et vente, la location de biens meublés et non meublés, ainsi que la gestion de biens immobiliers.Nos services de
                         conseil dans des projets de construction et la fourniture de matériel de construction sont également a votre disposition.
@@ -31,13 +31,39 @@ export default function DescriptionAllSpaces() {
                 </div>
             </div>
             {/* Répétez le même processus pour les autres balises <img> */}
+         
         </section>
 
          <section id="showcase" className="container px-2 md:px-8 py-14">
                     <h2 className="text-novis_yellow mb-10 text-center font-medium text-2xl md:text-4xl tracking-tight font-saudagar">
                         Nos propriétés
                     </h2>
-                    <ServicesCarousel />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full mt-6" src="/images/immobilier/salon.jpg" alt="" width={800} height={500} />
+
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full mt-6" src="/images/immobilier/cuisine.jpg" alt="" width={800} height={500} />
+
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full mt-6" src="/images/immobilier/chambre.jpg" alt="" width={800} height={500} />
+
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full mt-6" src="/images/immobilier/chambre 2.jpg" alt="" width={800} height={500} />
+
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full mt-6" src="/images/immobilier/salon_luxueux.jpg" alt="" width={800} height={600} />
+
+                        </div>
+                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full mt-6" src="/images/immobilier/espace.jpg" alt="" width={800} height={500} />
+
+                        </div>
+                 </div>
         </section>
         </>
         
