@@ -1,46 +1,61 @@
+"use client";
+
 import { Icons } from "@/components/icons";
 import NumberTicker from "@/components/magicui/number-ticker";
 import Image from "next/image";
-import imgback from "@/images/transport/m"
+import { useState, useEffect } from "react";
+
+const images=[
+    "/images/transport/entrepot_logistique.jpeg",
+    "/images/transport/camion_transport.jpg",
+    "/images/transport/dédouanement2.jpg",
+]
 
 export default function HeaderPage() {
-
-    return (
-        <>
-           <section className="relative ">
-                <div className="container px-0 relative max-w-[1400px]">
-                    <div className="relative z-[2] flex flex-col md:flex-row md:gap-x-8 justify-between bg-black/30 py-8 px-4 sm:py-16 lg:px-8">
-                        <div className="max-w-screen-sm text-white text-center md:text-left">
-                            <h2 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tight font-semibold">
-                                Vous cherchez à louer des bureaux privés en Côte-d&apos;Ivoire ? à Abidjan ? </h2>
-                            <p className="mb-8 font-light text-xs sm:text-sm">Bienvenue au sein des espaces de Perspectivesà Cocody : location de bureaux privés dans des bâtiments neufs, propre et moderne.</p>
-                        </div>
-                        <div className=" flex flex-col gap-2 md:gap-4">
-                            <div className="flex min-w-64 gap-2 bg-perspectives_orange rounded-sm p-2 text-white">
-                                <Icons.building className="size-4 md:size-6" />
-                                <p className="font-medium text-sm font-mono whitespace-pre-wrap tracking-tighter "><NumberTicker className="text-white mr-2" value={13} />Espaces de travail</p>
-                            </div>
-                            <div className="flex min-w-64 gap-2 bg-perspectives_orange rounded-sm p-2 text-white">
-                                <Icons.laptop className="size-4 md:size-6" />
-                                <p className="font-medium text-sm font-mono whitespace-pre-wrap tracking-tighter "><NumberTicker className="text-white mr-2" value={200} />Postes équipés</p>
-                            </div>
-                            <div className="flex min-w-64 gap-2 bg-perspectives_orange rounded-sm p-2 text-white">
-                                <Icons.space className="size-4 md:size-6" />
-                                <p className="font-medium text-sm font-mono whitespace-pre-wrap tracking-tighter "><NumberTicker className="text-white mr-2" value={40} />Salles de réunion</p>
-                            </div>
-                        </div>
-                    </div>
-                    {/* image background */}
-                    {/* <Image
-                        fill
-                        src={imgback}
-                        alt="img back"
-                        placeholder={"blurDataURL" in imgback ? "blur" : undefined}
-                        className=" object-cover"
-                    /> */}
-                </div>
-            </section >
-           
-        </>
-    );
+const [currentIndex, setCurrentIndex] = useState(0);
+ 
+     useEffect(() => {
+       const interval = setInterval(() => {
+         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+       }, 3000);
+       return () => clearInterval(interval);
+     }, []);
+   
+     return (
+       
+         <section className="p-2 bg-white">
+           <div className="relative w-full h-screen overflow-hidden  bg-white">
+         {images.map((image, index) => (
+           <img
+             key={index}
+             src={image}
+             alt={`Slide ${index + 1}`}
+             className={`absolute w-full h-screen object-cover  transition-opacity duration-1000  bg-black/50 ${
+               index === currentIndex ? "opacity-100" : "opacity-0"
+             }`} 
+           />
+         ))}
+   
+         {/* Titre Centré */}
+         <div className="absolute inset-0 flex items-center justify-center">
+           <h1 className="text-white text-5xl  px-4 py-2 rounded-md italic font-extraligh">
+           Simplifions vos formalités douanières et transports !
+           </h1>
+         </div>
+   
+         {/* Indicateurs */}
+         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+           {images.map((_, index) => (
+             <div
+               key={index}
+               className={`w-3 h-3 rounded-full ${
+                 index === currentIndex ? "bg-white" : "bg-white"
+               }`}
+             />
+           ))}
+         </div>
+       </div>
+         </section>
+     
+     );
 }

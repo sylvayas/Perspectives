@@ -8,10 +8,11 @@ import { useState, useEffect } from "react";
 
 
 const images=[
-    "/images/immobilier/fer_a_repasser.jpg",
-    "images/immobilier/chambre.jpg",
-    "images/immobilier/cuisine.jpg",
-    "images/immobilier/chambre 2.jpg",
+    "/images/commerce_géneral/fer_a_repasser.jpg",
+    "images/commerce_géneral/frigo2.jpg",
+    "images/commerce_géneral/gasinière.jpg",
+    "images/commerce_géneral/frigo.jpg",
+   
 ]
 
 
@@ -26,23 +27,24 @@ export default function HeaderPage() {
     }, []);
   
     return (
-      <section className="p-2">
-        <div className="relative w-full h-screen overflow-hidden">
+      
+        <section className="p-4 bg-white">
+          <div className="relative w-full h-screen overflow-hidden  bg-white">
         {images.map((image, index) => (
           <img
             key={index}
             src={image}
             alt={`Slide ${index + 1}`}
-            className={`absolute w-full h-full object-cover transition-opacity duration-1000  bg-black/50 ${
+            className={`absolute w-full h-screen object-fit  transition-opacity duration-1000 blur-sm  bg-black/50 ${
               index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
+            }`} 
           />
         ))}
   
         {/* Titre Centré */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white text-3xl font-bold bg-black/50 px-4 py-2 rounded-md">
-            Mon Titre Ici
+          <h1 className="text-white text-5xl font-extralight italic  px-4 py-2 rounded-md">
+          Votre besoin, notre engagement – Tout pour vous, en un seul endroit !
           </h1>
         </div>
   
@@ -52,12 +54,13 @@ export default function HeaderPage() {
             <div
               key={index}
               className={`w-3 h-3 rounded-full ${
-                index === currentIndex ? "bg-white" : "bg-gray-400"
+                index === currentIndex ? "bg-white" : "bg-white"
               }`}
             />
           ))}
         </div>
       </div>
-      </section>
+        </section>
+    
     );
 }

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export default function SubSection() {
   return (
-    <section className="bg-perspectives_marron text-white py-12 px-6 relative">
+    <section className="bg-perspectives_marron text-white py-12 px-6 relative p-4 ">
       <h2 className="text-3xl md:text-4xl font-light text-center mb-8">
        Nos services
       </h2>

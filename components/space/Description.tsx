@@ -38,29 +38,29 @@ export default function DescriptionAllSpaces() {
                     <h2 className="text-novis_yellow mb-10 text-center font-medium text-2xl md:text-4xl tracking-tight font-saudagar">
                         Nos propriétés
                     </h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                        <Image className="w-full h-full mt-6" src="/images/immobilier/salon.jpg" alt="" width={800} height={500} />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                        <div className=" rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full " src="/images/immobilier/salon.jpg" alt="" width={800} height={500} />
 
                         </div>
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                        <Image className="w-full h-full mt-6" src="/images/immobilier/cuisine.jpg" alt="" width={800} height={500} />
+                        <div className=" rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full " src="/images/immobilier/cuisine.jpg" alt="" width={800} height={500} />
 
                         </div>
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                        <Image className="w-full h-full mt-6" src="/images/immobilier/chambre.jpg" alt="" width={800} height={500} />
+                        <div className=" rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full " src="/images/immobilier/chambre.jpg" alt="" width={800} height={500} />
 
                         </div>
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                        <Image className="w-full h-full mt-6" src="/images/immobilier/chambre 2.jpg" alt="" width={800} height={500} />
+                        <div className=" rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full " src="/images/immobilier/chambre 2.jpg" alt="" width={800} height={500} />
 
                         </div>
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                        <Image className="w-full h-full mt-6" src="/images/immobilier/salon_luxueux.jpg" alt="" width={800} height={600} />
+                        <div className=" rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full " src="/images/immobilier/salon_luxueux.jpg" alt="" width={800} height={600} />
 
                         </div>
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                        <Image className="w-full h-full mt-6" src="/images/immobilier/espace.jpg" alt="" width={800} height={500} />
+                        <div className=" rounded-lg shadow-md overflow-hidden">
+                        <Image className="w-full h-full " src="/images/immobilier/espace.jpg" alt="" width={800} height={500} />
 
                         </div>
                  </div>
