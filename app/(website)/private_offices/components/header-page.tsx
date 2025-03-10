@@ -26,12 +26,14 @@ const [currentIndex, setCurrentIndex] = useState(0);
          <section className="p-2 bg-white">
            <div className="relative w-full h-screen overflow-hidden  bg-white">
          {images.map((image, index) => (
-           <img
+           <Image
              key={index}
              src={image}
              alt={`Slide ${index + 1}`}
+             width={800} 
+             height={600} 
              className={`absolute w-full h-screen object-cover  transition-opacity duration-1000  bg-black/50 ${
-               index === currentIndex ? "opacity-100" : "opacity-0"
+               index === currentIndex ? "opacity-100" : "opacity-0" 
              }`} 
            />
          ))}

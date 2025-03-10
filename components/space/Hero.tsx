@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import NumberTicker from "@/components/magicui/number-ticker";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 import {
     Card,
@@ -43,10 +44,12 @@ export default function Hero(){
          <section className=" bg-white">
            <div className="relative w-full h-screen overflow-hidden  bg-white">
          {images.map((image, index) => (
-           <img
+           <Image
              key={index}
              src={image}
              alt={`Slide ${index + 1}`}
+             width={800} 
+             height={600} 
              className={`absolute w-full h-screen object-cover  transition-opacity duration-1000 blur-sm bg-black/50 ${
                index === currentIndex ? "opacity-100" : "opacity-0"
              }`} 
@@ -56,7 +59,7 @@ export default function Hero(){
          {/* Titre Centré */}
          <div className="absolute inset-0 flex items-center justify-center">
            <h1 className=" text-5xl font-extralight italic text-white  px-4 py-2 rounded-md">
-           Trouvez bien plus qu'une maison, trouvez votre chez-vous.
+           Trouvez bien plus qu&apos;une maison, trouvez votre chez-vous.
            </h1>
          </div>
    

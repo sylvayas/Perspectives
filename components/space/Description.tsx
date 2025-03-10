@@ -18,10 +18,10 @@ export default function DescriptionAllSpaces() {
                 <Image className="w-full h-full mt-6" src="/images/immobilier/maison_immobilier.jpg" alt="finance image" width={900} height={600} />
                 <div className="mt-4 md:mt-0">
                     <p className="mb-6 font-light text-gray-500 md:text-lg  dark:text-gray-400 leading-loose">
-                         Nous offrons une gamme complète de services dans le domaine de l'immobilier et de la logistique,incluant l'intermédiation 
+                         Nous offrons une gamme complète de services dans le domaine de l&apos;immobilier et de la logistique,incluant l&apos;intermédiation 
                         en achat et vente, la location de biens meublés et non meublés, ainsi que la gestion de biens immobiliers.Nos services de
                         conseil dans des projets de construction et la fourniture de matériel de construction sont également a votre disposition.
-                        De plus,nous proposons la location de hangars, de plateformes et d'entrepots,garantissant des solutions adaptées a vous
+                        De plus,nous proposons la location de hangars, de plateformes et d&apos;entrepots,garantissant des solutions adaptées a vous
                         besoins logistiques.
 
                     </p>

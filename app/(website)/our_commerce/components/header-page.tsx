@@ -3,16 +3,15 @@
 import { Icons } from "@/components/icons";
 import NumberTicker from "@/components/magicui/number-ticker";
 import { Section } from "@react-email/components";
-import Image from "next/image";
+import Image from 'next/image';
 import { useState, useEffect } from "react";
 
 
 const images=[
     "/images/commerce_géneral/fer_a_repasser.jpg",
-    "images/commerce_géneral/frigo2.jpg",
-    "images/commerce_géneral/gasinière.jpg",
-    "images/commerce_géneral/frigo.jpg",
-   
+    "/images/commerce_géneral/frigo2.jpg",
+    "/images/commerce_géneral/gasinière.jpg",
+    "/images/commerce_géneral/frigo.jpg",  
 ]
 
 
@@ -31,10 +30,12 @@ export default function HeaderPage() {
         <section className="p-4 bg-white">
           <div className="relative w-full h-screen overflow-hidden  bg-white">
         {images.map((image, index) => (
-          <img
+          <Image
             key={index}
             src={image}
             alt={`Slide ${index + 1}`}
+            width={800} 
+            height={600} 
             className={`absolute w-full h-screen object-fit  transition-opacity duration-1000 blur-sm  bg-black/50 ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`} 

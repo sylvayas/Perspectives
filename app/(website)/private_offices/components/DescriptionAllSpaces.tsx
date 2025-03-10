@@ -4,7 +4,7 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from 'next/image'; // Ajout de l'importation
-import { transport } from '@/config/data';
+
 
 export default function DescriptionAllSpaces() {
     return (
@@ -15,9 +15,9 @@ export default function DescriptionAllSpaces() {
                                 <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
                             
                                     Dans le secteur du transit et du transport,nous proposons des services essentiels tels que le dédouanement,le transport
-                                    de marchandises et de matières premières.Notre équipes d'experts facilite les formalités douanières, garantissant une circulation
+                                    de marchandises et de matières premières.Notre équipes d&apos;experts facilite les formalités douanières, garantissant une circulation
                                     rapide et efficace de vos produits a travers les frontières.Grace a notre réseau logistique bien établi,nous assurons un transport 
-                                    sécurisé et fiable,vous permettant de vous concentrer sur vos activités commerciales sans vous soucier des délais
+                                    sécurisé et fiable,vous permettant de vous concentrer sur vos activités commerciales sans vous soucier des délais.
                                 </p>        
                           </div>
               </div>   
