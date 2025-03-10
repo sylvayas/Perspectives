@@ -31,10 +31,12 @@ export default function DescriptionAllSpaces() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-6 lg:mb-8 h-full">
                 {avantages.map((avantage,index) => (
                 <div key={index} className="items-center flex flex-col bg-gray-50 rounded-lg shadow ">
-                    <img
+                    <Image
                     className="w-full h-50 object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
                     src={avantage.image}
                     alt={avantage.image}
+                    width={800} 
+                    height={600} 
                     />
                     <div className="p-5">
                     <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">

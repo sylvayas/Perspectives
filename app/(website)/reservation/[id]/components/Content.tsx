@@ -186,7 +186,16 @@ export default function Content({ group, space }: { group: any; space: any }) {
         description: "Une erreur est survenue lors du paiement",
       });
     }
-  }, [paymentStatus]);
+  }, [paymentStatus,data,
+    totalAmount,
+    selectedTarif,
+    dates,
+    group.id,
+    space.id,
+    space.title,
+    space.adresse,
+    space.images,
+    router,]);
 
   return (
     <section className="container min-h-[300px] py-14 relative">

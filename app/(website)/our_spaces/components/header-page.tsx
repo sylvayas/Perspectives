@@ -31,9 +31,14 @@ export default function HeaderPage() {
                         </div>
                     </div>
                     {/* image background */}
-                     <img  
-                        src="/images/finance/finance_image.jpg"
-                        className=" absolute inset-0 w-full h-full object-cover"
+                    <Image
+                        src="/images/finance/finance_image.jpg"  // Chemin vers l'image
+                        alt="Vue d'un espace de travail moderne"  // Texte alternatif pour l'accessibilité
+                        layout="fill"  // Pour remplir la section
+                        objectFit="cover"  // Pour couvrir toute la section
+                        quality={100}  // Qualité de l'image (vous pouvez ajuster)
+                        priority  // Si vous voulez que l'image soit chargée en priorité
+                        className="absolute inset-0"  // Pour assurer que l'image occupe tout l'espace
                     />
             
             </div>
