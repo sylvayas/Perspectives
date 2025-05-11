@@ -3,61 +3,83 @@
 import { Icons } from "@/components/icons";
 import NumberTicker from "@/components/magicui/number-ticker";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-
-const images=[
-    "/images/transport/entrepot_logistique.jpeg",
-    "/images/transport/camion_transport.jpg",
-    "/images/transport/dédouanement2.jpg",
-]
 
 export default function HeaderPage() {
-const [currentIndex, setCurrentIndex] = useState(0);
- 
-     useEffect(() => {
-       const interval = setInterval(() => {
-         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-       }, 3000);
-       return () => clearInterval(interval);
-     }, []);
-   
-     return (
-       
-         <section className="p-2 bg-white">
-           <div className="relative w-full h-screen overflow-hidden  bg-white">
-         {images.map((image, index) => (
-           <Image
-             key={index}
-             src={image}
-             alt={`Slide ${index + 1}`}
-             width={800} 
-             height={600} 
-             className={`absolute w-full h-screen object-cover  transition-opacity duration-1000  bg-black/50 ${
-               index === currentIndex ? "opacity-100" : "opacity-0" 
-             }`} 
-           />
-         ))}
-   
-         {/* Titre Centré */}
-         <div className="absolute inset-0 flex items-center justify-center">
-           <h1 className="text-white text-5xl  px-4 py-2 rounded-md italic font-extraligh">
-           Simplifions vos formalités douanières et transports !
-           </h1>
-         </div>
-   
-         {/* Indicateurs */}
-         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-           {images.map((_, index) => (
-             <div
-               key={index}
-               className={`w-3 h-3 rounded-full ${
-                 index === currentIndex ? "bg-white" : "bg-white"
-               }`}
-             />
-           ))}
-         </div>
-       </div>
-         </section>
-     
-     );
+  return (
+    <>
+      <section className="relative w-full  bg-gray-900">
+        <div className="px-4 relative h-[360px] p-4 max-w-[1400px]">
+          <div className="relative z-[2] flex flex-col md:flex-row md:gap-x-8 justify-between h-[320px]   py-6 px-4 sm:py-8 lg:px-8">
+            <div className="max-w-screen-sm text-white text-center md:text-left flex flex-col justify-center">
+              <h2 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight animate-fade-in">
+                Optimisez vos finances avec des espaces adaptés à votre succès.
+              </h2>
+              <p className="mb-4 font-light text-xs sm:text-sm animate-fade-in">
+                Bienvenue au sein des espaces de Perspectives à Cocody
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 md:gap-4 justify-center">
+              <div className="flex min-w-56 gap-2 bg-orange-500 rounded-md p-3 text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg">
+                <Icons.building className="size-5 md:size-6" />
+                <p className="font-medium text-sm font-mono tracking-tighter">
+                  <NumberTicker className="text-white mr-2" value={13} />Espaces de travail
+                </p>
+              </div>
+              <div className="flex min-w-56 gap-2 bg-orange-500 rounded-md p-3 text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg">
+                <Icons.laptop className="size-5 md:size-6" />
+                <p className="font-medium text-sm font-mono tracking-tighter">
+                  <NumberTicker className="text-white mr-2" value={200} />Postes équipés
+                </p>
+              </div>
+              <div className="flex min-w-56 gap-2 bg-orange-500 rounded-md p-3 text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg">
+                <Icons.space className="size-5 md:size-6" />
+                <p className="font-medium text-sm font-mono tracking-tighter">
+                  <NumberTicker className="text-white mr-2" value={40} />Salles de réunion
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* Image Background */}
+          <Image
+            src="/images/transport/camion_transport.jpg"
+            alt="Vue d'un espace de travail moderne"
+            fill
+            className="absolute inset-0 object-cover w-full h-full"
+            quality={100}
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70" />
+        </div>
+      </section>
+
+      {/* <section className="relative bg-gray-100">
+        <div className="container grid grid-cols-2 gap-4 md:grid-cols-4 py-4 md:py-6">
+          {["Conseil", "Accompagnement", "Création de compte", "Prendre rendez-vous"].map((item, index) => (
+            <p
+              key={index}
+              className="font-medium text-xs md:text-sm text-gray-800 text-center transition-colors duration-300 hover:text-orange-500 cursor-pointer animate-fade-in"
+            >
+              {item}
+            </p>
+          ))}
+        </div>
+      </section> */}
+
+      <style jsx>{`
+        @keyframes fade-in {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fade-in {
+          animation: fade-in 1s ease-out;
+        }
+      `}</style>
+    </>
+  );
 }

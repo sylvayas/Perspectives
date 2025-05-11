@@ -60,7 +60,7 @@ export const Icons: any = {
   ),
   logo_rogner: ({ className, ...props }: { className: string }) => (
     <img
-      src="/images/logo_1.png"
+      src="/images/logo-1.png"
       alt="Perspectives"
       className={className}
       {...props}
@@ -76,7 +76,7 @@ export const Icons: any = {
   ),
   logo_black_rogner: ({ className, ...props }: { className: string }) => (
     <img
-      src="/images/logo-1_1.png"
+      src="/images/logo-1.png"
       alt="Perspectives"
       className={className}
       {...props}

@@ -1,4 +1,4 @@
-"use client";
+
 
 import * as React from "react"
 import Link from "next/link";
@@ -22,7 +22,6 @@ import {
 
 
 
-
 export function MainNav() {
     const pathname = usePathname();
     const menuList = getMenuList(pathname);
@@ -30,7 +29,7 @@ export function MainNav() {
     return (
         <div className="mr-4 hidden md:flex">
             <Link href="/" className="relative mr-6 flex items-center space-x-2">
-                <Icons.logo_black_rogner className="w-28" />
+                <Icons.logo_black_rogner className="w-12" />
             </Link>
             <NavigationMenu className="hidden items-center space-x-6 text-sm font-medium xl:flex">
                 <NavigationMenuList>
@@ -42,8 +41,8 @@ export function MainNav() {
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                    <NavigationMenuTrigger className={cn(`${menuList[1].menus[0].active && "font-bold text-novis_orange"}`)}>{menuList[1].menus[0].label}</NavigationMenuTrigger>
-                       <NavigationMenuContent>
+                       <NavigationMenuTrigger className={cn(`${menuList[1].menus[0].active && "font-bold text-novis_orange"}`)}>{menuList[1].menus[0].label}</NavigationMenuTrigger>
+                        <NavigationMenuContent>
                             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                 <li className="row-span-6">
                                     <NavigationMenuLink asChild>
@@ -83,7 +82,7 @@ export function MainNav() {
                                     "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
                                 )}
                             />
-                    </NavigationMenuContent>
+                       </NavigationMenuContent>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <NavigationMenuTrigger>{menuList[2].menus[0].label}</NavigationMenuTrigger>
@@ -159,16 +158,16 @@ export function MainNav() {
                             />
                         </NavigationMenuContent>
                     </NavigationMenuItem>
-                    <NavigationMenuItem>
+                    <NavigationMenuItem >
                         <Link href={menuList[4].menus[0].href} legacyBehavior passHref>
-                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[4].menus[0].active && "font-bold text-novis_orange"}`)} >
+                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[4].menus[0] && "font-bold text-novis_orange"}`)} >
                                 {menuList[4].menus[0].label}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Link href={menuList[5].menus[0].href} legacyBehavior passHref>
-                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[5].menus[0].active && "font-bold text-novis_orange"}`)} >
+                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[5].menus[0] && "font-bold text-novis_orange"}`)} >
                                 {menuList[5].menus[0].label}
                             </NavigationMenuLink>
                         </Link>

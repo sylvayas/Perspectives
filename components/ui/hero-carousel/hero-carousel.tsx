@@ -47,7 +47,7 @@ export default function HeroCarousel({ images }: { images: string[] }) {
           >
             <Image
               alt={img}
-              className="bg-center bg-cover object-cover w-full h-full"
+              className="bg-center bg-cover object-cover inset-0 w-full h-full"
               src={img}
               fill
             />

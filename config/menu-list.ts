@@ -49,8 +49,8 @@ export function getMenuList(pathname: string): Group[] {
       submenus: [
         { href: "", label: "", active: pathname === "" },
         { href: "/our_spaces", label: "Finance", active: pathname === "/our_spaces" },
-        { href: "/our_spaces/private_offices", label: "Immobilier - logistique", active: pathname === "/our_spaces/private_offices" },
-        { href: "/private_offices", label: "Transit –transport", active: pathname === "/private_offices" },
+        { href: "/our_spaces/private_offices", label: "Immobilier", active: pathname === "/our_spaces/private_offices" },
+        { href: "/private_offices", label: "transport", active: pathname === "/private_offices" },
         { href: "/our_commerce", label: "Commerce général", active: pathname === "/our_commerce" },
       ]
     },

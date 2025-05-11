@@ -8,7 +8,7 @@ export default function Services() {
                 Nos Services
             </h2>
             <h3 className="mx-auto mb-8 text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
-            Nous proposons des services variés en finance, immobilier, nettoyage, commerce général et transport, incluant conseil, accompagnement, gestion de biens, location, import-export, et solutions logistiques.
+            Nous proposons des services variés en finance, immobilier, commerce général et transport, incluant conseil, accompagnement, gestion de biens, location, import-export.
             </h3>
 
             <ServicesCarousel />

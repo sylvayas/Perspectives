@@ -15,7 +15,7 @@ const datas: ({
   description?: string;
 })[] = [
     {
-      image:"/images/perspective/Espace commun/img (2).jpg",
+      image:"/images/finance/investissement.jpg",
       type: "image"
     },
     {
@@ -25,7 +25,7 @@ const datas: ({
       type: "text"
     },
     {
-      image: "/images/other/hall bulle 2.jpg",
+      image: "/images/immobilier/clef de maison.jpg",
       type: "image"
     },
     {
@@ -35,7 +35,7 @@ const datas: ({
       type: "text"
     },
     {
-      image: "/images/perspective/Bureaux privés/Bureau prospérité/img (1).jpg",
+      image: "/images/transport/femme au volant.jpg",
       type: "image"
     },
     {
@@ -45,7 +45,7 @@ const datas: ({
       type: "text"
     },
     {
-      image: "/images/other/salle_reunion.jpg",
+      image: "/images/commerce_géneral/general.jpg",
       type: "image"
     },
     {
@@ -55,7 +55,7 @@ const datas: ({
       type: "text"
     },
     {
-      image: "/images/perspective/Bureaux privés/Bureau détermination/img (2).jpg",
+      image: "/images/commerce_géneral/shopping.jpg",
       type: "image"
     },
   ]

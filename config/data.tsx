@@ -134,7 +134,7 @@ export const offres = [
         icon: "flex",
       },
     ],
-    image: "/images/perspective/Espace Bulle Open space/img (1).jpg",
+    image: "/images/finance/analyse financière.jpg",
     elements: [
       {
         icon: "🏢", // Représentation symbolique d'un bâtiment
@@ -171,7 +171,7 @@ export const offres = [
   },
   {
     id: "domiciliation_physique_entreprise",
-    title: "Imobilier - Logistique",
+    title: "Imobilier",
     subdescription:
       "Profitez du confort et de l'ambiance dynamisante de notre espace de .",
     description: [
@@ -193,7 +193,7 @@ export const offres = [
         horraire: "10h-14h",
       },
     ],
-    image: "/images/other/exterieur.jpg",
+    image: "/images/immobilier/cle de maison.jpg",
 
     elements: [
       {
@@ -245,7 +245,7 @@ export const offres = [
   },
   {
     id: "location_occasionnelle_de_bureaux_meubles",
-    title: "Transit - Trasport",
+    title: " Trasport",
     subdescription: "Faites comme chez vous !",
     description: [
       "Conscient du fait que toutes les entreprises n'ont pas les mêmes besoins et le même budget nous donnons la possibilité à chacun de pouvoir évoluer à son rythme. A L'heure, à la journée, à la semaine ou au mois venez comme vous êtes.",
@@ -286,7 +286,7 @@ export const offres = [
           "/images/perspective/Bureaux privés/Bureau excellence/budget.png",
       },
     ],
-    image: "/images/other/bureau_equipe.jpg",
+    image: "/images/transport/modes_de_transport.jpg",
   },
   {
     id: "location_salle_de_reunion",
@@ -320,7 +320,7 @@ export const offres = [
     optionsSup:
       "Pour vous aider à vous concentrer exclusivement sur votre activité, nous vous proposons de nous confier l'organisation de vos petits-déjeuners, pauses café, déjeuners, etc.",
     options: ["Event planner", "Service premium"],
-    image: "/images/other/salle_reunion.jpg",
+    image: "/images/commerce_géneral/ecommerce.jpg",
 
   },
   // {

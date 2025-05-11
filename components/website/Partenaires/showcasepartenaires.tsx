@@ -22,9 +22,7 @@ const datas: ShowcaseCardProps[] = [
   {
     image: "/images/Partenaires/logo5.png",
   },
-  {
-    image: "/images/Partenaires/logo6.jpg",
-  },
+ 
   {
     image: "/images/Partenaires/logo7.png",
   },

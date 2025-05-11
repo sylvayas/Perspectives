@@ -6,10 +6,10 @@ import { CalendarIcon } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 
 const images = [
-  "/images/perspective/Bureaux privés/Bureau confiance/img (1).jpg",
-  "/images/perspective/Salle de réunion/img (1).jpg",
-  "/images/perspective/Espace Bulle Open space/img (1).jpg",
-  "/images/perspective/Espace commun/img (1).jpg",
+  "/images/finance/analyse financière.jpg",
+  "/images/immobilier/marchandage maison.jpg",
+  "/images/transport/un homme.jpg",
+  "/images/commerce_géneral/commerce.jpg",
 ];
 
 export default function Hero() {
@@ -28,14 +28,14 @@ export default function Hero() {
 
   return (
     <section className="relative">
-      <div className={cn("h-[60vh] md:h-[400px] xl:h-[500px] relative container px-0 max-w-[1400px]")}>
+      <div className={cn("h-[60vh] md:h-[418px] xl:h-[518px] relative container px-0 max-w-[1400px]")}>
         <div className="absolute z-[3] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center flex-col gap-8 max-w-5xl w-full">
           <h1 className="text-lg sm:text-xl md:text-4xl text-white text-center font-lora uppercase">
           Allons loin ensemble
           </h1>
 
           <div className="flex items-center justify-center text-white flex-wrap gap-2">
-            {item("FINANCE", "/our_spaces/private_offices")}
+            {item("FINANCE", "/our_spaces")}
             <span className="h-4 w-[2px] bg-white"></span>
             {item("IMMOBILIER-LOGISTIQUE", "/our_spaces/open_space")}
             <span className="h-4 w-[2px] bg-white"></span>
