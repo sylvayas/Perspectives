@@ -106,7 +106,7 @@ export default function DescriptionAllSpaces() {
           >
             <Image
               className="w-full h-full object-cover"
-              src="/images/immobilier/maison_immobilier.jpg"
+              src="/images/immobilier/Soleil 1.0.2.png"
               alt="Vue d'une propriété immobilière"
               width={900}
               height={600}

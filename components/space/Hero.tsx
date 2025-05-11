@@ -23,9 +23,7 @@ const images=[
     "/images/immobilier/2.jpg",
     "/images/immobilier/3.jpg",
     "/images/immobilier/4.jpg",
-    "/images/immobilier/6.jpg",
-    "/images/immobilier/7.jpg",
-    "/images/immobilier/8.jpg",
+   
     
 ]
 
