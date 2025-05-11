@@ -30,7 +30,7 @@ export default function SubSection() {
           {/* Image section */}
           <div className="md:w-1/2 flex justify-center">
             <Image 
-              src="/images/about/4.jpg" // Utilise un chemin relatif
+              src="/images/valeur/4.jpg" // Utilise un chemin relatif
               alt="Qui sommes-nous" 
               className="max-w-full h-auto rounded-lg shadow-lg" // Ajoute des styles pour un meilleur rendu
               width={400} // Specify width

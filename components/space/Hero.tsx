@@ -22,7 +22,6 @@ const images=[
     "/images/immobilier/1.jpg",
     "/images/immobilier/2.jpg",
     "/images/immobilier/3.jpg",
-    "/images/immobilier/4.jpg",
    
     
 ]

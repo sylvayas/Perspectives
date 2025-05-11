@@ -15,7 +15,7 @@ export default function DescriptionAllSpaces() {
                 <div className="relative overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
                     <Image 
                         className="w-full h-full object-cover" 
-                        src="/images/finance/business-people.jpg" 
+                        src="/images/finance/analyse financière.jpg" 
                         alt="finance image" 
                         width={800} 
                         height={600} 

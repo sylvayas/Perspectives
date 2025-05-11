@@ -6,8 +6,6 @@ import { useState, useEffect } from "react";
 const images = [
   "/images/commerce_géneral/fer_a_repasser.jpg",
   "/images/commerce_géneral/frigo2.jpg",
-  "/images/commerce_géneral/gasinière.jpg",
-  "/images/commerce_géneral/frigo.jpg",
 ];
 
 export default function HeaderPage() {

@@ -245,7 +245,7 @@ export const offres = [
   },
   {
     id: "location_occasionnelle_de_bureaux_meubles",
-    title: " Trasport",
+    title: " Transport",
     subdescription: "Faites comme chez vous !",
     description: [
       "Conscient du fait que toutes les entreprises n'ont pas les mêmes besoins et le même budget nous donnons la possibilité à chacun de pouvoir évoluer à son rythme. A L'heure, à la journée, à la semaine ou au mois venez comme vous êtes.",
@@ -286,7 +286,7 @@ export const offres = [
           "/images/perspective/Bureaux privés/Bureau excellence/budget.png",
       },
     ],
-    image: "/images/transport/modes_de_transport.jpg",
+    image: "/images/transport/camion_transport.jpg",
   },
   {
     id: "location_salle_de_reunion",
@@ -320,7 +320,7 @@ export const offres = [
     optionsSup:
       "Pour vous aider à vous concentrer exclusivement sur votre activité, nous vous proposons de nous confier l'organisation de vos petits-déjeuners, pauses café, déjeuners, etc.",
     options: ["Event planner", "Service premium"],
-    image: "/images/commerce_géneral/ecommerce.jpg",
+    image: "/images/commerce_géneral/commerce.jpg",
 
   },
   // {
