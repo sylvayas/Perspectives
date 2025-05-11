@@ -41,6 +41,7 @@ const mainProperties: Property[] = [
   { src: "/images/Apparts/Appart Prima/IMG_1545.DNG.png", alt: "Cuisine - Appartement Prima", width: 800, height: 500, apartment: "Appartement Prima" },
   { src: "/images/Apparts/Appart Prima/IMG_1555.DNG.png", alt: "Mini salle a manger - Appartement Prima", width: 800, height: 600, apartment: "Appartement Prima" },
   { src: "/images/Apparts/Appart Prima/IMG_1556.DNG.png", alt: "Salon luxueux - Appartement Prima", width: 800, height: 600, apartment: "Appartement Prima" },
+  { src: "/images/Apparts/Appart Prima/IMG_1635.DNG.png", alt: "Salon luxueux - Appartement Prima", width: 800, height: 600, apartment: "Appartement Prima" },
 
   { src: "/images/Apparts/Appart Soleil/Soleil 1.0.4.png", alt: "Chambre luxueuse - Appartement Soleil", width: 800, height: 500, apartment: "Appartement Soleil" },
   { src: "/images/Apparts/Appart Soleil/Soleil 1.0.2.png", alt: "Salon - Appartement Soleil", width: 800, height: 500, apartment: "Appartement Soleil" },
@@ -49,6 +50,7 @@ const mainProperties: Property[] = [
   { src: "/images/Apparts/Complexe Carré Massina/Appart/IMG_1055.DNG.png", alt: "Chambre - Complexe Carré Massina", width: 800, height: 500, apartment: "Complexe Carré Massina" },
   { src: "/images/Apparts/Complexe Carré Massina/Appart/IMG_0983.DNG.png", alt: "Salon - Complexe Carré Massina", width: 800, height: 500, apartment: "Complexe Carré Massina" },
   { src: "/images/Apparts/Complexe Carré Massina/Appart/IMG_0971.DNG_1.png", alt: "Cuisine - Complexe Carré Massina", width: 800, height: 500, apartment: "Complexe Carré Massina" },
+  { src: "/images/Apparts/Complexe Carré Massina/Appart/IMG_1015.DNG.png", alt: "Cuisine - Complexe Carré Massina", width: 800, height: 500, apartment: "Complexe Carré Massina" },
 ];
 
 // Autres propriétés
