@@ -11,11 +11,11 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { usePay } from "@/hooks/usePay";
 import { toast } from "sonner";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 import dayjs from "dayjs";
 
-// Type definition for Calendar component
 interface CalendarProps {
   id?: string;
   mode?: "multiple";
@@ -44,18 +44,24 @@ const roomTypes: RoomType[] = [
   { id: "suite", title: "Suite", pricePerNight: 25000 },
 ];
 
-export default function RoomReservationForm({
+export default function ListSpaceCard({
   hotel = { id: "unknown", name: "Unknown Hotel" },
 }: {
   hotel?: { id: string; name: string };
 }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [selectedDates, setSelectedDates] = useState<Date[]>([]);
   const [guests, setGuests] = useState<number>(1);
   const [roomType, setRoomType] = useState<string>(roomTypes[0].id);
   const [totalAmount, setTotalAmount] = useState<number>(0);
   const [data, setData] = useState<IFormInput | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [apartmentData, setApartmentData] = useState<{
+    name: string;
+    image: string;
+    description: string;
+  } | null>(null);
 
   const {
     register,
@@ -66,7 +72,24 @@ export default function RoomReservationForm({
     mode: "onChange",
   });
 
-  const formData = watch(); // Watch form inputs for real-time summary
+  const formData = watch();
+
+  // Extract query parameters
+  useEffect(() => {
+    const apartment = searchParams.get("apartment");
+    const image = searchParams.get("image");
+    const description = searchParams.get("description");
+
+    if (apartment && image && description) {
+      setApartmentData({
+        name: decodeURIComponent(apartment),
+        image: decodeURIComponent(image),
+        description: decodeURIComponent(description),
+      });
+    } else {
+      setApartmentData(null);
+    }
+  }, [searchParams]);
 
   const calculateAmount = useCallback(
     (guests: number, roomType: string, dates: Date[]): number => {
@@ -120,6 +143,7 @@ export default function RoomReservationForm({
               dates: selectedDates.map((date) => dayjs(date).format("YYYY-MM-DD")),
               guests: guests,
               totalPrice: amount,
+              apartment: apartmentData?.name || "Not specified",
             },
           }),
         });
@@ -135,7 +159,9 @@ export default function RoomReservationForm({
             formData.phone
           )}&hotelId=${hotel.id}&dates=${encodeURIComponent(
             selectedDates.map((date) => dayjs(date).format("YYYY-MM-DD")).join(",")
-          )}&guests=${guests}&roomType=${roomType}`
+          )}&guests=${guests}&roomType=${roomType}&apartment=${encodeURIComponent(
+            apartmentData?.name || ""
+          )}`
         );
       }
     } catch (error) {
@@ -176,6 +202,7 @@ export default function RoomReservationForm({
             dates: selectedDates.map((date) => dayjs(date).format("YYYY-MM-DD")),
             guests: guests,
             totalPrice: totalAmount,
+            apartment: apartmentData?.name || "Not specified",
           },
         }),
       })
@@ -192,7 +219,9 @@ export default function RoomReservationForm({
               data.phone
             )}&hotelId=${hotel.id}&dates=${encodeURIComponent(
               selectedDates.map((date) => dayjs(date).format("YYYY-MM-DD")).join(",")
-            )}&guests=${guests}&roomType=${roomType}&amount=${totalAmount}`
+            )}&guests=${guests}&roomType=${roomType}&amount=${totalAmount}&apartment=${encodeURIComponent(
+              apartmentData?.name || ""
+            )}`
           );
         })
         .catch((error) => {
@@ -209,20 +238,45 @@ export default function RoomReservationForm({
       });
       setIsSubmitting(false);
     }
-  }, [paymentStatus, data, totalAmount, hotel.id, selectedDates, guests, roomType, router]);
+  }, [paymentStatus, data, totalAmount, hotel.id, selectedDates, guests, roomType, router, apartmentData]);
 
   const handleCalendarSelect = (dates: Date[] | undefined) => {
     setSelectedDates(dates || []);
   };
 
-  // Sort selected dates for display
   const sortedDates = [...selectedDates].sort((a, b) => a.getTime() - b.getTime());
 
   return (
     <section className="container min-h-[200px] py-14 bg-gradient-to-b from-amber-50 to-white">
+      {/* Display Apartment Information */}
+      {apartmentData ? (
+        <div className="mb-8 max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold text-amber-800 mb-4">{apartmentData.name}</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src={apartmentData.image}
+                alt={`Image of ${apartmentData.name}`}
+                width={800}
+                height={500}
+                className="w-full h-[300px] object-cover"
+                quality={85}
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <p className="text-amber-600 text-lg">{apartmentData.description}</p>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className="mb-8 max-w-5xl mx-auto">
+          <p className="text-amber-600 text-lg">No apartment selected. Please choose an apartment to reserve.</p>
+        </div>
+      )}
+
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid gap-6 md:gap-8 lg:grid-cols-2 mt-6 max-w-5xl mx-auto min-h-[200px] "
+        className="grid gap-6 md:gap-8 lg:grid-cols-2 mt-6 max-w-5xl mx-auto min-h-[200px]"
       >
         <div className="space-y-6">
           <Card className="shadow-lg border-amber-200">
