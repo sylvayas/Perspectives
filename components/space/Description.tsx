@@ -35,20 +35,20 @@ const apartmentDescriptions: { [key: string]: string } = {
 
 // Propriétés principales
 const mainProperties: Property[] = [
-  { src: "/images/Apparts/appart B/Chambre 2.png", alt: "Chambre 2 - Appartement B", width: 800, height: 500, apartment: "Appartement B" },
-  { src: "/images/Apparts/appart B/Salon B 1.0.png", alt: "Salon B 1.0 - Appartement B", width: 800, height: 500, apartment: "Appartement B" },
-  { src: "/images/Apparts/appart B/Salon B 1.1.png", alt: "Salon B 1.1 - Appartement B", width: 800, height: 500, apartment: "Appartement B" },
+  { src: "/images/Apparts/appart B/chambre.png", alt: "Chambre 2 - Appartement B", width: 800, height: 500, apartment: "Appartement B" },
+  { src: "/images/Apparts/appart B/salon B 1.0.0.png", alt: "Salon B 1.0 - Appartement B", width: 800, height: 500, apartment: "Appartement B" },
+  { src: "/images/Apparts/appart B/salon B 1.1.0.png", alt: "Salon B 1.1 - Appartement B", width: 800, height: 500, apartment: "Appartement B" },
 
-  { src: "/images/Apparts/appart b23/Chambre Principale.png", alt: "Chambre Principale - Appartement B23", width: 800, height: 500, apartment: "Appartement B23" },
-  { src: "/images/Apparts/appart b23/Salon 1.0.png", alt: "Salon 1.0 - Appartement B23", width: 800, height: 500, apartment: "Appartement B23" },
-  { src: "/images/Apparts/appart b23/Salon 1.1.png", alt: "Salon 1.1 - Appartement B23", width: 800, height: 500, apartment: "Appartement B23" },
+  { src: "/images/Apparts/appart b23/chambreprincipale.png", alt: "Chambre Principale - Appartement B23", width: 800, height: 500, apartment: "Appartement B23" },
+  { src: "/images/Apparts/appart b23/salon 1.0.0.png", alt: "Salon 1.0 - Appartement B23", width: 800, height: 500, apartment: "Appartement B23" },
+  { src: "/images/Apparts/appart b23/salon 1.1.0.png", alt: "Salon 1.1 - Appartement B23", width: 800, height: 500, apartment: "Appartement B23" },
 
-  { src: "/images/Apparts/appart pressing/IMG_0704.DNG.png", alt: "Salon - Appartement Pressing", width: 800, height: 500, apartment: "Appartement Pressing" },
-  { src: "/images/Apparts/appart pressing/IMG_0722.DNG.png", alt: "Salon - Appartement Pressing", width: 800, height: 500, apartment: "Appartement Pressing" },
+  { src: "/images/Apparts/appart pressing/IMG1_0704.DNG.png", alt: "Salon - Appartement Pressing", width: 800, height: 500, apartment: "Appartement Pressing" },
+  { src: "/images/Apparts/appart pressing/IMG2_0722.DNG.png", alt: "Salon - Appartement Pressing", width: 800, height: 500, apartment: "Appartement Pressing" },
 
-  { src: "/images/Apparts/appart prima/IMG_1545.DNG.png", alt: "Cuisine - Appartement Prima", width: 800, height: 500, apartment: "Appartement Prima" },
-  { src: "/images/Apparts/appart prima/IMG_1555.DNG.png", alt: "Mini salle a manger - Appartement Prima", width: 800, height: 600, apartment: "Appartement Prima" },
-  { src: "/images/Apparts/appart prima/IMG_1556.DNG.png", alt: "Salon luxueux - Appartement Prima", width: 800, height: 600, apartment: "Appartement Prima" },
+  { src: "/images/Apparts/appart prima/IMG1_1545.DNG.png", alt: "Cuisine - Appartement Prima", width: 800, height: 500, apartment: "Appartement Prima" },
+  { src: "/images/Apparts/appart prima/IMG2_1555.DNG.png", alt: "Mini salle a manger - Appartement Prima", width: 800, height: 600, apartment: "Appartement Prima" },
+  { src: "/images/Apparts/appart prima/IMG3_1556.DNG.png", alt: "Salon luxueux - Appartement Prima", width: 800, height: 600, apartment: "Appartement Prima" },
 
   { src: "/images/Apparts/appart soleil/Soleil 1.0.4.png", alt: "Chambre luxueuse - Appartement Soleil", width: 800, height: 500, apartment: "Appartement Soleil" },
   { src: "/images/Apparts/appart soleil/Soleil 1.0.2.png", alt: "Salon - Appartement Soleil", width: 800, height: 500, apartment: "Appartement Soleil" },
@@ -59,8 +59,8 @@ const mainProperties: Property[] = [
 
 // Autres propriétés
 const otherProperties: Property[] = [
-  { src: "/images/Apparts/complex carré Massina/Salle de conf/IMG_0919.DNG.png", alt: "Chambre élégante - Salles de conf", width: 800, height: 500, apartment: "Salles de conf" },
-  { src: "/images/Apparts/complex carré Massina/salle de conf/IMG_0909.DNG.png", alt: "Salon luxueux - Salles de conf", width: 800, height: 600, apartment: "Salles de conf" },
+  { src: "/images/Apparts/complex carré Massina/Salle de conf/IMG3_0919.DNG.png", alt: "Chambre élégante - Salles de conf", width: 800, height: 500, apartment: "Salles de conf" },
+  { src: "/images/Apparts/complex carré Massina/salle de conf/IMG2_0909.DNG.png", alt: "Salon luxueux - Salles de conf", width: 800, height: 600, apartment: "Salles de conf" },
 ];
 
 // Grouper les propriétés par appartement
