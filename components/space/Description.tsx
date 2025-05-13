@@ -50,8 +50,8 @@ const mainProperties: Property[] = [
   { src: "/images/Apparts/appart prima/IMG2_1555.DNG.png", alt: "Mini salle a manger - Appartement Prima", width: 800, height: 600, apartment: "Appartement Prima" },
   { src: "/images/Apparts/appart prima/IMG3_1556.DNG.png", alt: "Salon luxueux - Appartement Prima", width: 800, height: 600, apartment: "Appartement Prima" },
 
-  { src: "/images/Apparts/appart soleil/Soleil 1.0.4.png", alt: "Chambre luxueuse - Appartement Soleil", width: 800, height: 500, apartment: "Appartement Soleil" },
-  { src: "/images/Apparts/appart soleil/Soleil 1.0.2.png", alt: "Salon - Appartement Soleil", width: 800, height: 500, apartment: "Appartement Soleil" },
+  { src: "/images/Apparts/appart soleil/soleil 1.0.4.0.png", alt: "Chambre luxueuse - Appartement Soleil", width: 800, height: 500, apartment: "Appartement Soleil" },
+  { src: "/images/Apparts/appart soleil/soleil 1.0.2.0.png", alt: "Salon - Appartement Soleil", width: 800, height: 500, apartment: "Appartement Soleil" },
 
   { src: "/images/Apparts/complex carré Massina/appart/IMG_1055.DNG.png", alt: "Chambre - Complexe Carré Massina", width: 800, height: 500, apartment: "Complexe Carré Massina" },
   { src: "/images/Apparts/complex carré Massina/appart/IMG_0971.DNG_1.png", alt: "Cuisine - Complexe Carré Massina", width: 800, height: 500, apartment: "Complexe Carré Massina" },
@@ -59,8 +59,8 @@ const mainProperties: Property[] = [
 
 // Autres propriétés
 const otherProperties: Property[] = [
-  { src: "/images/Apparts/complex carré Massina/Salle de conf/IMG3_0919.DNG.png", alt: "Chambre élégante - Salles de conf", width: 800, height: 500, apartment: "Salles de conf" },
-  { src: "/images/Apparts/complex carré Massina/salle de conf/IMG2_0909.DNG.png", alt: "Salon luxueux - Salles de conf", width: 800, height: 600, apartment: "Salles de conf" },
+  { src: "/images/Apparts/complex carré Massina/Salle de conf/img3_0919.png", alt: "Chambre élégante - Salles de conf", width: 800, height: 500, apartment: "Salles de conf" },
+  { src: "/images/Apparts/complex carré Massina/salle de conf/img2_0909.png", alt: "Salon luxueux - Salles de conf", width: 800, height: 600, apartment: "Salles de conf" },
 ];
 
 // Grouper les propriétés par appartement
