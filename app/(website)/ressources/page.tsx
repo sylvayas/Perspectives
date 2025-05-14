@@ -3,7 +3,7 @@ import React from 'react'
 const ressourcepages = () => {
   return (
     <div className='text-center mt-80 mb-96'>
-      Aucun document n'est disponible 
+      Aucun document n&apos;est disponible 
     </div>
   )
 }
