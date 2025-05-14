@@ -7,7 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 
 const images = [
   "/images/finance/analyse financière.jpg",
-  "/images/immobilier/marchandage maison.jpg",
+  "/images/immobilier/cle de maison.jpg",
   "/images/transport/un homme.jpg",
   "/images/commerce_géneral/commerce.jpg",
 ];

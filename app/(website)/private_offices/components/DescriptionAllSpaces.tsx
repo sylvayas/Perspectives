@@ -50,7 +50,7 @@ export default function DescriptionAllSpaces() {
         >
           <Image
             className="w-full h-full object-cover"
-            src="/images/perspective/camion_transport.jpg"
+            src="/images/transport/un homme.jpg"
             alt="Camion de transport logistique"
             width={800}
             height={500}
@@ -110,20 +110,7 @@ export default function DescriptionAllSpaces() {
               <div className="p-5 flex flex-col flex-grow">
                 <h3 className="text-xl font-bold tracking-tight text-gray-900 mb-2">{avantage.title}</h3>
                 <p className="mt-2 mb-4 font-light text-gray-600 flex-grow">{avantage.description}</p>
-                <Link
-                  href="/services"
-                  className={cn(
-                    buttonVariants(),
-                    "bg-perspectives_orange hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg w-fit flex items-center gap-2 text-sm opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform translate-y-2 transition-all duration-300"
-                  )}
-                  aria-label={`En savoir plus sur ${avantage.title}`}
-                >
-                  {/* Fallback SVG for Icons.info */}
-                  <svg className="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Détails
-                </Link>
+             
               </div>
             </motion.div>
           ))}

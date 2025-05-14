@@ -60,7 +60,7 @@ export function getMenuList(pathname: string): Group[] {
       label: "Ressources",
       icon: Icons.library,
       submenus: [
-        { href: "/resources/documents", label: "Documents à Télécharger", active: pathname === "/resources/documents" },
+        { href: "/ressources", label: "Documents à Télécharger", active: pathname === "/ressources" },
         { href: "/resources/faq", label: "FAQ", active: pathname === "/resources/faq" },
       ]
     },
