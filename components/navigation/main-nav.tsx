@@ -160,14 +160,14 @@ export function MainNav() {
                     </NavigationMenuItem>
                     <NavigationMenuItem >
                         <Link href={menuList[4].menus[0].href} legacyBehavior passHref>
-                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[4].menus[0] && "font-bold text-novis_orange"}`)} >
+                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[4].menus[0] && "font-base text-novis_orange"}`)} >
                                 {menuList[4].menus[0].label}
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
                         <Link href={menuList[5].menus[0].href} legacyBehavior passHref>
-                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[5].menus[0] && "font-bold text-novis_orange"}`)} >
+                            <NavigationMenuLink className={cn(navigationMenuTriggerStyle(), `${menuList[5].menus[0] && "font-base text-novis_orange"}`)} >
                                 {menuList[5].menus[0].label}
                             </NavigationMenuLink>
                         </Link>

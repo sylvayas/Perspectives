@@ -39,8 +39,8 @@ interface RoomType {
 }
 
 const roomTypes: RoomType[] = [
-  { id: "single", title: "Single Room", pricePerNight: 10000 },
-  { id: "double", title: "Double Room", pricePerNight: 15000 },
+  { id: "single", title: "Chambre simple", pricePerNight: 10000 },
+  { id: "double", title: "Chambre double", pricePerNight: 15000 },
   { id: "suite", title: "Suite", pricePerNight: 25000 },
 ];
 
@@ -270,7 +270,7 @@ export default function ListSpaceCard({
         </div>
       ) : (
         <div className="mb-8 max-w-5xl mx-auto">
-          <p className="text-amber-600 text-lg">No apartment selected. Please choose an apartment to reserve.</p>
+          <p className="text-amber-600 text-lg">Pas d&apos;appartement sélectionné. Veuillez choisir un appartement à réserver.</p>
         </div>
       )}
 
@@ -283,12 +283,12 @@ export default function ListSpaceCard({
             <CardHeader>
               <CardTitle className="text-2xl text-amber-800 flex items-center">
                 <Users className="h-6 w-6 mr-2" />
-                Guest Information
+                Informations sur les clients
               </CardTitle>
             </CardHeader>
             <CardContent className="grid gap-4">
               <div className="grid gap-2">
-                <Label htmlFor="name" className="text-amber-700">Full Name</Label>
+                <Label htmlFor="name" className="text-amber-700">Nom complet</Label>
                 <Input
                   id="name"
                   type="text"
@@ -321,7 +321,7 @@ export default function ListSpaceCard({
                   )}
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="phone" className="text-amber-700">Phone</Label>
+                  <Label htmlFor="phone" className="text-amber-700">Télephone</Label>
                   <Input
                     id="phone"
                     type="tel"
@@ -341,12 +341,12 @@ export default function ListSpaceCard({
             <CardHeader>
               <CardTitle className="text-2xl text-amber-800 flex items-center">
                 <Bed className="h-6 w-6 mr-2" />
-                Booking Details
+                Détails de la réservation
               </CardTitle>
             </CardHeader>
             <CardContent className="grid gap-4">
               <div className="grid gap-2">
-                <Label htmlFor="guests" className="text-amber-700">Number of Guests</Label>
+                <Label htmlFor="guests" className="text-amber-700">Nombres de client</Label>
                 <Input
                   id="guests"
                   type="number"
@@ -357,7 +357,7 @@ export default function ListSpaceCard({
                 />
               </div>
               <div className="grid gap-2">
-                <Label htmlFor="roomType" className="text-amber-700">Room Type</Label>
+                <Label htmlFor="roomType" className="text-amber-700">Type de chambre</Label>
                 <select
                   id="roomType"
                   value={roomType}
@@ -366,7 +366,7 @@ export default function ListSpaceCard({
                 >
                   {roomTypes.map((room) => (
                     <option key={room.id} value={room.id}>
-                      {room.title} ({room.pricePerNight} FCFA/night)
+                      {room.title} ({room.pricePerNight} FCFA/Nuit)
                     </option>
                   ))}
                 </select>
@@ -374,7 +374,7 @@ export default function ListSpaceCard({
               <div className="grid gap-2">
                 <Label className="text-amber-700 flex items-center">
                   <CalendarIcon className="h-5 w-5 mr-2" />
-                  Reservation Dates
+                 Date de la reservation
                 </Label>
                 <Calendar
                   id="reservationDates"
@@ -388,12 +388,12 @@ export default function ListSpaceCard({
                 />
                 {selectedDates.length > 0 ? (
                   <p className="text-sm text-amber-600">
-                    Selected Dates: {sortedDates
+                    Selectionnée une date: {sortedDates
                       .map((date) => dayjs(date).format("YYYY-MM-DD"))
                       .join(" - ")}
                   </p>
                 ) : (
-                  <p className="text-sm text-amber-600">No dates selected</p>
+                  <p className="text-sm text-amber-600">Aucune date selectionné</p>
                 )}
               </div>
             </CardContent>
@@ -404,17 +404,17 @@ export default function ListSpaceCard({
           <CardHeader>
             <CardTitle className="text-2xl text-amber-800 flex items-center">
               <Home className="h-6 w-6 mr-2" />
-              Reservation Summary
+               Résumé de la réservation
             </CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4">
             <div className="grid gap-2">
               <p className="text-amber-700 font-semibold flex items-center">
                 <Users className="h-5 w-5 mr-2" />
-                Guest Name
+                  Nom du client
               </p>
               <p className="text-amber-600">
-                {formData.name || "Not provided"}
+                {formData.name || "Non fourni"}
               </p>
             </div>
             <div className="grid gap-2">
@@ -423,51 +423,51 @@ export default function ListSpaceCard({
                 Email
               </p>
               <p className="text-amber-600">
-                {formData.email || "Not provided"}
+                {formData.email || "Non fourni"}
               </p>
             </div>
             <div className="grid gap-2">
               <p className="text-amber-700 font-semibold flex items-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Phone
+                Télephone
               </p>
               <p className="text-amber-600">
-                {formData.phone || "Not provided"}
+                {formData.phone || "Non fourni"}
               </p>
             </div>
             <div className="grid gap-2">
               <p className="text-amber-700 font-semibold flex items-center">
                 <CalendarIcon className="h-5 w-5 mr-2" />
-                Selected Dates
+                Selectionnée une date
               </p>
               <p className="text-amber-600">
                 {sortedDates.length > 0
                   ? sortedDates.map((date) => dayjs(date).format("YYYY-MM-DD")).join(", ")
-                  : "No dates selected"}
+                  : "Aucune date selectionnée"}
               </p>
             </div>
             <div className="grid gap-2">
               <p className="text-amber-700 font-semibold flex items-center">
                 <Users className="h-5 w-5 mr-2" />
-                Number of Guests
+                Nombres de client
               </p>
               <p className="text-amber-600">{guests}</p>
             </div>
             <div className="grid gap-2">
               <p className="text-amber-700 font-semibold flex items-center">
                 <Bed className="h-5 w-5 mr-2" />
-                Room Type
+                Type de chambre
               </p>
               <p className="text-amber-600">
-                {roomTypes.find((r) => r.id === roomType)?.title || "Not selected"}
+                {roomTypes.find((r) => r.id === roomType)?.title || "Aucune selection"}
               </p>
             </div>
             <div className="grid gap-2">
-              <p className="text-amber-700 font-semibold">Total Price</p>
+              <p className="text-amber-700 font-semibold">Total du prix</p>
               <p className="text-lg font-bold text-amber-800">
                 {totalAmount > 0
                   ? `${totalAmount} FCFA (${sortedDates.length} night${sortedDates.length > 1 ? "s" : ""})`
-                  : "Not calculated"}
+                  : "Aucun calcule"}
               </p>
             </div>
             <Button
@@ -478,12 +478,12 @@ export default function ListSpaceCard({
               {isSubmitting ? (
                 <>
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  <span>Processing...</span>
+                  <span>Chargement...</span>
                 </>
               ) : (
                 <>
                   <span>
-                    {totalAmount > 0 ? "Proceed to Payment" : "Request Reservation"}
+                    {totalAmount > 0 ? "Procéder au paiement" : "Demander une réservation"}
                   </span>
                   <ArrowUpRight className="h-4 w-4" />
                 </>
