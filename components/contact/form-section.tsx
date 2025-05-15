@@ -48,7 +48,7 @@ export default function FormSection() {
   };
 
   return (
-    <section className="relative overflow-hidden isolate px-4 py-8 mx-auto max-w-screen-2xl">
+    <section className="relative mb-32 overflow-hidden isolate px-4 py-8 mx-auto max-w-screen-2xl">
       <div className="max-w-screen-xl mx-auto">
         <div className="grid sm:grid-cols-2 items-start gap-16 p-4 mx-auto max-w-4xl bg-white font-[sans-serif]">
           <div>

@@ -4,19 +4,11 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const images = [
-  "/images/commerce_géneral/fer_a_repasser.jpg",
-  "/images/commerce_géneral/frigo2.jpg",
+  "/images/Appareil électroménagers.png",
+  
 ];
 
 export default function HeaderPage() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="p-4 bg-white">
@@ -25,11 +17,9 @@ export default function HeaderPage() {
           <Image
             key={index}
             src={image}
-            alt={`Slide ${index + 1}`}
+            alt={""}
             fill
-            className={`absolute inset-0 object-cover transition-opacity duration-1000 ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
+            className="absolute inset-0 object-cover"
           />
         ))}
 
@@ -40,17 +30,7 @@ export default function HeaderPage() {
           </h1>
         </div>
 
-        {/* Indicateurs */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {images.map((_, index) => (
-            <div
-              key={index}
-              className={`w-3 h-3 rounded-full ${
-                index === currentIndex ? "bg-white" : "bg-gray-400"
-              }`}
-            />
-          ))}
-        </div>
+       
       </div>
     </section>
   );

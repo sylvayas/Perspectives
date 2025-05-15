@@ -82,6 +82,14 @@ export const Icons: any = {
       {...props}
     />
   ),
+    logo_white: ({ className, ...props }: { className: string }) => (
+    <img
+      src="/images/Icone White.png"
+      alt="Perspectives"
+      className={className}
+      {...props}
+    />
+  ),
   close: X,
   spinner: Loader2,
   chevronLeft: ChevronLeft,

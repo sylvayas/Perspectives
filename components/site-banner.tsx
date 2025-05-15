@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 export function SiteBanner() {
   return (
@@ -13,11 +14,14 @@ export function SiteBanner() {
           className="inline-flex text-xs leading-normal md:text-sm"
         >
           ✨{" "}
-          <span className="ml-1 font-[580] dark:font-[550]">
-            {" "}
-            Bienvenue chez <span className="font-lora">PersPectives</span> <span className=" font-lora">CI</span>, <span className="font-lora"> allons loin ensemble.</span>
-          </span>{" "}
+         <div className="flex items-center">
+          <div className="ml-1 font-[580] flex items-center dark:font-[550]">
+            <Image src="/images/Monogramme.GIF" alt="" width={150} height={150} />
+            <span className="font-lora ml-2 mt-2">allons loin ensemble.</span>
+          </div>
           <ChevronRight className="ml-1 mt-[3px] hidden size-4 transition-all duration-300 ease-out group-hover:translate-x-1 lg:inline-block" />
+        </div>
+
         </Link>
       </div>
       <hr className="absolute bottom-0 m-0 h-px w-full bg-neutral-200/30" />

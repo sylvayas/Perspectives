@@ -15,20 +15,7 @@ export default function HeaderPage() {
                             Optimisez vos finances avec des espaces adaptés à votre succès.</h2>
                             <p className="mb-8 font-light text-xs sm:text-sm">Bienvenue au sein des espaces de Perspectives à Cocody</p>
                         </div>
-                        <div className=" flex flex-col gap-2 md:gap-4">
-                            <div className="flex min-w-64 gap-2 bg-perspectives_orange rounded-sm p-2 mt-20 text-white">
-                                <Icons.building className="size-4 md:size-6" />
-                                <p className="font-medium text-sm font-mono whitespace-pre-wrap tracking-tighter "><NumberTicker className="text-white mr-2" value={13} />Espaces de travail</p>
-                            </div>
-                            <div className="flex min-w-64 gap-2 bg-perspectives_orange rounded-sm p-2 text-white">
-                                <Icons.laptop className="size-4 md:size-6" />
-                                <p className="font-medium text-sm font-mono whitespace-pre-wrap tracking-tighter "><NumberTicker className="text-white mr-2" value={200} />Postes équipés</p>
-                            </div>
-                            <div className="flex min-w-64 gap-2 bg-perspectives_orange rounded-sm p-2 text-white">
-                                <Icons.space className="size-4 md:size-6" />
-                                <p className="font-medium text-sm font-mono whitespace-pre-wrap tracking-tighter "><NumberTicker className="text-white mr-2" value={40} />Salles de réunion</p>
-                            </div>
-                        </div>
+                    
                     </div>
                     {/* image background */}
                     <Image
@@ -44,14 +31,7 @@ export default function HeaderPage() {
             </div>
             </section >
 
-            <section className="relative">
-                <div className="container grid grid-cols-2 gap-4 md:grid-cols-4 py-2 md:py-4 bg-gray-200">
-                    <p className="font-medium text-xs md:text-sm">Conseil </p>
-                    <p className="font-medium text-xs md:text-sm">Accompagnement </p>
-                    <p className="font-medium text-xs md:text-sm">Création de compte</p>
-                    <p className="font-medium text-xs md:text-sm">Prendre rendez-vous</p>
-                </div>
-            </section>
+           
         </>
     );
 }

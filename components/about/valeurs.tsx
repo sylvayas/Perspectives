@@ -7,6 +7,8 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 import GridPattern from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
+import Statistiques from "../website/Statistiques/statistiques";
+import Faqs from "../Faqs/faqs";
 
 const Circle = forwardRef<
     HTMLDivElement,
@@ -129,6 +131,7 @@ export function AnimatedBeamMultipleOutputDemo({
 
 export default function Valeurs() {
     return (
+        <>
         <section className="container min-h-[300px] py-14 relative">
             <div className="relative md:gap-8 items-center px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 lg:px-6">
                 <div className="flex flex-col justify-center">
@@ -143,13 +146,13 @@ export default function Valeurs() {
                 <div className="mb-4 md:mt-0">
                 <h2 className="mb-4 text-4xl tracking-tight font-bold font-saudagar text-perspectives_marron">NOS VALEURS</h2>
                     <ul className="list-disc">
-                        <li className="mb-2 text-sm"><span className="font-semibold">Respect , </span> Discipline et Performance : les piliers de notre démarche.</li>
-                        <li className="mb-2 text-sm"><span className="font-semibold">Performance </span></li>
-                        <li className="mb-2 text-sm"><span className="font-semibold">Collaboration </span></li>
-                        <li className="mb-2 text-sm"><span className="font-semibold">Responsabilité </span></li>
+                        <li className="mb-2 text-sm"><span className="font-semibold">Respect , </span> la volonté</li>
                     </ul>
                 </div>
             </div>
         </section>
+             <Statistiques />
+              <Faqs />
+        </>
     );
 }

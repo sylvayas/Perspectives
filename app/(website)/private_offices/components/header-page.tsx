@@ -11,30 +11,28 @@ export default function HeaderPage() {
         <div className="px-4 relative h-[360px] p-4 max-w-[1400px]">
           <div className="relative z-[2] flex flex-col md:flex-row md:gap-x-8 justify-between h-[320px]   py-6 px-4 sm:py-8 lg:px-8">
             <div className="max-w-screen-sm text-white text-center md:text-left flex flex-col justify-center">
-              <h2 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight animate-fade-in">
-                Optimisez vos finances avec des espaces adaptés à votre succès.
-              </h2>
-              <p className="mb-4 font-light text-xs sm:text-sm animate-fade-in">
-                Bienvenue au sein des espaces de Perspectives à Cocody
-              </p>
+              <h2 className="mb-4 text-xl sm:text-2xl md:text-3xl lg:text-3xl font-extralight tracking-tight animate-fade-in">
+          Confiez vos livraisons de sable, ciment, gravier et autres matériaux à nos équipes expérimentées.
+        </h2>
+              
             </div>
             <div className="flex flex-col gap-2 md:gap-4 justify-center">
               <div className="flex min-w-56 gap-2 bg-orange-500 rounded-md p-3 text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg">
                 <Icons.building className="size-5 md:size-6" />
                 <p className="font-medium text-sm font-mono tracking-tighter">
-                  <NumberTicker className="text-white mr-2" value={13} />Espaces de travail
+                  <NumberTicker className="text-white mr-2" value={13} />Camions de transport
                 </p>
               </div>
               <div className="flex min-w-56 gap-2 bg-orange-500 rounded-md p-3 text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg">
                 <Icons.laptop className="size-5 md:size-6" />
                 <p className="font-medium text-sm font-mono tracking-tighter">
-                  <NumberTicker className="text-white mr-2" value={200} />Postes équipés
+                  <NumberTicker className="text-white mr-2" value={200} />PTonnes transportées
                 </p>
               </div>
               <div className="flex min-w-56 gap-2 bg-orange-500 rounded-md p-3 text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg">
                 <Icons.space className="size-5 md:size-6" />
                 <p className="font-medium text-sm font-mono tracking-tighter">
-                  <NumberTicker className="text-white mr-2" value={40} />Salles de réunion
+                  <NumberTicker className="text-white mr-2" value={40} />Sites desservis
                 </p>
               </div>
             </div>

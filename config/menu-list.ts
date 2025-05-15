@@ -61,7 +61,6 @@ export function getMenuList(pathname: string): Group[] {
       icon: Icons.library,
       submenus: [
         { href: "/ressources", label: "Documents à Télécharger", active: pathname === "/ressources" },
-        { href: "/ressources/faq", label: "FAQ", active: pathname === "/ressources/faq" },
       ]
     },
     {

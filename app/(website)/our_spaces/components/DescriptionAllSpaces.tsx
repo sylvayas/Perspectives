@@ -36,15 +36,7 @@ export default function DescriptionAllSpaces() {
                 </div>
             </div>
 
-            <AnimatedGridPattern
-                numSquares={30}
-                maxOpacity={0.1}
-                duration={3}
-                className={cn(
-                    "absolute inset-0 h-full w-full",
-                    "opacity-50 [mask-image:radial-gradient(800px_circle_at_center,white,transparent)]"
-                )}
-            />
+     
         </section>
     );
 }

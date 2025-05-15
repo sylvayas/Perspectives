@@ -16,25 +16,16 @@ export default function DescriptionAllSpaces() {
 
   const avantages = [
     {
-      title: "Transport maritime",
-      description: "Ce type de transport est essentiel pour le commerce international et le transport de grandes quantités de marchandises, en particulier sur de longues distances.",
+      title: " Le Transport de marchandises",
+      description: "L’activité logistique de transport de marchandises de Perspectives consiste à déplacer des biens, produits ou équipements d’un lieu à un autre avec rapidité, sécurité et efficacité.",
       image: "/images/transport/transport_maritime.jpg",
     },
     {
-      title: "Transport aérien",
-      description: "Le transport aérien fait référence à l'utilisation d'avions pour déplacer des passagers et des marchandises d'un endroit à un autre à travers l'air.",
+      title: " Le Transport et le transfert de matières ( sable, ciment, granite, gravier )",
+      description: "Le transport et transfert de matières (sable, ciment, granite, gravier) par Perspectives est un service logistique dédié au déplacement rapide, sécurisé et efficace de matériaux de construction.",
       image: "/images/transport/transport_aérien.jpg",
     },
-    {
-      title: "Transport terrestre",
-      description: "Le transport terrestre désigne tous les modes de transport qui utilisent des voies terrestres, telles que les routes, les autoroutes, les chemins de fer ou même des pistes non pavées, pour déplacer des personnes ou des marchandises.",
-      image: "/images/transport/transport_terrestre.jpg",
-    },
-    {
-      title: "Transport ferroviaire",
-      description: "Le transport ferroviaire est un mode de transport qui utilise des trains circulant sur des voies ferrées pour transporter des passagers et des marchandises.",
-      image: "/images/transport/transport_ferroviaire.jpg",
-    },
+  
   ];
 
   return (
@@ -67,55 +58,70 @@ export default function DescriptionAllSpaces() {
           className="mt-8 md:mt-0 flex flex-col justify-center w-full md:w-1/2"
         >
           <p className="mb-6 text-justify text-gray-600 md:text-lg leading-relaxed">
-            Dans le secteur du transit et du transport, nous proposons des services essentiels tels que le dédouanement, le transport
-            de marchandises et de matières premières. Notre équipe d’experts facilite les formalités douanières, garantissant une circulation
-            rapide et efficace de vos produits à travers les frontières. Grâce à notre réseau logistique bien établi, nous assurons un transport
-            sécurisé et fiable, vous permettant de vous concentrer sur vos activités commerciales sans vous soucier des délais.
+            Pour vos livraisons et transferts de sable, de ciment, de gravier et bien d&apos;autres matériaux, faites 
+            confiance à nos équipes qualifiées,
+            expérimentées et réactives. Nous assurons chaque déplacement avec fiabilité, grâce à une logistique maîtrisée et 
+            un service rigoureux,
+            pensé pour répondre à vos besoins dans les meilleurs délais.
           </p>
          
         </motion.div>
       </div>
 
       {/* Section des services */}
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6" ref={servicesRef}>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={servicesInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-12 text-3xl md:text-4xl font-saudagar tracking-tight text-gray-900"
-        >
-          Nos services
-        </motion.h2>
+    {/* Section des services */}
+<section
+  className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6"
+  ref={servicesRef}
+>
+  {/* Titre de la section */}
+  <motion.h2
+    initial={{ opacity: 0, y: 20 }}
+    animate={servicesInView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.6 }}
+    className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-12 text-3xl md:text-4xl font-saudagar tracking-tight text-gray-900"
+  >
+    Nos services
+  </motion.h2>
 
-        <div className="flex flex-wrap gap-8 justify-center">
-          {avantages.map((avantage, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={servicesInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex flex-col bg-white rounded-lg shadow-md overflow-hidden w-full sm:w-[calc(50%-2rem)] md:w-[calc(25%-2rem)] group hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="relative">
-                <Image
-                  className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  src={avantage.image}
-                  alt={avantage.title}
-                  width={800}
-                  height={600}
-                  quality={85}
-                />
-                <BorderBeam className="z-10" />
-              </div>
-              <div className="p-5 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold tracking-tight text-gray-900 mb-2">{avantage.title}</h3>
-                <p className="mt-2 mb-4 font-light text-gray-600 flex-grow">{avantage.description}</p>
-             
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+  {/* Grille des cartes de services */}
+<div className="grid grid-cols-1 ml-64 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto">
+      {avantages.map((avantage, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={servicesInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.5, delay: index * 0.15 }}
+          className="relative flex flex-col bg-gradient-to-br from-white to-gray-50 rounded-xl border border-gray-200 p-6 hover:border-novis_green transition-all duration-300 hover:shadow-md"
+        >
+          {/* Icon/Badge */}
+          <div className="flex justify-center mb-4">
+            <Image
+              className="w-16 h-16 object-contain rounded-full bg-gray-100 p-2"
+              src={avantage.image}
+              alt={avantage.title}
+              width={64}
+              height={64}
+              quality={85}
+            />
+          </div>
+
+          {/* Content */}
+          <div className="flex flex-col text-center">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              {avantage.title}
+            </h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              {avantage.description}
+            </p>
+          </div>
+
+          {/* Hover Border Effect */}
+          <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-novis_green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        </motion.div>
+      ))}
+    </div>
+</section>
     </section>
   );
 }

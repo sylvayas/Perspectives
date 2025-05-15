@@ -6,10 +6,8 @@ import { CalendarIcon } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 
 const images = [
-  "/images/finance/analyse financière.jpg",
-  "/images/immobilier/cle de maison.jpg",
-  "/images/transport/un homme.jpg",
-  "/images/commerce_géneral/commerce.jpg",
+  "/images/Projet RAWDA.png",
+
 ];
 
 export default function Hero() {
@@ -37,11 +35,11 @@ export default function Hero() {
           <div className="flex items-center justify-center text-white flex-wrap gap-2">
             {item("FINANCE", "/our_spaces")}
             <span className="h-4 w-[2px] bg-white"></span>
-            {item("IMMOBILIER-LOGISTIQUE", "/our_spaces/open_space")}
+            {item("IMMOBILIER", "/our_spaces/open_space")}
             <span className="h-4 w-[2px] bg-white"></span>
-            {item("TRANSIT–TRANSPORT", "/our_spaces/meeting_room")}
+            {item("TRANSPORT", "/private_offices")}
             <span className="h-4 w-[2px] bg-white"></span>
-            {item("COMMERCE GÉNÉRAL", "/our_spaces/common_space")}
+            {item("COMMERCE GÉNÉRAL", "/our_commerce")}
           </div>
 {/* 
           <Link
