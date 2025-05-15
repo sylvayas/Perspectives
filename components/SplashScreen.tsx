@@ -30,7 +30,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
       }}
     >
       <Image
-        src="/images/Pictogramme.GIF" // Chemin vers ton GIF dans /public
+        src="/images/Pictogramme.gif" // Chemin vers ton GIF dans /public
         alt="Splash Screen"
         width={200} // Ajuste la taille
         height={200}

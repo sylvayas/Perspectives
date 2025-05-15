@@ -16,7 +16,7 @@ export function SiteBanner() {
           ✨{" "}
          <div className="flex items-center">
           <div className="ml-1 font-[580] flex items-center dark:font-[550]">
-            <Image src="/images/Monogramme.GIF" alt="" width={150} height={150} />
+            <Image src="/images/Monogramme.gif" alt="" width={150} height={150} />
             <span className="font-lora ml-2 mt-2">allons loin ensemble.</span>
           </div>
           <ChevronRight className="ml-1 mt-[3px] hidden size-4 transition-all duration-300 ease-out group-hover:translate-x-1 lg:inline-block" />
