@@ -6,6 +6,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { getMenuList } from "@/config/menu-list";
 
+import { } from "@mui/icons-material" ;
+import Image from "next/image";
 export default function Footer() {
   const pathname = usePathname();
   const menuList = getMenuList(pathname);
@@ -17,9 +19,6 @@ export default function Footer() {
           {/* Logo and Description Section */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-1/3 gap-4">
             <Icons.logo_white className="w-16 h-16" />
-            <p className="text-sm max-w-xs lg:max-w-none">
-              Des solutions innovantes pour accompagner votre réussite dans tous vos projets, quels que soient vos ambitions.
-            </p>
             {/* Social Media Icons */}
             <div className="flex gap-3">
               {[
@@ -35,8 +34,11 @@ export default function Footer() {
                   href: "https://www.instagram.com/perspectives_ci",
                   icon: <Icons.instagram className="w-5 h-5" />,
                 },
-                { href: "", icon: <Icons.twitter className="w-5 h-5" /> },
-              ].map((social, index) => (
+                    {
+        href: "https://www.tiktok.com/@perspectives_ci", // Remplacez par votre lien TikTok réel
+        icon: <Image src={"/images/tiktok (1).png"} alt={""} width={25} height={25}/>, // Assurez-vous que Icons.tiktok existe
+      },
+                    ].map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
@@ -112,10 +114,10 @@ export default function Footer() {
             <div>
               <h3 className="text-lg font-semibold uppercase">Informations</h3>
               <div className="mt-4 flex flex-col gap-2 text-sm">
-                <p>Marcory Zone 4, Immeuble Diamond Ivoire</p>
-                <p>Abidjan, Côte d&apos;Ivoire</p>
                 <p>Contact: +225 07-07-13-70-50</p>
-                <p>Email: info@perspectivesci.com</p>
+                <p>Email: infos@perspectivesci.com</p>
+                <p>Adresse : Marcory Zone 4, Immeuble Diamond Ivoire Abidjan, Côte d&apos;Ivoire</p>
+              
               </div>
             </div>
           </div>

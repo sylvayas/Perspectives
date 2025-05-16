@@ -81,7 +81,7 @@ export default function Services() {
       })}
     </div>
     <Statistiques />
-            <Faqs />
+    <Faqs />
 </>
   );
 }

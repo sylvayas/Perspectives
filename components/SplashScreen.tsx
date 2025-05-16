@@ -9,7 +9,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onFinish }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onFinish(); // Masque le splash screen après un délai
-    }, 3000); // 3 secondes, ajuste selon besoin
+    }, 2000); // 3 secondes, ajuste selon besoin
 
     return () => clearTimeout(timer);
   }, [onFinish]);

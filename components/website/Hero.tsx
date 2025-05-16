@@ -37,7 +37,7 @@ export default function Hero() {
             <span className="h-4 w-[2px] bg-white"></span>
             {item("IMMOBILIER", "/our_spaces/open_space")}
             <span className="h-4 w-[2px] bg-white"></span>
-            {item("TRANSPORT", "/private_offices")}
+            {item("TRANSIT-TRANSPORT", "/private_offices")}
             <span className="h-4 w-[2px] bg-white"></span>
             {item("COMMERCE GÉNÉRAL", "/our_commerce")}
           </div>

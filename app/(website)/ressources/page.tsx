@@ -7,7 +7,6 @@ interface Document {
   id: number;
   title: string;
   description: string;
-  category: string;
   previewImage: string;
   pdfPath: string;
 }
@@ -16,9 +15,8 @@ interface Document {
 const documents: Document[] = [
   {
     id: 1,
-    title: "Brochure Finance",
-    description: "Découvrez nos solutions de gestion patrimoniale et de financement sur mesure.",
-    category: "Finance",
+    title: "Brochure",
+    description: " Téléchargez nos brochures détaillées pour découvrir nos services exclusifs en finance, immobilier, transport et commerce.",
     previewImage: "/images/Projet RAWDA.png",
     pdfPath: "/images/RAWDA - Présentation Numérique.pdf",
   },
@@ -61,14 +59,12 @@ export default function DocumentsPage() {
               <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
                 {doc.description}
               </p>
-              <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-500">
-                Catégorie : {doc.category}
-              </p>
+            
               <Link
                 href={doc.pdfPath}
                 download
                 target="_blank"
-                className="mt-4 inline-block bg-novis_yellow text-neutral-900 font-medium py-2 px-4 rounded-lg hover:bg-yellow-400 transition-colors"
+                className="mt-4 inline-block bg-novis_yellow text-neutral-900 font-medium py-2 px-4 rounded-lg bg-[#8E421C] hover:bg-[#8E421C] transition-colors"
               >
                 Télécharger le PDF
               </Link>
@@ -79,11 +75,11 @@ export default function DocumentsPage() {
 
       {/* Call-to-action */}
       <div className="text-center mt-12">
-        <p className="text-lg text-neutral-600 dark:text-neutral-400">
+        <p className="text-lg text-neutral-600  dark:text-neutral-400">
           Besoin d’informations supplémentaires ?{" "}
           <Link
-            href="/contact"
-            className="text-novis_yellow hover:underline"
+            href="/contact_us"
+            className="text-novis_yellow underline hover:underline"
           >
             Contactez-nous
           </Link>

@@ -10,19 +10,21 @@ export default function SiteHeader() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 w-full supports-backdrop-blur:bg-background/95 bg-background/95 backdrop-blur-lg"
+        "sticky top-0 z-40 w-full supports-backdrop-blur:bg-background/95 bg-[#FFF7F4] backdrop-blur-lg"
       )}
     >
-      <div className="container px-4 flex h-16 items-center">
+      <div className="container px-4 flex h-16 items-center justify-between">
+        {/* Logo and Sidebar */}
+        <div className="flex items-center gap-4">
+          <Link href="/" className="flex items-center space-x-2">
+            <Icons.logo_black_rogner className="w-12" />
+          </Link>
+          <Sidebar />
+        </div>
         {/* Navigation principale */}
         <MainNav />
-        {/* Sidebar */}
-        <Sidebar />
-        {/* Espace pour la navigation mobile (commenté pour l'instant) */}
-        {/* <MobileNav /> */}
-
         {/* Bouton de réservation */}
-        <div className="flex flex-1 items-center gap-2 justify-end">
+        <div className="flex items-center gap-2">
           <Link
             className={cn(
               buttonVariants(),

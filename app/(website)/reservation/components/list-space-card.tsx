@@ -247,7 +247,7 @@ export default function ListSpaceCard({
   const sortedDates = [...selectedDates].sort((a, b) => a.getTime() - b.getTime());
 
   return (
-    <section className="container min-h-[200px] py-14 bg-gradient-to-b from-amber-50 to-white">
+    <section className="container min-h-[200px] py-14 bg-gradient-to-b from-[#FFF7F4] to-white">
       {/* Display Apartment Information */}
       {apartmentData ? (
         <div className="mb-8 max-w-5xl mx-auto">
@@ -473,7 +473,7 @@ export default function ListSpaceCard({
             <Button
               type="submit"
               disabled={!isValidForm || isSubmitting}
-              className="mt-4 bg-amber-600 hover:bg-amber-700 text-white gap-2 w-full"
+              className="mt-4 bg-[#8E421C] hover:bg-[#FFF7F4] text-white gap-2 w-full"
             >
               {isSubmitting ? (
                 <>

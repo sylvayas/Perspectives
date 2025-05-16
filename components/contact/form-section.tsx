@@ -166,7 +166,7 @@ export default function FormSection() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`bg-perspectives_orange text-white tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6 ${
+              className={`bg-[#8E421C] text-white tracking-wide rounded-md text-sm px-4 py-3 w-full !mt-6 ${
                 isSubmitting
                   ? "opacity-50 cursor-not-allowed"
                   : "hover:bg-perspectives_orange-dark"

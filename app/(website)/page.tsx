@@ -7,6 +7,7 @@ import ShowcasePartenaires from '@/components/website/Partenaires/showcaseparten
 import Showcase from '@/components/website/Showcase/showcase';
 import About from '@/components/website/About/about';
 import SplashScreen from '@/components/SplashScreen'; // Import du SplashScreen
+import Multiservices from '@/components/website/Multiservices/multiservices';
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
@@ -23,6 +24,7 @@ export default function Home() {
         <div>
           <Hero />
           <Showcase />
+          <Multiservices/>
           <ShowcasePartenaires />
           <Services />
           <About />
