@@ -37,8 +37,8 @@ export default function Hero(){
    
      return (
        
-   <section className="relative">
-  <div className="container px-0 relative max-w-[1400px] h-[480px]">
+   <section className="relative p-2">
+  <div className="container px-0 relative max-w-[1400px] h-[480px] rounded-tr-[40px] rounded-bl-[40px]">
     {/* Image de fond */}
     {images.map((image, index) => (
       <Image
@@ -49,15 +49,15 @@ export default function Hero(){
         objectFit="cover"
         quality={100}
         priority
-        className={`absolute inset-0 transition-opacity duration-1000  ${
+        className={`absolute inset-0 transition-opacity duration-1000 rounded-tr-[40px] rounded-bl-[40px]  ${
           index === currentIndex ? "opacity-100" : "opacity-0"
         }`}
       />
     ))}
 
     {/* Conteneur du texte */}
-    <div className="relative z-[2] flex flex-col md:flex-row md:gap-x-8 justify-between bg-black/30 h-[480px] py-8 px-4 sm:py-16 lg:px-8">
-      <div className="max-w-screen-sm text-white text-center md:text-left">
+    <div className="relative z-[2] flex flex-col md:flex-row md:gap-x-8 justify-between bg-black/30 h-[480px] rounded-tr-[40px] rounded-bl-[40px] py-8 px-4 sm:py-16 lg:px-8">
+      <div className="max-w-screen-sm text-white text-center md:text-left rounded-tr-[40px] rounded-bl-[40px]">
        
         {/* Ajout d'un paragraphe pour correspondre au style du second code */}
         <p className="mb-8 mt-24 font-extralight text-2xl sm:text-xl text-justify">

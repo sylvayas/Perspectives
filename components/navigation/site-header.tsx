@@ -17,7 +17,7 @@ export default function SiteHeader() {
         {/* Logo and Sidebar */}
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center space-x-2">
-            <Icons.logo_black_rogner className="w-12" />
+            <Icons.logo_black_rogner className="w-12 md:size-12" />
           </Link>
           <Sidebar />
         </div>

@@ -29,15 +29,15 @@ export default function DescriptionAllSpaces() {
   ];
 
   return (
-    <section className="container min-h-[400px] py-16 relative overflow-hidden" ref={sectionRef}>
+    <section className="container min-h-[400px] py-16 relative overflow-hidden " ref={sectionRef}>
    
       {/* Première section : Image + Texte */}
-      <div className="relative flex flex-col md:flex-row gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+      <div className="relative flex flex-col  md:flex-row gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={sectionInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8 }}
-          className="relative rounded-lg overflow-hidden shadow-lg w-full md:w-1/2"
+          className="relative overflow-hidden shadow-lg w-full rounded-tr-[40px] rounded-bl-[40px] md:w-1/2"
         >
           <Image
             className="w-full h-full object-cover"

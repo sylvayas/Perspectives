@@ -25,8 +25,9 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative">
-      <div className={cn("h-[60vh] md:h-[418px] xl:h-[518px] relative container px-0 max-w-[1400px]")}>
+    <section className="relative p-5  ">
+     <div className={cn("h-[60vh] md:h-[418px] xl:h-[518px] relative container px-0 max-w-[1400px] rounded-bl-lg")}>
+
         <div className="absolute z-[3] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center flex-col gap-8 max-w-5xl w-full">
           <h1 className="text-lg sm:text-xl md:text-4xl text-white text-center font-lora uppercase">
           Allons loin ensemble

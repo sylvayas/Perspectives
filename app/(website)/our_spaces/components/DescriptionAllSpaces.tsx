@@ -12,7 +12,7 @@ export default function DescriptionAllSpaces() {
         <section className="container min-h-[400px] py-16 relative bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
 
             <div className="relative gap-8 items-center py-10 px-6 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-8">
-                <div className="relative overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+                <div className="relative overflow-hidden rounded-tr-[40px] rounded-bl-[40px]  shadow-lg transition-transform duration-300 hover:scale-105">
                     <Image 
                         className="w-full h-full object-cover" 
                         src="/images/finance/analyse financière.jpg" 

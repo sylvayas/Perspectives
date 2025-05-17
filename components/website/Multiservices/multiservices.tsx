@@ -5,10 +5,10 @@ import { BorderBeam } from '@/components/magicui/border-beam';
 const Multiservices = () => {
   return (
       <>
-       <section className="container min-h-[400px] py-16 relative  dark:from-gray-900 dark:to-gray-800">
+       <section className="container min-h-[400px] py-4 relative   dark:from-gray-900 dark:to-gray-800">
   
-              <div className="relative gap-8 items-center py-10 px-6 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-8">
-                  <div className="relative overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+              <div className="relative gap-8 items-center py-6 px-6 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-8">
+                  <div className="relative overflow-hidden rounded-tr-[40px] rounded-bl-[40px]  shadow-lg transition-transform duration-300 hover:scale-105">
                       <Image 
                           className="w-full h-full object-cover" 
                           src="/images/finance/analyse financière.jpg" 
@@ -19,7 +19,7 @@ const Multiservices = () => {
                       />
                       <BorderBeam className="absolute inset-0" />
                   </div>
-                <div className="mt-6 md:mt-0 flex flex-col justify-center">
+                  <div className="mt-6 md:mt-0 flex flex-col justify-center">
                       <h2 className="text-[#8E421C]  text-4xl font-bold mb-4">
                          Dans le domaine financier
                       </h2>
@@ -32,7 +32,7 @@ const Multiservices = () => {
        
           </section>
 
-           <section className="container min-h-[400px] py-16 relative  dark:from-gray-900 dark:to-gray-800">
+           <section className="container min-h-[400px] py-4 relative  dark:from-gray-900 dark:to-gray-800">
   
               <div className="relative gap-8 items-center py-9 px-6 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-8">
                
@@ -44,7 +44,7 @@ const Multiservices = () => {
                         <span className='text-[#8E421C] text-3xl font-bold'></span> Se concentre sur la location et la construction d&apos;appartements de haut standing.Chaque bien est selectionné ou concu avec une attention particulière portée aux  détails, a l&apos;emplacement et aux finitions
                     </p>
                </div>
-                  <div className="relative overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+                  <div className="relative overflow-hidden rounded-tr-[40px] rounded-bl-[40px] shadow-lg transition-transform duration-300 hover:scale-105">
                       <Image 
                           className="w-full h-full object-cover" 
                           src="/images/Apparts/appart b23/salon 1.0.0.png" 
@@ -60,10 +60,10 @@ const Multiservices = () => {
        
           </section>
 
-             <section className="container min-h-[400px] py-16 relative  dark:from-gray-900 dark:to-gray-800">
+             <section className="container min-h-[400px] py-4 relative  dark:from-gray-900 dark:to-gray-800">
   
-              <div className="relative gap-8 items-center py-9 px-6 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-8">
-                 <div className="relative overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+              <div className="relative gap-8 items-center py-6 px-6 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-8">
+                 <div className="relative overflow-hidden rounded-tr-[40px] rounded-bl-[40px]  shadow-lg transition-transform duration-300 hover:scale-105">
                       <Image 
                           className="w-full h-full object-cover" 
                           src="/images/transport/un homme.jpg" 
@@ -86,11 +86,11 @@ const Multiservices = () => {
   
           </section>
 
-           <section className="container min-h-[400px] py-16 relative dark:from-gray-900 dark:to-gray-800">
-        <div className="relative flex flex-col gap-8 items-center py-9 px-6 mx-auto max-w-screen-xl sm:py-16 lg:px-8">
+           <section className="container min-h-[400px] py-4 relative dark:from-gray-900 dark:to-gray-800">
+        <div className="relative flex flex-col gap-8 items-center py-6 px-6 mx-auto max-w-screen-xl sm:py-16 lg:px-8">
             {/* Div pour l'image, centrée */}
             <div className="flex justify-center w-full">
-            <div className="relative overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 max-w-full">
+            <div className="relative overflow-hidden rounded-tr-[40px] rounded-bl-[40px]  shadow-lg transition-transform duration-300 hover:scale-105 max-w-full">
                 <Image
                 className="w-full h-full object-cover"
                 src="/images/Appareil électroménagers.png"

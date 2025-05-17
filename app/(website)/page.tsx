@@ -25,9 +25,9 @@ export default function Home() {
           <Hero />
           <Showcase />
           <Multiservices/>
-          <ShowcasePartenaires />
+          {/* <ShowcasePartenaires /> */}
           <Services />
-          <About />
+          {/* <About /> */}
         </div>
       )}
     </>

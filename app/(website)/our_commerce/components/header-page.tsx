@@ -11,8 +11,8 @@ const images = [
 export default function HeaderPage() {
 
   return (
-    <section className="p-4 bg-white">
-      <div className="relative w-full h-[500px] overflow-hidden bg-white">
+    <section className=" bg-white">
+      <div className="relative w-full h-[470px] overflow-hidden bg-white">
         {images.map((image, index) => (
           <Image
             key={index}
@@ -24,10 +24,13 @@ export default function HeaderPage() {
         ))}
 
         {/* Titre Centré */}
-        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-          <h1 className="text-white text-3xl md:text-5xl font-extralight italic text-center px-4 py-2">
-            Votre besoin, notre engagement – Tout pour vous, en un seul endroit !
-          </h1>
+        <div className="absolute inset-0 flex flex-col items-center  justify-center bg-black/30">
+       <div className="mt-44">
+           <p className="text-white text-4xl md:text-4xl text-center mr-[860px] px-4 py-2">
+            Votre besoin, notre engagement
+          </p>
+          <p className="text-white text-4xl md:text-4xl text-center mr-[800px] px-4 py-2">Tout pour vous, en un seul endroit !</p>
+       </div>
         </div>
 
        

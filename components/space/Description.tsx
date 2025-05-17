@@ -50,7 +50,7 @@ const mainProperties: Property[] = [
 
 // Autres propriétés
 const otherProperties: Property[] = [
-  { src: "/images/Apparts/complex carré Massina/salle de conf/img2_0909.png", alt: "Salon luxueux - Salles de conf", width: 800, height: 600, apartment: "Salles de conf" },
+  { src: "/images/Apparts/complex carré Massina/salle de conf/img3_091900.png", alt: "Salon luxueux - Salles de conf", width: 800, height: 600, apartment: "Salles de conf" },
 ];
 
 // Grouper les propriétés par appartement

@@ -30,7 +30,7 @@ export default function FormSection() {
         },
         body: JSON.stringify({
           ...data,
-          to: "info@perspectivesci.com",
+          to: "infos@perspectivesci.com",
         }),
       });
 
@@ -81,7 +81,7 @@ export default function FormSection() {
                     className="text-sm ml-4"
                   >
                     <small className="block">Mail</small>
-                    <strong>info@perspectivesci.com</strong>
+                    <strong>infos@perspectivesci.com</strong>
                   </a>
                 </li>
               </ul>

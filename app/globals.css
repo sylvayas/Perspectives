@@ -11,9 +11,17 @@
 
 @font-face {
   font-family: "inter";
-  src: url("/fonts/inter/FontsFree-Net-Inter-regular.ttf") format("truetype");
+  src: url("/fonts/book antiqua/Book-Antiqua") format("truetype");
   font-weight: 400;
   font-style: italic;
+}
+
+
+@font-face {
+  font-family: "inter";
+  src: url("/fonts/book antiqua/Book-Antiqua") format("truetype");
+  font-weight: 400;
+  font-style: bold;
 }
 
 /* @font-face {
