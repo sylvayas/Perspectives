@@ -92,42 +92,7 @@ export default function FormSection() {
               </ul>
             </div>
 
-            <div className="mt-12">
-              <h2 className="text-gray-800 text-base mb-4 font-bold">
-                Réseaux sociaux
-              </h2>
-              <div className="flex gap-3">
-                {[
-                  {
-                    href: 'https://www.facebook.com/profile.php?id=61562775252547',
-                    icon: <Icons.facebook className="w-5 h-5" />,
-                  },
-                  {
-                    href: 'https://www.linkedin.com/company/perspectivesinternational',
-                    icon: <Icons.linkedIn className="w-5 h-5" />,
-                  },
-                  {
-                    href: 'https://www.instagram.com/perspectives_ci',
-                    icon: <Icons.instagram className="w-5 h-5" />,
-                  },
-                  {
-                    href: 'https://www.tiktok.com/@perspectives_ci',
-                    icon: <Image src="/images/tiktok (1).png" alt="TikTok" width={25} height={25} />,
-                  },
-                ].map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-1.5 rounded-full border-[#F4E0D7] text-black ring-1 bg-[#F4E0D7] flex justify-center items-center transition"
-                    aria-label={`Visit our ${social.href.split('.')[1]} page`}
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
+          
           </div>
 
           <form onSubmit={handleSubmit(onSubmit)} className="ml-auto space-y-4">
