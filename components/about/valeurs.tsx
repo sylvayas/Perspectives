@@ -145,9 +145,9 @@ export default function Valeurs() {
                 </div>
                 <div className="mb-4 md:mt-0">
                 <h2 className="mb-4 text-4xl tracking-tight font-bold font-saudagar text-perspectives_marron">NOS VALEURS</h2>
-                    <ul className="list-disc">
-                        <li className="mb-2 text-sm"><span className="font-semibold">Respect , </span> la volonté</li>
-                    </ul>
+                  
+                      <span className="font-semibold">Le respect , </span> La volonté
+               
                 </div>
             </div>
         </section>

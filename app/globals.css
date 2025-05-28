@@ -103,7 +103,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-
+    --font-book-antiqua: "Book Antiqua", Times, serif;
     /* Autres Couleurs */
     --perspectives-marron: 20, 69%, 33%; /* Marron */
     --perspectives-gris: 0, 0%, 30%; /* Gris */
@@ -150,6 +150,11 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-book-antiqua);
+  }
+
+  h1,h2,p,button,input{
+      font-family: var(--font-book-antiqua);
   }
 }
 

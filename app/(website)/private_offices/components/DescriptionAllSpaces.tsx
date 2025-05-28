@@ -14,20 +14,33 @@ export default function DescriptionAllSpaces() {
   const { ref: sectionRef, inView: sectionInView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const { ref: servicesRef, inView: servicesInView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
-  const avantages = [
-    {
-      title: " Le Transport de marchandises",
-      description: "L’activité logistique de transport de marchandises de Perspectives consiste à déplacer des biens, produits ou équipements d’un lieu à un autre avec rapidité, sécurité et efficacité.",
-      image: "/images/transport/transport_maritime.jpg",
-    },
-    {
-      title: " Le Transport et le transfert de matières ( sable, ciment, granite, gravier )",
-      description: "Le transport et transfert de matières (sable, ciment, granite, gravier) par Perspectives est un service logistique dédié au déplacement rapide, sécurisé et efficace de matériaux de construction.",
-      image: "/images/transport/transport_aérien.jpg",
-    },
-  
-  ];
-
+ const avantages = [
+  {
+    title: "Le Transport de marchandises",
+    description: "L’activité logistique de transport de marchandises de Perspectives consiste à déplacer des biens, produits ou équipements d’un lieu à un autre avec rapidité, sécurité et efficacité.",
+    image: "/images/transport/transport_marchandise.jpg",
+  },
+  {
+    title: "Le Transport et le transfert de matières (sable, ciment, granite, gravier)",
+    description: "Le transport et transfert de matières (sable, ciment, granite, gravier) par Perspectives est un service logistique dédié au déplacement rapide, sécurisé et efficace de matériaux de construction.",
+    image: "/images/transport/transport_matière_première.jpg",
+  },
+  {
+    title: "Transport maritime",
+    description: "Ce type de transport est essentiel pour le commerce international et le transport de grandes quantités de marchandises, en particulier sur de longues distances.",
+    image: "/images/transport/transport_maritime.jpg", // Placeholder path
+  },
+  {
+    title: "Transport aérien",
+    description: "Le transport aérien fait référence à l’utilisation d’avions pour déplacer des passagers et des marchandises d’un endroit à un autre à travers l’air.",
+    image: "/images/transport/transport_aérien.jpg", // Placeholder path
+  },
+  {
+    title: "Transport terrestre",
+    description: "Le transport terrestre désigne tous les modes de transport qui utilisent des voies terrestres, telles que les routes, les autoroutes, les chemins de fer ou même des pistes non pavées, pour déplacer des personnes ou des marchandises.",
+    image: "/images/transport/transport_terrestre.jpg", // Placeholder path
+  },
+];
   return (
     <section className="container min-h-[400px] py-16 relative overflow-hidden " ref={sectionRef}>
    
@@ -85,7 +98,7 @@ export default function DescriptionAllSpaces() {
   </motion.h2>
 
   {/* Grille des cartes de services */}
-<div className="grid grid-cols-1 ml-64 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto">
+<div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto">
       {avantages.map((avantage, index) => (
         <motion.div
           key={index}

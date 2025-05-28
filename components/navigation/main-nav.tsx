@@ -23,8 +23,8 @@ export function MainNav() {
   const menuList = getMenuList(pathname);
 
   return (
-    <div className="flex justify-center items-center flex-1">
-      <NavigationMenu className="flex items-center space-x-6 text-sm font-medium">
+    <div className="flex justify-center items-center flex-1 ">
+      <NavigationMenu className="flex items-center space-x-6 text-sm font-medium ">
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href={menuList[0].menus[0].href} legacyBehavior passHref>
@@ -75,7 +75,7 @@ export function MainNav() {
               {menuList[2].menus[0].label}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[100px] text-center gap-3 p-4 md:w-[80px] text-[#8E421C] md:grid-cols-1 lg:w-[300px]">
+              <ul className="grid w-[100px] text-center gap-3 p-4 md:w-[80px] text-[#8E421C] lg:w-[300px]">
                 {menuList[2].menus[0].submenus.map((item, index: number) => (
                   <ListItem
                     key={index}

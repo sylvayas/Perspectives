@@ -18,7 +18,7 @@ export default function Hero() {
   const item = (name: string, url: string) => {
     return (
       <Link href={url} className="relative group/service_item">
-        <span className="font-merriweather text-xs sm:text-sm">{name}</span>
+        <span className="text-xs sm:text-sm">{name}</span>
         {item_bar}
       </Link>
     );
@@ -29,11 +29,11 @@ export default function Hero() {
      <div className={cn("h-[60vh] md:h-[418px] xl:h-[518px] relative container px-0 max-w-[1400px] rounded-bl-lg")}>
 
         <div className="absolute z-[3] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center flex-col gap-8 max-w-5xl w-full">
-          <h1 className="text-lg sm:text-xl md:text-4xl text-white text-center font-lora uppercase">
+          <h1 className="text-xl sm:text-4xl md:text-4xl text-white text-center  uppercase">
           Allons loin ensemble
           </h1>
 
-          <div className="flex items-center justify-center text-white flex-wrap gap-2">
+          <div className="flex items-center justify-center text-white text-sm flex-wrap gap-2">
             {item("FINANCE", "/our_spaces")}
             <span className="h-4 w-[2px] bg-white"></span>
             {item("IMMOBILIER", "/our_spaces/open_space")}

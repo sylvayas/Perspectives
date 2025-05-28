@@ -37,7 +37,7 @@ export default function Hero(){
    
      return (
        
-   <section className="relative p-2">
+   <section className="relative p-4">
   <div className="container px-0 relative max-w-[1400px] h-[480px] rounded-tr-[40px] rounded-bl-[40px]">
     {/* Image de fond */}
     {images.map((image, index) => (
@@ -57,10 +57,10 @@ export default function Hero(){
 
     {/* Conteneur du texte */}
     <div className="relative z-[2] flex flex-col md:flex-row md:gap-x-8 justify-between bg-black/30 h-[480px] rounded-tr-[40px] rounded-bl-[40px] py-8 px-4 sm:py-16 lg:px-8">
-      <div className="max-w-screen-sm text-white text-center md:text-left rounded-tr-[40px] rounded-bl-[40px]">
+      <div className="max-w-screen-sm text-white text-center md:text-left rounded-tr-[40px] rounded-bl-[40px] mt-9">
        
         {/* Ajout d'un paragraphe pour correspondre au style du second code */}
-        <p className="mb-8 mt-24 font-extralight text-2xl sm:text-xl text-justify">
+        <p className="mb-8 mt-24 font-normal text-2xl sm:text-2xl text-justify">
          Nous proposons une gamme complète de services en immobilier et logistique : intermédiation pour l’achat et la vente, location de biens meublés ou non, gestion immobilière, conseil en projets de construction, et fourniture de matériel. Nos solutions incluent également la location de hangars, plateformes, et entrepôts, adaptées à vos besoins logistiques.
         </p>
       </div>

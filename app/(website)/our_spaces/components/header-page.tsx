@@ -7,7 +7,7 @@ export default function HeaderPage() {
 
     return (
         <>
-            <section className="relative ">
+            <section className="relative p-4 ">
                 <div className="container px-0 relative max-w-[1400px] h-[410px] rounded-tr-[40px] rounded-bl-[40px] ">
                     <div className="relative z-[2]  flex flex-col md:flex-row md:gap-x-8 justify-between rounded-tr-[40px] rounded-bl-[40px] bg-black/30 h-[410px] py-8 px-4 sm:py-16 lg:px-8">
                         <div className="max-w-screen-sm text-white text-center md:text-left">

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Icons } from "@/components/icons";
 
@@ -23,101 +23,151 @@ interface Product {
 // Données des produits
 const allProducts: Product[] = [
   {
-    id: "1",
-    title: "Gazinière 4 Feux – UltraPro",
-    description: {
-      intro: "Cuisinez comme un chef avec la gazinière UltraPro à 4 feux, conçue pour une performance optimale et une durabilité exceptionnelle.",
-      features: [
-        "4 brûleurs puissants pour une cuisson rapide",
-        "Four intégré avec grille réglable",
-        "Finition en acier inoxydable",
-        "Allumage automatique",
-      ],
-     
-      callToAction: "Commandez maintenant et profitez d'une livraison rapide à Abidjan !",
+    "id": "1",
+    "title": "Climatiseur MDV – Confort Essentiel",
+    "description": {
+        "intro": "Restez au frais avec le climatiseur MDV, conçu pour un refroidissement efficace et un confort fiable dans toutes vos pièces.",
+        "features": [
+            "Refroidissement rapide et puissant",
+            "Classe énergétique élevée pour des économies d'énergie",
+            "Fonctionnement silencieux pour un confort optimal",
+            "Filtres intégrés pour un air plus sain",
+            "Installation facile et design moderne",
+            "Télécommande intuitive pour une utilisation simplifiée"
+        ],
+        "callToAction": "Commandez maintenant et profitez d'une livraison rapide à Abidjan !"
     },
-    src: "/images/four4feu.jpg",
-  },
+    "src": "/images/appareil_electromenager/MDV climatiseur.jpg"
+},
   {
-    id: "2",
-    title: "Gazinière 6 Feux – MasterChef",
-    description: {
-      intro: "La gazinière MasterChef 6 feux est idéale pour les grandes familles ou les professionnels, offrant une puissance et une polyvalence incomparables.",
-      features: [
-        "6 brûleurs pour une cuisson simultanée",
-        "Four spacieux avec éclairage interne",
-        "Revêtement antiadhésif facile à nettoyer",
-        "Sécurité gaz intégrée",
-      ],
-    
-      callToAction: "Commandez dès aujourd'hui pour une cuisine performante !",
-    },
-    src: "/images/four6feu.jpg",
+  "id": "2",
+  "title": "Climatiseur Split Skyluxe S026Q7Wfar32",
+  "description": {
+    "intro": "Le climatiseur Skyluxe S026Q7Wfar32 offre une solution compacte et efficace pour climatiser et chauffer des espaces jusqu’à 25 m², avec une technologie Inverter économe en énergie et un design moderne.",
+    "features": [
+      "Technologie Inverter DC avec efficacité énergétique A++/A+",
+      "Capacité de refroidissement de 9000 BTU, idéale pour les petites à moyennes pièces",
+      "Fonction autonettoyante pour un air propre et des performances optimales",
+      "Mode I Feel pour un contrôle précis de la température via la télécommande",
+    ],
+    "callToAction": "Commandez dès aujourd'hui pour un confort climatique optimal !"
   },
+  "src": "/images/appareil_electromenager/Skyluxe.jpg"
+},
   {
-    id: "3",
-    title: "Télévision LED 43'' – SmartVision",
-    description: {
-      intro: "Profitez d'une expérience visuelle immersive avec la télévision LED SmartVision 43 pouces, parfaite pour vos soirées cinéma.",
-      features: [
-        "Écran Full HD 43 pouces",
-        "Connectivité Wi-Fi et Smart TV intégrée",
-        "Ports HDMI et USB multiples",
-        "Son stéréo clair",
-      ],
-     
-      callToAction: "Commandez maintenant pour une livraison rapide !",
-    },
-    src: "/images/tv43.jpg",
+  "id": "3",
+  "title": "Télévision LED 43'' – Aspes Smart TV",
+  "description": {
+    "intro": "Découvrez l’élégance et la performance avec la télévision LED 43 pouces Aspes, conçue pour transformer votre expérience de divertissement à domicile.",
+    "features": [
+      "Résolution Full HD pour des images nettes et éclatantes",
+      "Système Smart TV avec accès à vos applications préférées",
+      "Double port HDMI et USB pour une connectivité étendue",
+      "Technologie audio avancée pour un son immersif",
+      "Design fin et moderne, idéal pour tous les intérieurs"
+    ],
+    "callToAction": "Ne manquez pas cette offre exclusive – commandez votre TV Aspes dès aujourd’hui !"
   },
-  {
-    id: "4",
-    title: "Télévision LED 55'' – UltraHD",
-    description: {
-      intro: "La télévision UltraHD 55 pouces offre une qualité d'image 4K exceptionnelle pour un divertissement sans compromis.",
-      features: [
-        "Résolution 4K Ultra HD",
-        "Applications de streaming préinstallées",
-        "Design élégant et fin",
-        "Télécommande intelligente",
-      ],
-  
-      callToAction: "Passez au niveau supérieur avec UltraHD !",
-    },
-    src: "/images/tv55.jpg",
+  "src": "/images/appareil_electromenager/tele aspes.jpg"
+},
+
+{
+  "id": "4",
+  "title": "Télévision Samsung UHD TV 55'' – Smart 4K",
+  "description": {
+    "intro": "Vivez une expérience visuelle exceptionnelle avec la Samsung UHD TV 55 pouces, alliant qualité d'image 4K et fonctionnalités intelligentes.",
+    "features": [
+      "Résolution 4K UHD pour des images nettes et détaillées",
+      "Technologie UHD Dimming pour un contraste amélioré",
+      "Smart TV avec accès rapide aux applications de streaming",
+      "Design épuré et cadre fin pour une intégration parfaite",
+      "Télécommande multifonction avec contrôle vocal"
+    ],
+    "callToAction": "Découvrez la puissance de l’UHD Samsung – commandez maintenant !"
   },
-  {
-    id: "5",
-    title: "Chauffe-eau Électrique 50L – AquaComfort",
-    description: {
-      intro: "L'AquaComfort 50L garantit une eau chaude constante pour votre confort quotidien, avec une efficacité énergétique optimale.",
-      features: [
-        "Capacité de 50 litres",
-        "Régulation thermostatique",
-        "Installation facile",
-        "Résistance anticorrosion",
-      ],
- 
-      callToAction: "Commandez pour un confort optimal !",
-    },
-    src: "/images/chauffe.jpg",
+  "src": "/images/appareil_electromenager/télévision samsung1.jpg"
+},
+ {
+  "id": "5",
+  "title": "Gazinière Svan 4 Feux – Cuisson Polyvalente",
+  "description": {
+    "intro": "La gazinière Svan allie performance, sécurité et élégance pour une cuisine pratique au quotidien.",
+    "features": [
+      "4 foyers à gaz pour une cuisson rapide et efficace",
+      "Allumage automatique pour plus de praticité",
+      "Four à gaz spacieux avec thermostat réglable",
+      "Grilles robustes et surface facile à nettoyer",
+      "Design moderne adapté à toutes les cuisines"
+    ],
+    "callToAction": "Préparez vos plats préférés avec Svan – commandez dès maintenant !"
   },
-  {
-    id: "6",
-    title: "Micro-ondes 25L – QuickHeat",
-    description: {
-      intro: "Le micro-ondes QuickHeat 25L est parfait pour réchauffer, décongeler ou cuire rapidement vos plats préférés.",
-      features: [
-        "Capacité de 25 litres",
-        "5 niveaux de puissance",
-        "Fonction décongélation rapide",
-        "Commandes digitales",
-      ],
-  
-      callToAction: "Simplifiez votre cuisine avec QuickHeat !",
-    },
-    src: "/images/four.webp",
+  "src": "/images/appareil_electromenager/svan cuisiniere a gaz.webp"
+},
+{
+  "id": "6",
+  "title": "Réfrigérateur Combiné Svan SC185600ENF – 320L No Frost",
+  "description": {
+    "intro": "Le réfrigérateur Svan SC185600ENF vous offre une grande capacité de stockage, un système No Frost et un design moderne pour une conservation optimale de vos aliments.",
+    "features": [
+      "Capacité totale de 320 litres (réfrigérateur + congélateur)",
+      "Technologie No Frost : fini le dégivrage manuel",
+      "Contrôle électronique de la température",
+      "Éclairage LED intérieur pour une meilleure visibilité",
+      "Classe énergétique économique et fonctionnement silencieux"
+    ],
+    "callToAction": "Adoptez le confort moderne avec le SC185600ENF – commandez-le dès maintenant !"
   },
+  "src": "/images/appareil_electromenager/svan frigo.webp"
+},
+{
+  "id": "7",
+  "title": "Machine à Laver LG – Performance et Fiabilité",
+  "description": {
+    "intro": "La machine à laver LG vous offre un lavage puissant, économe et silencieux, pour un linge toujours impeccable au quotidien.",
+    "features": [
+      "Grande capacité de lavage adaptée aux besoins familiaux",
+      "Technologie de lavage optimisée pour un soin du linge en douceur",
+      "Moteur silencieux et économe en énergie",
+      "Plusieurs programmes automatiques pour tous types de textiles",
+      "Design moderne avec panneau de contrôle intuitif"
+    ],
+    "callToAction": "Simplifiez votre quotidien avec la qualité LG – commandez maintenant !"
+  },
+  "src": "/images/appareil_electromenager/LG machine a laver.jpg"
+},
+{
+  "id": "8",
+  "title": "Micro-ondes LG – Puissance et Précision au Quotidien",
+  "description": {
+    "intro": "Le micro-ondes LG allie performance, design et technologie pour réchauffer, cuire ou décongeler vos plats rapidement et avec précision.",
+    "features": [
+      "Capacité idéale pour un usage quotidien",
+      "Technologie de chauffage uniforme pour une cuisson homogène",
+      "Fonction décongélation intelligente et rapide",
+      "Panneau de commandes intuitif avec affichage digital",
+      "Design moderne et compact adapté à toutes les cuisines"
+    ],
+    "callToAction": "Améliorez votre quotidien en cuisine avec LG – commandez dès maintenant !"
+  },
+  "src": "/images/appareil_electromenager/lg-micro-onde.jpg"
+},
+ {
+  "id": "9",
+  "title": "Climatiseur MDV – Confort Thermique Toute l’Année",
+  "description": {
+    "intro": "Le climatiseur MDV vous assure une fraîcheur immédiate en été et un confort optimal en toute saison grâce à sa technologie de pointe.",
+    "features": [
+      "Refroidissement et chauffage rapides",
+      "Technologie Inverter pour des économies d’énergie",
+      "Fonction déshumidification et purification de l’air",
+      "Mode silencieux pour un confort discret",
+      "Télécommande intuitive et affichage digital"
+    ],
+    "callToAction": "Adoptez le confort intelligent avec le climatiseur MDV – commandez maintenant !"
+  },
+  "src": "/images/appareil_electromenager/climatiseur MDV.jpg"
+}
+,
 ];
 
 export default function ProductGallery() {
@@ -162,7 +212,7 @@ export default function ProductGallery() {
 
         <Tabs defaultValue="gasCookers" className="mt-8">
           <TabsList className="grid grid-cols-1 w-full">
-            <TabsTrigger value="gasCookers">Tout nos produits</TabsTrigger>
+            <TabsTrigger value="gasCookers" className="text-md">Tout nos produits</TabsTrigger>
           </TabsList>
           <TabsContent value="gasCookers" className="mt-6">
            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -237,6 +287,19 @@ export default function ProductGallery() {
                 </div>
                 
                 <p>{selectedImage.description.callToAction}</p>
+              
+              <div className="mt-10 ">
+                  <Link href={"/contact_us"}>
+                 <Button
+                   type="button"
+                   className="inline-flex w-full p-4 justify-center rounded-md bg-[#F4E0D7] px-8 py-2 text-sm font-semibold text-black shadow-xs hover:bg-[#7A3817] hover:text-white sm:ml-3 sm:w-auto"
+                  >
+                    <span>Contactez-nous</span>
+                  </Button>
+                </Link>
+              </div>
+
+
               </div>
              
             </div>

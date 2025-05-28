@@ -9,12 +9,11 @@ import { Label } from "@/components/ui/label";
 import { Calendar } from "@/components/ui/calendar";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { usePay } from "@/hooks/usePay";
 import { toast } from "sonner";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
-
 import dayjs from "dayjs";
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 
 interface CalendarProps {
   id?: string;
@@ -39,9 +38,13 @@ interface RoomType {
 }
 
 const roomTypes: RoomType[] = [
-  { id: "single", title: "Chambre simple", pricePerNight: 10000 },
-  { id: "double", title: "Chambre double", pricePerNight: 15000 },
-  { id: "suite", title: "Suite", pricePerNight: 25000 },
+  { id: "appart_b", title: "Appartement B", pricePerNight: 80000 },
+  { id: "appart_b23", title: "Appartement B23", pricePerNight: 150000 },
+  { id: "appart_marron", title: "Appartement Marron", pricePerNight: 100000 },
+  { id: "appart_pressing", title: "Appartement Pressing", pricePerNight: 50000 },
+  { id: "appart_soleil", title: "Appartement Soleil", pricePerNight: 150000 },
+  { id: "appart_prima", title: "Appartement Prima", pricePerNight: 80000 },
+  { id: "appart_complexe_carre_massina", title: "Complexe Carré Massina", pricePerNight: 0 },
 ];
 
 export default function ListSpaceCard({
@@ -55,26 +58,27 @@ export default function ListSpaceCard({
   const [guests, setGuests] = useState<number>(1);
   const [roomType, setRoomType] = useState<string>(roomTypes[0].id);
   const [totalAmount, setTotalAmount] = useState<number>(0);
-  const [data, setData] = useState<IFormInput | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [apartmentData, setApartmentData] = useState<{
     name: string;
     image: string;
     description: string;
   } | null>(null);
+  const [open, setOpen] = useState(false);
 
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors, isValid },
+    reset,
   } = useForm<IFormInput>({
     mode: "onChange",
   });
 
   const formData = watch();
 
-  // Extract query parameters
+  // Extraire les paramètres de l'URL et présélectionner le type de chambre
   useEffect(() => {
     const apartment = searchParams.get("apartment");
     const image = searchParams.get("image");
@@ -86,93 +90,102 @@ export default function ListSpaceCard({
         image: decodeURIComponent(image),
         description: decodeURIComponent(description),
       });
+
+      // Présélectionner le type de chambre en fonction du nom de l'appartement
+      const matchingRoom = roomTypes.find(
+        (room) => room.title.toLowerCase() === decodeURIComponent(apartment).toLowerCase()
+      );
+      if (matchingRoom) {
+        setRoomType(matchingRoom.id);
+      }
     } else {
       setApartmentData(null);
     }
   }, [searchParams]);
 
+  // Calculer le montant total
   const calculateAmount = useCallback(
     (guests: number, roomType: string, dates: Date[]): number => {
-      if (!guests || !roomType || !dates || dates.length === 0) return 0;
-
-      const qty = guests || 0;
-      if (qty <= 0) return 0;
+      if (!roomType || !dates || dates.length === 0) return 0;
 
       const selectedRoom = roomTypes.find((room) => room.id === roomType);
       if (!selectedRoom) return 0;
 
-      const nights = dates.length;
+      // Trier les dates pour obtenir la date de début et de fin
+      const sortedDates = [...dates].sort((a, b) => a.getTime() - b.getTime());
+      if (sortedDates.length < 1) return 0;
+
+      // Calculer le nombre de nuits (différence entre la date de fin et la date de début)
+      const startDate = dayjs(sortedDates[0]);
+      const endDate = dayjs(sortedDates[sortedDates.length - 1]);
+      const nights = endDate.diff(startDate, 'day');
       if (nights <= 0) return 0;
 
-      return selectedRoom.pricePerNight * qty * nights;
+      // Prix total = prix par nuit × nombre de nuits (sans multiplier par le nombre de clients)
+      return selectedRoom.pricePerNight * nights;
     },
     []
   );
 
-  const { open, paymentStatus } = usePay();
-
+  // Valider le formulaire
   const isValidForm = isValid && selectedDates.length > 0 && guests >= 1;
 
+  // Gérer la soumission du formulaire
   const onSubmit: SubmitHandler<IFormInput> = async (formData) => {
     setIsSubmitting(true);
-    setData(formData);
-    const amount = calculateAmount(guests, roomType, selectedDates);
     try {
-      if (amount > 0) {
-        await open({
-          amount,
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-        });
-      } else {
-        const response = await fetch("/api/send-email", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
+      // Calculer le montant total pour l'email
+      const amount = calculateAmount(guests, roomType, selectedDates);
+
+      // Envoyer l'email avec les détails de la réservation
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          subject: "Demande de réservation",
+          to: [formData.email, "infos@perspectivesci.com"],
+          emailData: {
+            clientName: formData.name,
+            clientEmail: formData.email,
+            clientPhone: formData.phone,
+            roomType: roomTypes.find((r) => r.id === roomType)?.title,
+            dates: selectedDates.map((date) => dayjs(date).format("YYYY-MM-DD")),
+            guests: guests,
+            totalPrice: amount,
           },
-          body: JSON.stringify({
-            subject: "Room Reservation Request",
-            to: [formData.email, "reservations@hotel.com"],
-            emailData: {
-              hotelName: hotel.name,
-              roomType: roomTypes.find((r) => r.id === roomType)?.title,
-              clientName: formData.name,
-              clientEmail: formData.email,
-              clientPhone: formData.phone,
-              dates: selectedDates.map((date) => dayjs(date).format("YYYY-MM-DD")),
-              guests: guests,
-              totalPrice: amount,
-              apartment: apartmentData?.name || "Not specified",
-            },
-          }),
-        });
-        if (!response.ok) {
-          throw new Error("Failed to send email");
-        }
-        router.push(
-          `/recap?type=reservation&name=${encodeURIComponent(
-            formData.name
-          )}&email=${encodeURIComponent(
-            formData.email
-          )}&phone=${encodeURIComponent(
-            formData.phone
-          )}&hotelId=${hotel.id}&dates=${encodeURIComponent(
-            selectedDates.map((date) => dayjs(date).format("YYYY-MM-DD")).join(",")
-          )}&guests=${guests}&roomType=${roomType}&apartment=${encodeURIComponent(
-            apartmentData?.name || ""
-          )}`
-        );
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Échec de l'envoi de l'email");
       }
+
+      // Afficher le modal de confirmation
+      setOpen(true);
+      // Réinitialiser les champs du formulaire
+      reset();
+      // Réinitialiser les dates sélectionnées
+      setSelectedDates([]);
+      // Réinitialiser le nombre de clients
+      setGuests(1);
+      // Réinitialiser le type de chambre
+      setRoomType(roomTypes[0].id);
+      // Réinitialiser le montant total
+      setTotalAmount(0);
     } catch (error) {
-      toast("Error", {
-        description: `An error occurred: ${error instanceof Error ? error.message : "Unknown error"}`,
+      toast("Erreur", {
+        description: `Une erreur s'est produite : ${
+          error instanceof Error ? error.message : "Erreur inconnue"
+        }`,
       });
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  // Mettre à jour le montant total lorsque les données changent
   useEffect(() => {
     if (guests && roomType && selectedDates.length > 0) {
       const amount = calculateAmount(guests, roomType, selectedDates);
@@ -182,73 +195,22 @@ export default function ListSpaceCard({
     }
   }, [guests, roomType, selectedDates, calculateAmount]);
 
-  useEffect(() => {
-    if (paymentStatus === "success" && data) {
-      setIsSubmitting(true);
-      fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          subject: "Room Reservation Confirmation",
-          to: [data.email, "reservations@hotel.com"],
-          emailData: {
-            hotelName: hotel.name,
-            roomType: roomTypes.find((r) => r.id === roomType)?.title,
-            clientName: data.name,
-            clientEmail: data.email,
-            clientPhone: data.phone,
-            dates: selectedDates.map((date) => dayjs(date).format("YYYY-MM-DD")),
-            guests: guests,
-            totalPrice: totalAmount,
-            apartment: apartmentData?.name || "Not specified",
-          },
-        }),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Failed to send email");
-          }
-          router.push(
-            `/recap?type=payment&name=${encodeURIComponent(
-              data.name
-            )}&email=${encodeURIComponent(
-              data.email
-            )}&phone=${encodeURIComponent(
-              data.phone
-            )}&hotelId=${hotel.id}&dates=${encodeURIComponent(
-              selectedDates.map((date) => dayjs(date).format("YYYY-MM-DD")).join(",")
-            )}&guests=${guests}&roomType=${roomType}&amount=${totalAmount}&apartment=${encodeURIComponent(
-              apartmentData?.name || ""
-            )}`
-          );
-        })
-        .catch((error) => {
-          toast("Error", {
-            description: `An error occurred while sending the confirmation: ${error instanceof Error ? error.message : "Unknown error"}`,
-          });
-        })
-        .finally(() => {
-          setIsSubmitting(false);
-        });
-    } else if (paymentStatus === "error") {
-      toast("Payment Failed", {
-        description: "An error occurred during payment. Please try again.",
-      });
-      setIsSubmitting(false);
-    }
-  }, [paymentStatus, data, totalAmount, hotel.id, selectedDates, guests, roomType, router, apartmentData]);
-
+  // Gérer la sélection des dates dans le calendrier
   const handleCalendarSelect = (dates: Date[] | undefined) => {
     setSelectedDates(dates || []);
   };
 
   const sortedDates = [...selectedDates].sort((a, b) => a.getTime() - b.getTime());
+  const startDate = sortedDates.length > 0 ? dayjs(sortedDates[0]) : null;
+  const endDate = sortedDates.length > 0 ? dayjs(sortedDates[sortedDates.length - 1]) : null;
+  const nights = startDate && endDate ? endDate.diff(startDate, 'day') : 0;
+
+  // Obtenir les détails de la chambre sélectionnée pour l'affichage
+  const selectedRoom = roomTypes.find((r) => r.id === roomType);
 
   return (
     <section className="container min-h-[200px] py-14 bg-gradient-to-b from-[#FFF7F4] to-white">
-      {/* Display Apartment Information */}
+      {/* Afficher les informations sur l'appartement */}
       {apartmentData ? (
         <div className="mb-8 max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-amber-800 mb-4">{apartmentData.name}</h2>
@@ -256,7 +218,7 @@ export default function ListSpaceCard({
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
                 src={apartmentData.image}
-                alt={`Image of ${apartmentData.name}`}
+                alt={`Image de ${apartmentData.name}`}
                 width={800}
                 height={500}
                 className="w-full h-[300px] object-cover"
@@ -293,7 +255,7 @@ export default function ListSpaceCard({
                   id="name"
                   type="text"
                   className="border-amber-300 focus:ring-amber-500"
-                  {...register("name", { required: "Full name is required" })}
+                  {...register("name", { required: "Le nom complet est requis" })}
                   aria-invalid={errors.name ? "true" : "false"}
                 />
                 {errors.name && (
@@ -308,10 +270,10 @@ export default function ListSpaceCard({
                     type="email"
                     className="border-amber-300 focus:ring-amber-500"
                     {...register("email", {
-                      required: "Email is required",
+                      required: "L'email est requis",
                       pattern: {
                         value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: "Invalid email address",
+                        message: "Adresse email invalide",
                       },
                     })}
                     aria-invalid={errors.email ? "true" : "false"}
@@ -321,12 +283,12 @@ export default function ListSpaceCard({
                   )}
                 </div>
                 <div className="grid gap-2">
-                  <Label htmlFor="phone" className="text-amber-700">Télephone</Label>
+                  <Label htmlFor="phone" className="text-amber-700">Téléphone</Label>
                   <Input
                     id="phone"
                     type="tel"
                     className="border-amber-300 focus:ring-amber-500"
-                    {...register("phone", { required: "Phone is required" })}
+                    {...register("phone", { required: "Le téléphone est requis" })}
                     aria-invalid={errors.phone ? "true" : "false"}
                   />
                   {errors.phone && (
@@ -346,7 +308,7 @@ export default function ListSpaceCard({
             </CardHeader>
             <CardContent className="grid gap-4">
               <div className="grid gap-2">
-                <Label htmlFor="guests" className="text-amber-700">Nombres de client</Label>
+                <Label htmlFor="guests" className="text-amber-700">Nombre de clients</Label>
                 <Input
                   id="guests"
                   type="number"
@@ -358,23 +320,32 @@ export default function ListSpaceCard({
               </div>
               <div className="grid gap-2">
                 <Label htmlFor="roomType" className="text-amber-700">Type de chambre</Label>
-                <select
-                  id="roomType"
-                  value={roomType}
-                  onChange={(e) => setRoomType(e.target.value)}
-                  className="border-amber-300 focus:ring-amber-500 rounded-md p-2"
-                >
-                  {roomTypes.map((room) => (
-                    <option key={room.id} value={room.id}>
-                      {room.title} ({room.pricePerNight} FCFA/Nuit)
-                    </option>
-                  ))}
-                </select>
+                <div className="flex items-center gap-4">
+                  <select
+                    id="roomType"
+                    value={roomType}
+                    onChange={(e) => setRoomType(e.target.value)}
+                    className="border-amber-300 focus:ring-amber-500 rounded-md p-2 flex-1"
+                  >
+                    {roomTypes.map((room) => (
+                      <option key={room.id} value={room.id}>
+                        {room.title}
+                      </option>
+                    ))}
+                  </select>
+                  {selectedRoom && (
+                    <p className="text-amber-600 text-sm">
+                      {selectedRoom.pricePerNight > 0
+                        ? `${selectedRoom.pricePerNight} FCFA/Nuit`
+                        : "Prix à confirmer"}
+                    </p>
+                  )}
+                </div>
               </div>
               <div className="grid gap-2">
                 <Label className="text-amber-700 flex items-center">
                   <CalendarIcon className="h-5 w-5 mr-2" />
-                 Date de la reservation
+                  Date(s) de la réservation
                 </Label>
                 <Calendar
                   id="reservationDates"
@@ -388,12 +359,12 @@ export default function ListSpaceCard({
                 />
                 {selectedDates.length > 0 ? (
                   <p className="text-sm text-amber-600">
-                    Selectionnée une date: {sortedDates
+                    Date(s) sélectionnée(s): {sortedDates
                       .map((date) => dayjs(date).format("YYYY-MM-DD"))
                       .join(" - ")}
                   </p>
                 ) : (
-                  <p className="text-sm text-amber-600">Aucune date selectionné</p>
+                  <p className="text-sm text-amber-600">Aucune date sélectionnée</p>
                 )}
               </div>
             </CardContent>
@@ -404,14 +375,14 @@ export default function ListSpaceCard({
           <CardHeader>
             <CardTitle className="text-2xl text-amber-800 flex items-center">
               <Home className="h-6 w-6 mr-2" />
-               Résumé de la réservation
+              Résumé de la réservation
             </CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4">
             <div className="grid gap-2">
               <p className="text-amber-700 font-semibold flex items-center">
                 <Users className="h-5 w-5 mr-2" />
-                  Nom du client
+                Nom du client
               </p>
               <p className="text-amber-600">
                 {formData.name || "Non fourni"}
@@ -429,7 +400,7 @@ export default function ListSpaceCard({
             <div className="grid gap-2">
               <p className="text-amber-700 font-semibold flex items-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Télephone
+                Téléphone
               </p>
               <p className="text-amber-600">
                 {formData.phone || "Non fourni"}
@@ -438,18 +409,18 @@ export default function ListSpaceCard({
             <div className="grid gap-2">
               <p className="text-amber-700 font-semibold flex items-center">
                 <CalendarIcon className="h-5 w-5 mr-2" />
-                Selectionnée une date
+                Date(s) sélectionnée(s)
               </p>
               <p className="text-amber-600">
                 {sortedDates.length > 0
                   ? sortedDates.map((date) => dayjs(date).format("YYYY-MM-DD")).join(", ")
-                  : "Aucune date selectionnée"}
+                  : "Aucune date sélectionnée"}
               </p>
             </div>
             <div className="grid gap-2">
               <p className="text-amber-700 font-semibold flex items-center">
                 <Users className="h-5 w-5 mr-2" />
-                Nombres de client
+                Nombre de clients
               </p>
               <p className="text-amber-600">{guests}</p>
             </div>
@@ -459,32 +430,44 @@ export default function ListSpaceCard({
                 Type de chambre
               </p>
               <p className="text-amber-600">
-                {roomTypes.find((r) => r.id === roomType)?.title || "Aucune selection"}
+                {selectedRoom?.title || "Aucune sélection"}
+              </p>
+            </div>
+            <div className="grid gap-2">
+              <p className="text-amber-700 font-semibold">Prix par nuit</p>
+              <p className="text-amber-600">
+                {selectedRoom && selectedRoom.pricePerNight > 0
+                  ? `${selectedRoom.pricePerNight} FCFA`
+                  : "Prix à confirmer"}
               </p>
             </div>
             <div className="grid gap-2">
               <p className="text-amber-700 font-semibold">Total du prix</p>
               <p className="text-lg font-bold text-amber-800">
                 {totalAmount > 0
-                  ? `${totalAmount} FCFA (${sortedDates.length} night${sortedDates.length > 1 ? "s" : ""})`
-                  : "Aucun calcule"}
+                  ? `${totalAmount} FCFA (${nights} nuit${nights > 1 ? "s" : ""})`
+                  : "Aucun calcul"}
               </p>
+              {totalAmount === 0 && roomType === "appart_complexe_carre_massina" && (
+                <p className="text-red-500 text-sm">
+                  Le prix pour {selectedRoom?.title} n&apos;est pas encore défini. Veuillez contacter l&apos;administration.
+                </p>
+              )}
             </div>
+
             <Button
               type="submit"
               disabled={!isValidForm || isSubmitting}
-              className="mt-4 bg-[#8E421C] hover:bg-[#FFF7F4] text-white gap-2 w-full"
+              className="mt-4 bg-[#8E421C] text-white gap-2 w-full"
             >
               {isSubmitting ? (
                 <>
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  <span>Chargement...</span>
+                  <span>Envoi en cours...</span>
                 </>
               ) : (
                 <>
-                  <span>
-                    {totalAmount > 0 ? "Procéder au paiement" : "Demander une réservation"}
-                  </span>
+                  <span>Demander une réservation</span>
                   <ArrowUpRight className="h-4 w-4" />
                 </>
               )}
@@ -492,6 +475,65 @@ export default function ListSpaceCard({
           </CardContent>
         </Card>
       </form>
+
+      <Dialog open={open} onClose={() => setOpen(false)} className="relative z-10">
+        <DialogBackdrop
+          transition
+          className="fixed inset-0 bg-gray-500/75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in"
+        />
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <DialogPanel
+              transition
+              className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[enter]:ease-out data-[leave]:duration-200 data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+            >
+              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div className="sm:flex sm:items-start">
+                  <div className="mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:size-10">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="size-6 text-green-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                    <DialogTitle as="h3" className="text-base font-semibold text-gray-900">
+                      Demande de réservation envoyée
+                    </DialogTitle>
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-500">
+                        Votre demande de réservation a été prise en compte. Nous vous contacterons bientôt !
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <Button
+                  type="button"
+                    onClick={() => {
+                    setOpen(false);
+                    router.push("/our_spaces/private_offices");
+                  }}
+                  className="inline-flex w-full justify-center rounded-md bg-[#F4E0D7] px-3 py-2 text-sm font-semibold text-black shadow-xs hover:bg-[#7A3817] sm:ml-3 sm:w-auto"
+                >
+                  Fermer
+                </Button>
+              
+              </div>
+            </DialogPanel>
+          </div>
+        </div>
+      </Dialog>
     </section>
   );
 }

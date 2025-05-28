@@ -1,6 +1,6 @@
 import HeaderPage from "./components/header-page";
 import Content from "./components/Content";
-import { datas, espaces } from "@/config/data";
+import {  espaces } from "@/config/data";
 
 export default async function ItemSpace({
   params,

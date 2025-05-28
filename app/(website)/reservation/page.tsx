@@ -4,6 +4,7 @@ import { Loader2 } from "lucide-react";
 import ListSpaceCard from "@/app/(website)/reservation/components/list-space-card";
 import HeaderPage from "./components/header-page";
 
+
 export default function ReservationPage() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function ReservationPage() {
       }
     >
       <ListSpaceCard/>
+   
     </Suspense>
     </>
   );

@@ -25,7 +25,7 @@ export default function Statistiques() {
             <div className="bg-perspectives_marron ring-novis_yellow ring-1 aspect-square h-10 md:h-12 flex justify-center items-center">
               <Icons.space className="text-white size-8 md:size-10" />
             </div>
-            <p className="font-medium text-3xl md:text-4xl font-mono whitespace-pre-wrap tracking-tighter "><NumberTicker value={230} /> m²</p>
+            <p className="font-medium text-3xl md:text-4xl font-mono whitespace-pre-wrap tracking-tighter "><NumberTicker value={230} /></p>
             <p className="font-medium">Appareils électroménagers vendus</p>
           </div>
 

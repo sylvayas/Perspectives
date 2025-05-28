@@ -30,7 +30,8 @@ const apartmentDescriptions: { [key: string]: string } = {
   "Appartement Prima": "Alliant espace et élégance, l’appartement Prima se distingue par son ambiance chaleureuse et sa décoration raffinée. Composé de 2 pièces contenu, il offre un cadre de vie agréable, pensé pour le confort et la sérénité. Entièrement équipé et doté d’un accès à un parking, il bénéficie d’un emplacement stratégique, idéal pour saisir chaque opportunité et profiter d’une grande liberté de mouvement au quotidien.",
   "Appartement Soleil": "Niché au 1e étage de l’immeuble Soleil, cet appartement séduit par son volume généreux et son atmosphère raffinée. Ses larges baies vitrées laissent entrer une lumière naturelle abondante, mettant en valeur une décoration élégante et épurée. Avec ses 4 pièces, dont 3 chambres spacieuses et autonomes, il offre un cadre de vie harmonieux, propice à la sérénité. Entièrement équipé et bénéficiant d’un accès à un parking, il conjugue confort et praticité en plein cœur de Marcory Zone 4.",
   "Complexe Carré Massina": "Situés dans le magnifique complexe Carré Massina, nos appartements de 3 et 4 pièces allient simplicité et chaleur. Avec une décoration élégante et sobre, chaque espace est pensé pour offrir à ses occupants confort et fonctionnalité. Entièrement équipés et meublés, ces appartements vous garantissent efficacité et praticité, tout en vous offrant un cadre de vie à la fois beau et raffiné. Idéalement situés à proximité de l’Aéroport Félix Houphouët-Boigny, ils sont parfaits pour les voyages d'affaires ou les déplacements, offrant un environnement calme et élégant.",
-  "Salles de conf": "Les salles de conférence du complexe Carré Massina offrent un cadre professionnel et élégant, idéal pour vos réunions, séminaires ou événements. Dotées d’une décoration sobre et moderne, elles sont entièrement équipées pour garantir confort et efficacité. Leur emplacement stratégique à proximité de l’Aéroport Félix Houphouët-Boigny en fait un choix parfait pour les professionnels en déplacement."
+  "Marron": "L’appartement Marron, situé à Marcory Zone 4, séduit par sa simplicité et son ambiance chaleureuse. Composé de 3 pièces, dont 2 chambres, il offre un cadre de vie agréable et fonctionnel, avec une décoration élégante et sobre.Entièrement équipé et meublé, cet appartement crée un environnement accueillant et pratique, idéal pour vos séjours en famille. Son atmosphère confortable et son agencement optimal vous garantissent confort et sérénité.",
+  "Salle de conférence": "Les salles de conférence du complexe Carré Massina offrent un cadre professionnel et élégant, idéal pour vos réunions, séminaires ou événements. Dotées d’une décoration sobre et moderne, elles sont entièrement équipées pour garantir confort et efficacité. Leur emplacement stratégique à proximité de l’Aéroport Félix Houphouët-Boigny en fait un choix parfait pour les professionnels en déplacement."
 };
 
 // Propriétés principales
@@ -46,11 +47,12 @@ const mainProperties: Property[] = [
   { src: "/images/Apparts/appart soleil/soleil 1.0.2.0.png", alt: "Salon - Appartement Soleil", width: 800, height: 500, apartment: "Appartement Soleil" },
 
   { src: "/images/Apparts/complex carré Massina/appart/IMG_0987.DNG.png", alt: "Chambre - Complexe Carré Massina", width: 800, height: 500, apartment: "Complexe Carré Massina" },
+  { src: "/images/Apparts/ungosse.jpg", alt: "Chambre - Complexe Carré Massina", width: 800, height: 500, apartment: "Complexe Carré Massina" },
 ];
 
 // Autres propriétés
 const otherProperties: Property[] = [
-  { src: "/images/Apparts/complex carré Massina/salle de conf/img3_091900.png", alt: "Salon luxueux - Salles de conf", width: 800, height: 600, apartment: "Salles de conf" },
+  { src: "/images/Apparts/complex carré Massina/salle de conf/img3_091900.png", alt: "Salon luxueux - Salle de conférence", width: 800, height: 600, apartment: "Salle de conférence" },
 ];
 
 // Grouper les propriétés par appartement
@@ -89,43 +91,7 @@ export default function DescriptionAllSpaces() {
 
   return (
     <>
-      {/* <section className="container min-h-[400px] py-16 relative bg-gray-50" ref={sectionRef}>
-        <div className="relative flex flex-col md:flex-row gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={sectionInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8 }}
-            className="relative rounded-lg overflow-hidden shadow-lg w-full md:w-1/2"
-          >
-            <Image
-              className="w-full h-full object-cover"
-              src="/images/immobilier/Soleil 1.0.2.png"
-              alt="Vue d'une propriété immobilière"
-              width={900}
-              height={600}
-              quality={100}
-              priority
-            />
-            <BorderBeam className="z-10" />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={sectionInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-8 md:mt-0 flex flex-col justify-center w-full md:w-1/2"
-          >
-            <p className="mb-6 text-justify text-gray-600 md:text-lg leading-relaxed">
-              Nous proposons une gamme complète de services en immobilier et logistique : intermédiation pour l’achat
-              et la vente, location de biens meublés ou non, gestion immobilière, conseil en projets de construction, et
-              fourniture de matériel. Nos solutions incluent également la location de hangars, plateformes, et
-              entrepôts, adaptées à vos besoins logistiques.
-            </p>
-          </motion.div>
-        </div>
-      </section> */}
-
-      <section id="showcase" className="container mb-64 px-4 md:px-8 py-16" ref={showcaseRef}>
+      <section id="showcase" className="container mb-40 px-4 md:px-8 py-16" ref={showcaseRef}>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={showcaseInView ? { opacity: 1, y: 0 } : {}}
@@ -137,8 +103,8 @@ export default function DescriptionAllSpaces() {
 
         <Tabs defaultValue="main" className="mt-8">
           <TabsList className="grid grid-cols-2 w-full">
-            <TabsTrigger value="main">Propriétés principales</TabsTrigger>
-            <TabsTrigger value="other">Salle de réunion</TabsTrigger>
+            <TabsTrigger value="main" className="text-md">Propriétés principales</TabsTrigger>
+            <TabsTrigger value="other" className="text-md">Salle de réunion</TabsTrigger>
           </TabsList>
           <TabsContent value="main" className="mt-6">
             <div className="flex flex-wrap gap-6 justify-center">
@@ -172,12 +138,12 @@ export default function DescriptionAllSpaces() {
                   </div>
                   <BorderBeam className="z-10" />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex flex-col gap-2">
-                    <p className="text-white font-medium text-sm">{apartment}</p>
+                    <p className="text-white font-normal text-xl">{apartment}</p>
                     <Link
                       className={cn(
                         buttonVariants(),
                         "max-w-32 md:max-w-48 gap-2 overflow-hidden whitespace-pre",
-                        "group relative w-full justify-center gap-2 rounded-md transition-all opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform translate-y-2 duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2"
+                        "group relative w-full justify-center gap-2 rounded-md transition-all opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform translate-y-2 duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2 hover:ring-[#F4E0D7] "
                       )}
                       href={{
                         pathname: "/reservation",
@@ -188,10 +154,10 @@ export default function DescriptionAllSpaces() {
                         },
                       }}
                     >
-                      <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40" />
-                      <div className="flex items-center">
+                      <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40 " />
+                       <div className="flex items-center space-x-1">
                         <Icons.calendar className="size-4" />
-                        Réservez
+                        <span className="ml-1 text-md sm:text-md">Réservez</span>
                       </div>
                     </Link>
                   </div>
@@ -243,15 +209,16 @@ export default function DescriptionAllSpaces() {
                     </button> */}
                   </div>
                   <BorderBeam className="z-10" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex flex-col gap-2">
-                    <p className="text-white font-medium text-sm">{apartment}</p>
-                    <Link
+                  <div className="absolute bottom-0 left-0 right-0  p-4 flex flex-col gap-2">
+                    <p className="text-white font-normal text-xl">{apartment}</p>
+                    {/* <Link
                       className={cn(
-                        buttonVariants(),
-                        "bg-perspectives_orange hover:bg-novis_yellow/90 text-black font-semibold py-2 px-4 rounded-lg w-fit flex items-center gap-2 text-sm opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform translate-y-2 transition-all duration-300"
-                      )}
+                      buttonVariants(),
+                      "max-w-32 md:max-w-48 gap-2 overflow-hidden whitespace-pre",
+                      "group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-offset-1 hover:ring-[#F4E0D7] "
+                    )}
                       href={{
-                        pathname: "/reservation",
+                        pathname: "/reservation/",
                         query: {
                           apartment: apartment,
                           image: images[0].src,
@@ -260,9 +227,11 @@ export default function DescriptionAllSpaces() {
                       }}
                       aria-label={`Réserver ${apartment}`}
                     >
-                      <Icons.calendar className="size-4" />
-                      Réserver
-                    </Link>
+                     <div className="flex items-center space-x-2">
+                        <Icons.calendar className="size-4" />
+                        <span className="ml-1 text-md sm:text-md">Réservez</span>
+                      </div>
+                    </Link> */}
                   </div>
                 </motion.div>
               ))}

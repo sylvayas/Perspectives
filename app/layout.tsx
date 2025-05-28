@@ -44,11 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={cn(
-          `relative flex min-h-screen w-full flex-col justify-center 
-          overflow-x-hidden scroll-smooth bg-background antialiased`,
-          fontBookAntiqua.variable
-        )}
+        className={cn("font-bookAntiqua", fontBookAntiqua.variable)}
       >
         {children}
       </body>

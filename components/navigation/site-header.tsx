@@ -13,23 +13,32 @@ export default function SiteHeader() {
         "sticky top-0 z-40 w-full supports-backdrop-blur:bg-background/95 bg-[#FFF7F4] backdrop-blur-lg"
       )}
     >
+      <style jsx>{`
+        @media (max-width: 767px) {
+          .hide-on-mobile {
+            display: none;
+          }
+        }
+      `}</style>
       <div className="container px-4 flex h-16 items-center justify-between">
         {/* Logo and Sidebar */}
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center space-x-2">
-            <Icons.logo_black_rogner className="w-12 md:size-12" />
+            <Icons.logo_black_rogner className="w-12 md:size-26" />
           </Link>
           <Sidebar />
         </div>
         {/* Navigation principale */}
-        <MainNav />
+        <div className="hide-on-mobile">
+          <MainNav />
+        </div>
         {/* Bouton de réservation */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 md:bg-[#F4E0D7]">
           <Link
             className={cn(
               buttonVariants(),
               "max-w-32 md:max-w-48 gap-2 overflow-hidden whitespace-pre",
-              "group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2"
+              "group relative w-full justify-center gap-2 rounded-md transition-all duration-300 ease-out hover:ring-2 hover:ring-[#F4E0D7]"
             )}
             href="/our_spaces/private_offices"
           >
