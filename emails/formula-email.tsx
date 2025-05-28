@@ -39,7 +39,7 @@ export const FormulaEmail: React.FC<FormulaEmailData> = ({
             alt="Perspectives CI"
             style={logo}
           />
-          <Heading style={heading}>Confirmation de Reservation</Heading>
+          <Heading style={heading}>Demande de Reservation</Heading>
           <Section style={section}>
             <Text style={text} className="text-center">Informations du client</Text>
             <Text style={text}>Nom : {clientName}</Text>
