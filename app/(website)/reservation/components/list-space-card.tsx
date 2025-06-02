@@ -44,7 +44,7 @@ const roomTypes: RoomType[] = [
   { id: "appart_pressing", title: "Appartement Pressing", pricePerNight: 50000 },
   { id: "appart_soleil", title: "Appartement Soleil", pricePerNight: 150000 },
   { id: "appart_prima", title: "Appartement Prima", pricePerNight: 80000 },
-  { id: "appart_complexe_carre_massina", title: "Complexe Carré Massina", pricePerNight: 0 },
+  { id: "appart_complexe_carre_massina", title: "Complexe Carré Massina", pricePerNight: 100000 },
 ];
 
 export default function ListSpaceCard({
@@ -84,22 +84,33 @@ export default function ListSpaceCard({
     const image = searchParams.get("image");
     const description = searchParams.get("description");
 
+    console.log("URL Parameters:", { apartment, image, description }); // Debug: Log URL parameters
+
     if (apartment && image && description) {
+      const decodedApartment = decodeURIComponent(apartment).trim(); // Remove extra spaces
       setApartmentData({
-        name: decodeURIComponent(apartment),
+        name: decodedApartment,
         image: decodeURIComponent(image),
         description: decodeURIComponent(description),
       });
 
-      // Présélectionner le type de chambre en fonction du nom de l'appartement
+      // Normalize and find matching room
       const matchingRoom = roomTypes.find(
-        (room) => room.title.toLowerCase() === decodeURIComponent(apartment).toLowerCase()
+        (room) => room.title.toLowerCase() === decodedApartment.toLowerCase()
       );
+
+      console.log("Matching Room:", matchingRoom); // Debug: Log the matched room
+
       if (matchingRoom) {
         setRoomType(matchingRoom.id);
+      } else {
+        console.warn(`No matching room found for apartment: ${decodedApartment}`);
+        setRoomType(roomTypes[0].id); // Fallback to default room type
       }
     } else {
+      console.warn("Missing URL parameters:", { apartment, image, description });
       setApartmentData(null);
+      setRoomType(roomTypes[0].id); // Fallback to default room type
     }
   }, [searchParams]);
 
@@ -118,10 +129,9 @@ export default function ListSpaceCard({
       // Calculer le nombre de nuits (différence entre la date de fin et la date de début)
       const startDate = dayjs(sortedDates[0]);
       const endDate = dayjs(sortedDates[sortedDates.length - 1]);
-      const nights = endDate.diff(startDate, 'day');
-      if (nights <= 0) return 0;
+      const nights = Math.max(1, endDate.diff(startDate, 'day')); // Minimum 1 night
 
-      // Prix total = prix par nuit × nombre de nuits (sans multiplier par le nombre de clients)
+      // Prix total = prix par nuit × nombre de nuits
       return selectedRoom.pricePerNight * nights;
     },
     []
@@ -203,7 +213,7 @@ export default function ListSpaceCard({
   const sortedDates = [...selectedDates].sort((a, b) => a.getTime() - b.getTime());
   const startDate = sortedDates.length > 0 ? dayjs(sortedDates[0]) : null;
   const endDate = sortedDates.length > 0 ? dayjs(sortedDates[sortedDates.length - 1]) : null;
-  const nights = startDate && endDate ? endDate.diff(startDate, 'day') : 0;
+  const nights = startDate && endDate ? Math.max(1, endDate.diff(startDate, 'day')) : 0;
 
   // Obtenir les détails de la chambre sélectionnée pour l'affichage
   const selectedRoom = roomTypes.find((r) => r.id === roomType);
@@ -232,7 +242,9 @@ export default function ListSpaceCard({
         </div>
       ) : (
         <div className="mb-8 max-w-5xl mx-auto">
-          <p className="text-amber-600 text-lg">Pas d&apos;appartement sélectionné. Veuillez choisir un appartement à réserver.</p>
+          <p className="text-red-500 text-lg">
+            Aucun appartement sélectionné. Veuillez choisir un appartement depuis la page des espaces.
+          </p>
         </div>
       )}
 
@@ -448,11 +460,11 @@ export default function ListSpaceCard({
                   ? `${totalAmount} FCFA (${nights} nuit${nights > 1 ? "s" : ""})`
                   : "Aucun calcul"}
               </p>
-              {totalAmount === 0 && roomType === "appart_complexe_carre_massina" && (
+              {/* {totalAmount === 0 && roomType === "appart_complexe_carre_massina" && (
                 <p className="text-red-500 text-sm">
-                  Le prix pour {selectedRoom?.title} n&apos;est pas encore défini. Veuillez contacter l&apos;administration.
+                  Le prix pour {selectedRoom?.title} n'est pas encore défini. Veuillez contacter l'administration.
                 </p>
-              )}
+              )} */}
             </div>
 
             <Button
@@ -520,7 +532,7 @@ export default function ListSpaceCard({
               <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                 <Button
                   type="button"
-                    onClick={() => {
+                  onClick={() => {
                     setOpen(false);
                     router.push("/our_spaces/private_offices");
                   }}
@@ -528,7 +540,6 @@ export default function ListSpaceCard({
                 >
                   Fermer
                 </Button>
-              
               </div>
             </DialogPanel>
           </div>

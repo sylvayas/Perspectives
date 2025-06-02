@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-14">
           {/* Logo and Social Media Section */}
           <div className="flex flex-col items-center -ml-12 lg:items-center text-center lg:text-left w-full lg:w-1/3 gap-4">
-            <Icons.logo_white className="w-16 h-16" />
+            <Icons.logo_white className="w-22 h-20" />
             {/* Social Media Icons */}
             <div className="flex gap-3">
               {[
@@ -35,7 +35,7 @@ export default function Footer() {
                 },
                     {
         href: "https://www.tiktok.com/@perspectives_ci", // Remplacez par votre lien TikTok réel
-        icon: <Image src={"/images/tiktok (1).png"} alt={""} width={25} height={25} className="m-1"/>, // Assurez-vous que Icons.tiktok existe
+        icon: <Image src={"/images/tiktok icone.png"} alt={""} width={25} height={25} className="m-1"/>, // Assurez-vous que Icons.tiktok existe
       },
                     ].map((social, index) => (
                 <a

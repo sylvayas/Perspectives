@@ -31,7 +31,7 @@ export function MainNav() {
               <NavigationMenuLink
                 className={cn(
                   navigationMenuTriggerStyle(),
-                  "font-book-antiqua text-[#8E421C] hover:bg-transparent hover:text-white to-transparent transition-colors",
+                  "font-book-antiqua text-[#8E421C] hover:bg-transparent hover:text-black to-transparent transition-colors",
                   menuList[0].menus[0].active && "font-bold"
                 )}
               >

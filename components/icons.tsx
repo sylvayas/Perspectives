@@ -84,7 +84,7 @@ export const Icons: any = {
   ),
     logo_white: ({ className, ...props }: { className: string }) => (
     <img
-      src="/images/Icone White.png"
+      src="/images/Icone White (2).png"
       alt="Perspectives"
       className={className}
       {...props}

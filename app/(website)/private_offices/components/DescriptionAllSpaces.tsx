@@ -1,51 +1,54 @@
 "use client";
 
 import React from "react";
-import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern"; // Verify this export
+import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
 import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button"; // Verify this export
-import { cn } from "@/lib/utils"; // Verify this export
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { BorderBeam } from "@/components/magicui/border-beam"; // Verify this export
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 export default function DescriptionAllSpaces() {
   const { ref: sectionRef, inView: sectionInView } = useInView({ triggerOnce: true, threshold: 0.2 });
   const { ref: servicesRef, inView: servicesInView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
- const avantages = [
-  {
-    title: "Le Transport de marchandises",
-    description: "L’activité logistique de transport de marchandises de Perspectives consiste à déplacer des biens, produits ou équipements d’un lieu à un autre avec rapidité, sécurité et efficacité.",
-    image: "/images/transport/transport_marchandise.jpg",
-  },
-  {
-    title: "Le Transport et le transfert de matières (sable, ciment, granite, gravier)",
-    description: "Le transport et transfert de matières (sable, ciment, granite, gravier) par Perspectives est un service logistique dédié au déplacement rapide, sécurisé et efficace de matériaux de construction.",
-    image: "/images/transport/transport_matière_première.jpg",
-  },
-  {
-    title: "Transport maritime",
-    description: "Ce type de transport est essentiel pour le commerce international et le transport de grandes quantités de marchandises, en particulier sur de longues distances.",
-    image: "/images/transport/transport_maritime.jpg", // Placeholder path
-  },
-  {
-    title: "Transport aérien",
-    description: "Le transport aérien fait référence à l’utilisation d’avions pour déplacer des passagers et des marchandises d’un endroit à un autre à travers l’air.",
-    image: "/images/transport/transport_aérien.jpg", // Placeholder path
-  },
-  {
-    title: "Transport terrestre",
-    description: "Le transport terrestre désigne tous les modes de transport qui utilisent des voies terrestres, telles que les routes, les autoroutes, les chemins de fer ou même des pistes non pavées, pour déplacer des personnes ou des marchandises.",
-    image: "/images/transport/transport_terrestre.jpg", // Placeholder path
-  },
-];
+  const transport = [
+    {
+      title: "Transport maritime",
+      description: "Ce type de transport est essentiel pour le commerce international et le transport de grandes quantités de marchandises, en particulier sur de longues distances.",
+      image: "/images/transport/transport_maritime.jpg",
+    },
+    {
+      title: "Transport terrestre",
+      description: "Le transport terrestre désigne tous les modes de transport qui utilisent des voies terrestres, telles que les routes, les autoroutes, les chemins de fer ou même des pistes non pavées.",
+      image: "/images/transport/transport_terrestre.jpg",
+    },
+    {
+      title: "Transport aérien",
+      description: "Le transport aérien fait référence à l’utilisation d’avions pour déplacer des passagers et des marchandises d’un endroit à un autre à travers l’air.",
+      image: "/images/transport/transport_aérien.jpg",
+    },
+  ];
+
+  const transit = [
+    {
+      title: "Le Transport de marchandises",
+      description: "L’activité logistique de transport de marchandises de Perspectives consiste à déplacer des biens, produits ou équipements d’un lieu à un autre avec rapidité, sécurité et efficacité.",
+      image: "/images/transport/transport_marchandise.jpg",
+    },
+    {
+      title: "Le Transport et le transfert de matières (sable, ciment, granite, gravier)",
+      description: "Le transport et transfert de matières (sable, ciment, granite, gravier) par Perspectives est un service logistique dédié au déplacement rapide, sécurisé et efficace de matériaux de construction.",
+      image: "/images/transport/transport_matière_première.jpg",
+    },
+  ];
+
   return (
-    <section className="container min-h-[400px] py-16 relative overflow-hidden " ref={sectionRef}>
-   
+    <section className="container min-h-[400px] py-16 relative overflow-hidden" ref={sectionRef}>
       {/* Première section : Image + Texte */}
-      <div className="relative flex flex-col  md:flex-row gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+      <div className="relative flex flex-col md:flex-row gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px |6">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={sectionInView ? { opacity: 1, scale: 1 } : {}}
@@ -72,69 +75,91 @@ export default function DescriptionAllSpaces() {
         >
           <p className="mb-6 text-justify text-gray-600 md:text-lg leading-relaxed">
             Pour vos livraisons et transferts de sable, de ciment, de gravier et bien d&apos;autres matériaux, faites 
-            confiance à nos équipes qualifiées,
-            expérimentées et réactives. Nous assurons chaque déplacement avec fiabilité, grâce à une logistique maîtrisée et 
-            un service rigoureux,
-            pensé pour répondre à vos besoins dans les meilleurs délais.
+            confiance à nos équipes qualifiées, expérimentées et réactives. Nous assurons chaque déplacement avec fiabilité, grâce à une logistique maîtrisée et 
+            un service rigoureux, pensé pour répondre à vos besoins dans les meilleurs délais.
           </p>
-         
         </motion.div>
       </div>
 
-      {/* Section des services */}
-    {/* Section des services */}
-<section
-  className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6"
-  ref={servicesRef}
->
-  {/* Titre de la section */}
-  <motion.h2
-    initial={{ opacity: 0, y: 20 }}
-    animate={servicesInView ? { opacity: 1, y: 0 } : {}}
-    transition={{ duration: 0.6 }}
-    className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-12 text-3xl md:text-4xl font-saudagar tracking-tight text-gray-900"
-  >
-    Nos services
-  </motion.h2>
-
-  {/* Grille des cartes de services */}
-<div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto">
-      {avantages.map((avantage, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0 }}
-          animate={servicesInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.5, delay: index * 0.15 }}
-          className="relative flex flex-col bg-gradient-to-br from-white to-gray-50 rounded-xl border border-gray-200 p-6 hover:border-novis_green transition-all duration-300 hover:shadow-md"
+      {/* Section Transit */}
+      <section className="py-4 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={servicesInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-12 text-3xl md:text-4xl font-saudagar tracking-tight text-gray-900"
         >
-          {/* Icon/Badge */}
-          <div className="flex justify-center mb-4">
-            <Image
-              className="w-16 h-16 object-contain rounded-full bg-gray-100 p-2"
-              src={avantage.image}
-              alt={avantage.title}
-              width={64}
-              height={64}
-              quality={85}
-            />
-          </div>
+          Transit
+        </motion.h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 max-w-7xl mx-auto">
+          {transit.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={servicesInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
+              className="relative flex flex-col bg-gradient-to-br from-white to-gray-50 rounded-xl border border-gray-200 p-6 hover:border-novis_green transition-all duration-300 hover:shadow-md"
+            >
+              <div className="flex justify-center mb-4">
+                <Image
+                  className="w-16 h-16 object-contain rounded-full bg-gray-100 p-2"
+                  src={item.image}
+                  alt={item.title}
+                  width={64}
+                  height={64}
+                  quality={85}
+                />
+              </div>
+              <div className="flex flex-col text-center">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+              </div>
+              <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-novis_green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
-          {/* Content */}
-          <div className="flex flex-col text-center">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              {avantage.title}
-            </h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              {avantage.description}
-            </p>
-          </div>
+      {/* Section Transport */}
+      <section className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6" ref={servicesRef}>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={servicesInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-12 text-3xl md:text-4xl font-saudagar tracking-tight text-gray-900"
+        >
+          Transport
+        </motion.h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-6 max-w-7xl mx-auto">
+          {transport.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={servicesInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              className="relative flex flex-col bg-gradient-to-br from-white to-gray-50 rounded-xl border border-gray-200 p-6 hover:border-novis_green transition-all duration-300 hover:shadow-md"
+            >
+              <div className="flex justify-center mb-4">
+                <Image
+                  className="w-16 h-16 object-contain rounded-full bg-gray-100 p-2"
+                  src={item.image}
+                  alt={item.title}
+                  width={64}
+                  height={64}
+                  quality={85}
+                />
+              </div>
+              <div className="flex flex-col text-center">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+              </div>
+              <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-novis_green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </motion.div>
+          ))}
+        </div>
+      </section>
 
-          {/* Hover Border Effect */}
-          <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-novis_green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </motion.div>
-      ))}
-    </div>
-</section>
+      
     </section>
   );
 }

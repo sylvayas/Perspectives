@@ -47,7 +47,7 @@ const mainProperties: Property[] = [
   { src: "/images/Apparts/appart soleil/soleil 1.0.2.0.png", alt: "Salon - Appartement Soleil", width: 800, height: 500, apartment: "Appartement Soleil" },
 
   { src: "/images/Apparts/complex carré Massina/appart/IMG_0987.DNG.png", alt: "Chambre - Complexe Carré Massina", width: 800, height: 500, apartment: "Complexe Carré Massina" },
-  { src: "/images/Apparts/ungosse.jpg", alt: "Chambre - Complexe Carré Massina", width: 800, height: 500, apartment: "Complexe Carré Massina" },
+  { src: "/images/Apparts/ungosse.jpg", alt: "Chambre - Complexe Marron", width: 800, height: 500, apartment: "Marron" },
 ];
 
 // Autres propriétés
@@ -106,65 +106,67 @@ export default function DescriptionAllSpaces() {
             <TabsTrigger value="main" className="text-md">Propriétés principales</TabsTrigger>
             <TabsTrigger value="other" className="text-md">Salle de réunion</TabsTrigger>
           </TabsList>
-          <TabsContent value="main" className="mt-6">
-            <div className="flex flex-wrap gap-6 justify-center">
-              {Object.entries(mainGroupedProperties).map(([apartment, images], index) => (
-                <motion.div
-                  key={apartment}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={showcaseInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="relative rounded-lg shadow-md overflow-hidden group w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] hover:shadow-xl transition-shadow duration-300"
-                >
-                  <div className="relative w-full h-[300px]">
-                    {images.map((image, imgIndex) => (
-                      <div
-                        key={imgIndex}
-                        className={`absolute inset-0 transition-opacity duration-500 ${
-                          imgIndex === (sliderIndices[apartment] || 0) ? "opacity-100" : "opacity-0"
-                        }`}
-                      >
-                        <Image
-                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                          src={image.src}
-                          alt={image.alt}
-                          width={image.width}
-                          height={image.height}
-                          quality={85}
-                        />
-                      </div>
-                    ))}
-                 
-                  </div>
-                  <BorderBeam className="z-10" />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex flex-col gap-2">
-                    <p className="text-white font-normal text-xl">{apartment}</p>
-                    <Link
-                      className={cn(
-                        buttonVariants(),
-                        "max-w-32 md:max-w-48 gap-2 overflow-hidden whitespace-pre",
-                        "group relative w-full justify-center gap-2 rounded-md transition-all opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform translate-y-2 duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2 hover:ring-[#F4E0D7] "
-                      )}
-                      href={{
-                        pathname: "/reservation",
-                        query: {
-                          apartment: apartment,
-                          image: images[0].src,
-                          description: apartmentDescriptions[apartment] || "Description non disponible.",
-                        },
-                      }}
-                    >
-                      <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40 " />
-                       <div className="flex items-center space-x-1">
-                        <Icons.calendar className="size-4" />
-                        <span className="ml-1 text-md sm:text-md">Réservez</span>
-                      </div>
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
+         <TabsContent value="main" className="mt-6">
+  <div className="flex flex-wrap gap-6 justify-center">
+    {Object.entries(mainGroupedProperties).map(([apartment, images], index) => (
+      <motion.div
+        key={apartment}
+        initial={{ opacity: 0, y: 20 }}
+        animate={showcaseInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: index * 0.1 }}
+        className={cn(
+          "relative rounded-lg shadow-md overflow-hidden group w-full sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] hover:shadow-xl transition-shadow duration-300",
+          { "self-start": apartment === "Marron" } // Align "Marron" to the left
+        )}
+      >
+        <div className="relative w-full h-[300px]">
+          {images.map((image, imgIndex) => (
+            <div
+              key={imgIndex}
+              className={`absolute inset-0 transition-opacity duration-500 ${
+                imgIndex === (sliderIndices[apartment] || 0) ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                quality={85}
+              />
             </div>
-          </TabsContent>
+          ))}
+        </div>
+        <BorderBeam className="z-10" />
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex flex-col gap-2">
+          <p className="text-white font-normal text-xl">{apartment}</p>
+          <Link
+            className={cn(
+              buttonVariants(),
+              "max-w-32 md:max-w-48 gap-2 overflow-hidden whitespace-pre",
+              "group relative w-full justify-center gap-2 rounded-md transition-all opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform translate-y-2 duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2 hover:ring-[#F4E0D7]"
+            )}
+            href={{
+              pathname: "/reservation",
+              query: {
+                apartment: apartment,
+                image: images[0].src,
+                description: apartmentDescriptions[apartment] || "Description non disponible.",
+              },
+            }}
+          >
+            <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-40" />
+            <div className="flex items-center space-x-1">
+              <Icons.calendar className="size-4" />
+              <span className="ml-1 text-md sm:text-md">Réservez</span>
+            </div>
+          </Link>
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</TabsContent>
           <TabsContent value="other" className="mt-6">
             <div className="flex flex-wrap gap-6 justify-center">
               {Object.entries(otherGroupedProperties).map(([apartment, images], index) => (
